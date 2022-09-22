@@ -5,6 +5,7 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import com.example.theescapists2.databinding.ActivityMainBinding
+import com.google.android.material.navigation.NavigationBarView
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -12,7 +13,30 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        // binding.bottomNavigation.setOnItemSelectedListener {}
+        bottomNavigation()
+    }
+
+
+    fun bottomNavigation(){
+        binding.bottomNavigation.setOnItemSelectedListener{
+            when(it.itemId){
+                R.id.craftId -> {
+                    Toast.makeText(this,"Craft",Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.mapsId -> {
+                    Toast.makeText(this,"Maps",Toast.LENGTH_SHORT).show()
+                    true
+                }
+                R.id.wallpaperId -> {
+                    Toast.makeText(this,"wallapapers", Toast.LENGTH_SHORT).show()
+                    true
+                }
+                else -> false
+            }
+
+
+        }
     }
 
 }
