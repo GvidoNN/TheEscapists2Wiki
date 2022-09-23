@@ -6,7 +6,10 @@
         <entry key="..\:/Theescapists2/app/src/main/res/drawable/bottom_nav_selector.xml" value="0.1" />
         <entry key="..\:/Theescapists2/app/src/main/res/drawable/ic_crafts.xml" value="0.1" />
         <entry key="..\:/Theescapists2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
-        <entry key="..\:/Theescapists2/app/src/main/res/layout/activity_main.xml" value="0.4" />
+        <entry key="..\:/Theescapists2/app/src/main/res/drawable/ic_maps.xml" value="0.1" />
+        <entry key="..\:/Theescapists2/app/src/main/res/layout/activity_main.xml" value="0.2" />
+        <entry key="..\:/Theescapists2/app/src/main/res/layout/activity_maps.xml" value="0.22760416666666666" />
+        <entry key="..\:/Theescapists2/app/src/main/res/layout/activity_wallpaper.xml" value="0.21354166666666666" />
         <entry key="..\:/Theescapists2/app/src/main/res/menu/bottom_menu.xml" value="0.253125" />
       </map>
     </option>

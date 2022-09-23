@@ -3,7 +3,7 @@
 <resources>
     <string name="app_name">The escapists 2 вики</string>
     <string name="craft">Крафты</string>
-    <string name="maps">Карты</string>
+    <string name="map">Карты</string>
     <string name="wallpaper">Обои</string>
     
 </resources>

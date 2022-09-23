@@ -9,7 +9,7 @@
     <item
         android:id="@+id/mapsId"
         android:icon="@drawable/ic_maps"
-        android:title="@string/maps"
+        android:title="@string/map"
         android:orderInCategory="2"
         />
     <item
