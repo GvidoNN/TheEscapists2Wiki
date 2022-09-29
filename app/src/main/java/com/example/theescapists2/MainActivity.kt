@@ -14,6 +14,8 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        supportActionBar?.setDisplayHomeAsUpEnabled(true)
+        supportActionBar?.title = getString(R.string.craft)
         bottomNavigation()
     }
 
@@ -22,12 +24,12 @@ class MainActivity : AppCompatActivity() {
         binding.bottomNavigation.selectedItemId = R.id.craftId
         binding.bottomNavigation.setOnItemSelectedListener{
             when(it.itemId){
-                R.id.craftId -> {
-                    Toast.makeText(this,"Craft",Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MainActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
+//                R.id.craftId -> {
+//                    Toast.makeText(this,"Craft",Toast.LENGTH_SHORT).show()
+//                    val intent = Intent(this, MainActivity::class.java)
+//                    startActivity(intent)
+//                    true
+//                }
                 R.id.mapsId -> {
                     Toast.makeText(this,"Maps",Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, MapsActivity::class.java)

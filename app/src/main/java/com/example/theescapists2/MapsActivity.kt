@@ -13,7 +13,7 @@ class MapsActivity : AppCompatActivity() {
         binding = ActivityMapsBinding.inflate(layoutInflater)
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
-        supportActionBar?.title = R.string.map.toString()
+        supportActionBar?.title = getString(R.string.map)
         bottomNavigation()
     }
 
@@ -27,12 +27,12 @@ class MapsActivity : AppCompatActivity() {
                     startActivity(intent)
                     true
                 }
-                R.id.mapsId -> {
-                    Toast.makeText(this, "Maps", Toast.LENGTH_SHORT).show()
-                    val intent = Intent(this, MapsActivity::class.java)
-                    startActivity(intent)
-                    true
-                }
+//                R.id.mapsId -> {
+//                    Toast.makeText(this, "Maps", Toast.LENGTH_SHORT).show()
+//                    val intent = Intent(this, MapsActivity::class.java)
+//                    startActivity(intent)
+//                    true
+//                }
                 R.id.wallpaperId -> {
                     Toast.makeText(this, "wallapapers", Toast.LENGTH_SHORT).show()
                     val intent = Intent(this, WallpaperActivity::class.java)
