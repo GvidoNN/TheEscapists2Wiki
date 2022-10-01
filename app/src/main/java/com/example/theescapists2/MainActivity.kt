@@ -31,31 +31,43 @@ class MainActivity : AppCompatActivity() {
 
     fun bottomNavigation(){
         binding.bottomNavigation.selectedItemId = R.id.craftId
-//        binding.bottomNavigation.setOnItemSelectedListener{
-//            when(it.itemId){
-////                R.id.craftId -> {
-////                    Toast.makeText(this,"Craft",Toast.LENGTH_SHORT).show()
-////                    val intent = Intent(this, MainActivity::class.java)
-////                    startActivity(intent)
-////                    true
-////                }
-//                R.id.mapsId -> {
-//                    Toast.makeText(this,"Maps",Toast.LENGTH_SHORT).show()
-//                    val intent = Intent(this, MapsActivity::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                R.id.wallpaperId -> {
-//                    Toast.makeText(this,"wallapapers", Toast.LENGTH_SHORT).show()
-//                    val intent = Intent(this, WallpaperActivity::class.java)
-//                    startActivity(intent)
-//                    true
-//                }
-//                else -> false
-//            }
+        binding.bottomNavigation.setOnItemSelectedListener{
+            when(it.itemId){
+                R.id.mapsId ->{
+                    Toast.makeText(this,"Map",Toast.LENGTH_SHORT).show()
+                    val fragment = FragmentMap.newInstance()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.place_craft_fragment, fragment)
+                        .commit()
+                    true
 
+                }
+                R.id.craftId ->{
+                    Toast.makeText(this,"Craft",Toast.LENGTH_SHORT).show()
+                    val fragment = FragmentMainCraft.newInstance()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.place_craft_fragment, fragment)
+                        .commit()
+                    true
 
-//        }
+                }
+                R.id.wallpaperId ->{
+                    Toast.makeText(this,"Wallpaper",Toast.LENGTH_SHORT).show()
+                    val fragment = FragmentWallpaper.newInstance()
+                    supportFragmentManager
+                        .beginTransaction()
+                        .replace(R.id.place_craft_fragment, fragment)
+                        .commit()
+                    true
+
+                }
+
+                else -> false
+            }
+
+        }
     }
 
 }
