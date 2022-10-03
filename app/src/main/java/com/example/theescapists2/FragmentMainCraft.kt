@@ -9,10 +9,9 @@ import com.example.theescapists2.databinding.FragmentMainCraftBinding
 
 class FragmentMainCraft : Fragment() {
 
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
+
+
+    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = FragmentMainCraftBinding.inflate(inflater)
         return binding.root
     }

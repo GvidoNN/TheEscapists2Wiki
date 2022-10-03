@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/fragmentMainCraft">
+
+    <fragment
+        android:id="@+id/fragmentMainCraft"
+        android:name="com.example.theescapists2.FragmentMainCraft"
+        android:label="FragmentMainCraft" >
+        <action
+            android:id="@+id/action_fragmentMainCraft_to_fragmentMap"
+            app:destination="@id/fragmentMap" />
+        <action
+            android:id="@+id/action_fragmentMainCraft_to_fragmentWallpaper"
+            app:destination="@id/fragmentWallpaper" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentMap"
+        android:name="com.example.theescapists2.FragmentMap"
+        android:label="fragment_map"
+        tools:layout="@layout/fragment_map" >
+        <action
+            android:id="@+id/action_fragmentMap_to_fragmentMainCraft"
+            app:destination="@id/fragmentMainCraft" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentWallpaper"
+        android:name="com.example.theescapists2.FragmentWallpaper"
+        android:label="fragment_wallpaper"
+        tools:layout="@layout/fragment_wallpaper" >
+        <action
+            android:id="@+id/action_fragmentWallpaper_to_fragmentMainCraft"
+            app:destination="@id/fragmentMainCraft" />
+    </fragment>
+</navigation>
