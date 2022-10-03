@@ -1,6 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FragmentMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".FragmentMap">
@@ -9,6 +11,23 @@
     <TextView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:text="its map" />
+        android:gravity="center"
+        android:text="its map"
+        android:textColor="#E91E63" />
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="66dp"
+        android:layout_gravity="bottom|center|center_horizontal"
+        android:background="#FF9800"
+        android:foregroundGravity="center"
+        app:itemIconSize="40dp"
+        app:itemIconTint="@drawable/bottom_nav_selector"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:menu="@menu/bottom_menu" />
 
 </FrameLayout>

@@ -24,6 +24,9 @@
         <action
             android:id="@+id/action_fragmentMap_to_fragmentMainCraft"
             app:destination="@id/fragmentMainCraft" />
+        <action
+            android:id="@+id/action_fragmentMap_to_fragmentWallpaper"
+            app:destination="@id/fragmentWallpaper" />
     </fragment>
     <fragment
         android:id="@+id/fragmentWallpaper"
@@ -33,5 +36,8 @@
         <action
             android:id="@+id/action_fragmentWallpaper_to_fragmentMainCraft"
             app:destination="@id/fragmentMainCraft" />
+        <action
+            android:id="@+id/action_fragmentWallpaper_to_fragmentMap"
+            app:destination="@id/fragmentMap" />
     </fragment>
 </navigation>

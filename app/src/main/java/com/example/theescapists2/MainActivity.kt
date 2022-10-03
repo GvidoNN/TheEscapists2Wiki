@@ -6,10 +6,11 @@ import android.view.View
 import android.widget.Toast
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager
+import androidx.navigation.Navigation
 import com.example.theescapists2.databinding.ActivityMainBinding
 import com.google.android.material.navigation.NavigationBarView
 
-class MainActivity : AppCompatActivity(){
+class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
 
 
@@ -19,59 +20,6 @@ class MainActivity : AppCompatActivity(){
         setContentView(binding.root)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = getString(R.string.craft)
-        bottomNavigation()
-        if (savedInstanceState == null){
-            val fragment = FragmentMainCraft.newInstance(
-            )
-            supportFragmentManager
-                .beginTransaction()
-                .replace(R.id.place_craft_fragment, fragment)
-                .commit()
 
-        }
     }
-
-
-    fun bottomNavigation(){
-        binding.bottomNavigation.selectedItemId = R.id.craftId
-        binding.bottomNavigation.setOnItemSelectedListener{
-            when(it.itemId){
-                R.id.mapsId ->{
-                    Toast.makeText(this,"Map",Toast.LENGTH_SHORT).show()
-                    val fragment = FragmentMap.newInstance()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.place_craft_fragment, fragment)
-//                        .addToBackStack(null)
-                        .commit()
-                    true
-
-                }
-                R.id.craftId ->{
-                    Toast.makeText(this,"Craft",Toast.LENGTH_SHORT).show()
-                    val fragment = FragmentMainCraft.newInstance()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.place_craft_fragment, fragment)
-                        .commit()
-                    true
-
-                }
-                R.id.wallpaperId ->{
-                    Toast.makeText(this,"Wallpaper",Toast.LENGTH_SHORT).show()
-                    val fragment = FragmentWallpaper.newInstance()
-                    supportFragmentManager
-                        .beginTransaction()
-                        .replace(R.id.place_craft_fragment, fragment)
-                        .commit()
-                    true
-
-                }
-
-                else -> false
-            }
-
-        }
-    }
-
 }
