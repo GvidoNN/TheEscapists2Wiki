@@ -4,5 +4,7 @@
     <string name="map">Maps</string>
     <string name="wallpaper">Wallpapers</string>
     <string name="baseball_bat">Wooden Bat</string>
+    <string name="baseball_bat_craft">Timber+Timber+Roll of Duct</string>
     <string name="sock_mase">Sock Mace</string>
+    <string name="sock_mase_craft">Sock + Soap</string>
 </resources>

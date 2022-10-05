@@ -6,6 +6,8 @@
     <string name="map">Карты</string>
     <string name="wallpaper">Обои</string>
     <string name="baseball_bat">Бейсбольная бита</string>
+    <string name="baseball_bat_craft">Скотч+Скотч+Бревно</string>
     <string name="sock_mase">Носок-кистень</string>
+    <string name="sock_mase_craft">Носок + Мыло</string>
 
 </resources>

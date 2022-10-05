@@ -28,6 +28,8 @@ class ItemAdapter(private val itemList: ArrayList<Items>): RecyclerView.Adapter<
         fun bind(item : Items){
             binding.titleImage.setImageResource(item.imageId)
             binding.tvName.text = item.name
+            binding.tvCraft.text = item.craft
+            binding.tvIntelligence.text = item.intelligence
         }
     }
 

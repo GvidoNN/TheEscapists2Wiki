@@ -11,7 +11,8 @@
         android:label="FragmentMainCraft" >
         <action
             android:id="@+id/action_fragmentMainCraft_to_fragmentMap"
-            app:destination="@id/fragmentMap" />
+            app:destination="@id/fragmentMap"
+            app:enterAnim="@android:anim/fade_in" />
         <action
             android:id="@+id/action_fragmentMainCraft_to_fragmentWallpaper"
             app:destination="@id/fragmentWallpaper" />

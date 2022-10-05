@@ -19,6 +19,8 @@ class FragmentMainCraft : Fragment(){
     private lateinit var itemsArrayList: ArrayList<Items>
     lateinit var imageId: Array<Int>
     lateinit var name: Array<String>
+    lateinit var craft: Array<String>
+    lateinit var intelligence: Array<String>
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -85,8 +87,17 @@ class FragmentMainCraft : Fragment(){
             getString(R.string.sock_mase)
         )
 
+        craft = arrayOf(
+            getString(R.string.baseball_bat_craft),
+            getString(R.string.sock_mase_craft)
+        )
+
+        intelligence = arrayOf("40",
+            "40"
+        )
+
         for (i in imageId.indices) {
-            val items = Items(imageId[i], name[i])
+            val items = Items(imageId[i], name[i], craft[i], intelligence[i])
             itemsArrayList.add(items)
 
         }
