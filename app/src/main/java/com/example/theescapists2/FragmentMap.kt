@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import com.example.theescapists2.databinding.FragmentMapBinding
 
-class FragmentMap : Fragment() {
+class FragmentMap : Fragment(){
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = FragmentMapBinding.inflate(inflater)
         binding.bottomNavigation.selectedItemId = R.id.mapsId
@@ -31,6 +31,7 @@ class FragmentMap : Fragment() {
         }
         return binding.root
     }
+
 
     companion object {
         @JvmStatic

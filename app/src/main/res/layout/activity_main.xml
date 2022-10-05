@@ -7,32 +7,19 @@
     android:background="#252525"
     tools:context=".MainActivity">
 
-    <!--    <com.google.android.material.bottomnavigation.BottomNavigationView-->
-    <!--        android:id="@+id/bottomNavigation"-->
-    <!--        android:layout_width="0dp"-->
-    <!--        android:layout_height="66dp"-->
-    <!--        android:background="#FF9800"-->
-    <!--        app:itemIconSize="40dp"-->
-    <!--        app:itemIconTint="@drawable/bottom_nav_selector"-->
-    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
-    <!--        app:layout_constraintEnd_toEndOf="parent"-->
-    <!--        app:layout_constraintHorizontal_bias="0.0"-->
-    <!--        app:layout_constraintStart_toStartOf="parent"-->
-    <!--        app:menu="@menu/bottom_menu" />-->
-
     <androidx.fragment.app.FragmentContainerView
         android:id="@+id/fragmentContainerView"
         android:name="androidx.navigation.fragment.NavHostFragment"
-        android:layout_width="408dp"
-        android:layout_height="715dp"
-        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#9C27B0"
         app:defaultNavHost="true"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.82"
+        app:layout_constraintVertical_bias="1.0"
         app:navGraph="@navigation/my_nav" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

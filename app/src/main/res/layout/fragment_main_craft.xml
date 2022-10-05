@@ -9,6 +9,12 @@
 
     <!-- TODO: Update blank fragment layout -->
 
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="665dp"
+        tools:listitem="@layout/item_item" />
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
@@ -26,11 +32,9 @@
 
     <TextView
         android:id="@+id/textView"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:gravity="center"
-        android:text="TextView"
-        android:textColor="#9C27B0" />
+        android:text="HHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH" />
+
 
 </FrameLayout>
