@@ -13,9 +13,9 @@
         android:orderInCategory="2"
         />
     <item
-        android:id="@+id/wallpaperId"
+        android:id="@+id/componentId"
         android:icon="@drawable/ic_wallpapers"
-        android:title="@string/wallpaper"
+        android:title="@string/component"
         android:orderInCategory="3"
         />
 

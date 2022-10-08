@@ -7,7 +7,7 @@
 
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
-        android:layout_width="408dp"
+        android:layout_width="match_parent"
         android:layout_height="142dp"
         android:layout_marginEnd="1dp"
         app:layout_constraintBottom_toBottomOf="parent"
@@ -31,7 +31,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvIntelligence"
@@ -39,7 +40,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_weight="1"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textStyle="bold" />
         </LinearLayout>
 
         <LinearLayout
@@ -49,7 +51,7 @@
 
             <ImageView
                 android:id="@+id/title_image"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 app:srcCompat="@drawable/baseball" />
 
@@ -60,7 +62,9 @@
                 android:layout_gravity="center|fill_horizontal"
                 android:gravity="bottom"
                 android:rotationX="0"
-                android:text="TextView" />
+                android:text="TextView"
+                android:textSize="14sp"
+                android:textStyle="bold" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

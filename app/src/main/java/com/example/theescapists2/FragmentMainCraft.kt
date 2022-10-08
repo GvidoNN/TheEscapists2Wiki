@@ -37,7 +37,7 @@ class FragmentMainCraft : Fragment(){
                         .navigate(R.id.action_fragmentMainCraft_to_fragmentMap)
                     true
                 }
-                R.id.wallpaperId -> {
+                R.id.componentId -> {
                     val view = binding.FragmentMain
                     Navigation.findNavController(view)
                         .navigate(R.id.action_fragmentMainCraft_to_fragmentWallpaper)
@@ -72,7 +72,6 @@ class FragmentMainCraft : Fragment(){
         recyclerView.setHasFixedSize(true)
         adapter = ItemAdapter(itemsArrayList)
         recyclerView.adapter = adapter
-        adapter.notifyDataSetChanged()
     }
 
     private fun dataInitialize() {

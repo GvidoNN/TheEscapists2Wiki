@@ -20,7 +20,7 @@ class FragmentMap : Fragment(){
                         .navigate(R.id.action_fragmentMap_to_fragmentMainCraft)
                     true
                 }
-                R.id.wallpaperId -> {
+                R.id.componentId -> {
                     val view = binding.FragmentMain
                     Navigation.findNavController(view)
                         .navigate(R.id.action_fragmentMap_to_fragmentWallpaper)

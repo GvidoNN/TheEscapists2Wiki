@@ -2,9 +2,13 @@
     <string name="app_name">The escapists 2 wiki</string>
     <string name="craft">Crafts</string>
     <string name="map">Maps</string>
-    <string name="wallpaper">Wallpapers</string>
+    <string name="component">Components</string>
+    <string name="item">Item</string>
+    <string name="intelligence">Intelligence</string>
     <string name="baseball_bat">Wooden Bat</string>
-    <string name="baseball_bat_craft">Timber+Timber+Roll of Duct</string>
+    <string name="baseball_bat_craft">Timber+Timber+Roll of duct</string>
     <string name="sock_mase">Sock Mace</string>
     <string name="sock_mase_craft">Sock + Soap</string>
+    <string name="roll_of_duct">Roll of duct</string>
+    <string name="timber">Timber</string>
 </resources>

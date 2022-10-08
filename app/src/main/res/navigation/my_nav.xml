@@ -11,11 +11,10 @@
         android:label="FragmentMainCraft" >
         <action
             android:id="@+id/action_fragmentMainCraft_to_fragmentMap"
-            app:destination="@id/fragmentMap"
-            app:enterAnim="@android:anim/fade_in" />
+            app:destination="@id/fragmentMap" />
         <action
             android:id="@+id/action_fragmentMainCraft_to_fragmentWallpaper"
-            app:destination="@id/fragmentWallpaper" />
+            app:destination="@id/fragmentComponent" />
     </fragment>
     <fragment
         android:id="@+id/fragmentMap"
@@ -27,13 +26,13 @@
             app:destination="@id/fragmentMainCraft" />
         <action
             android:id="@+id/action_fragmentMap_to_fragmentWallpaper"
-            app:destination="@id/fragmentWallpaper" />
+            app:destination="@id/fragmentComponent" />
     </fragment>
     <fragment
-        android:id="@+id/fragmentWallpaper"
-        android:name="com.example.theescapists2.FragmentWallpaper"
-        android:label="fragment_wallpaper"
-        tools:layout="@layout/fragment_wallpaper" >
+        android:id="@+id/fragmentComponent"
+        android:name="com.example.theescapists2.FragmentComponent"
+        android:label="fragment_component"
+        tools:layout="@layout/fragment_component">
         <action
             android:id="@+id/action_fragmentWallpaper_to_fragmentMainCraft"
             app:destination="@id/fragmentMainCraft" />

@@ -4,10 +4,14 @@
     <string name="app_name">The escapists 2 вики</string>
     <string name="craft">Крафты</string>
     <string name="map">Карты</string>
-    <string name="wallpaper">Обои</string>
+    <string name="component">Компоненты</string>
+    <string name="item">Предмет</string>
+    <string name="intelligence">Интеллект</string>
     <string name="baseball_bat">Бейсбольная бита</string>
     <string name="baseball_bat_craft">Скотч+Скотч+Бревно</string>
     <string name="sock_mase">Носок-кистень</string>
     <string name="sock_mase_craft">Носок + Мыло</string>
+    <string name="roll_of_duct">Скотч</string>
+    <string name="timber">Бревно</string>
 
 </resources>
