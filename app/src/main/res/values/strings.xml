@@ -11,4 +11,20 @@
     <string name="sock_mase_craft">Sock + Soap</string>
     <string name="roll_of_duct">Roll of duct</string>
     <string name="timber">Timber</string>
+    <string name="center_perks_2.0" translatable="false">Center Perks 2.0</string>
+    <string name="cougar_creek_railroad" translatable="false">Cougar Creek Railroad</string>
+    <string name="rattlesnake_springs" translatable="false">Rattlesnake Springs</string>
+    <string name="kapowcamp" translatable="false">K.A.P.O.W Camp</string>
+    <string name="hmsorca" translatable="false">H.M.S. Orca</string>
+    <string name="hmpoffshore" translatable="false">H.M.P Offshore</string>
+    <string name="forttundra" translatable="false">Fort Tundra</string>
+    <string name="area17" translatable="false">Area 17</string>
+    <string name="airforcecon" translatable="false">Air Force Con</string>
+    <string name="ussanomaly" translatable="false">U.S.S. Anomaly</string>
+    <string name="thegloriousregime" translatable="false">The Glorious Regime</string>
+    <string name="wickedward" translatable="false">Wicked Ward</string>
+    <string name="santassshakedown" translatable="false">Santa\'s Shakedown</string>
+    <string name="snowwayout" translatable="false">Snow Way Out </string>
+    <string name="bigtopbreakout" translatable="false">Big Top Breakout </string>
+    <string name="dungeonsandducttape" translatable="false">Dungeons And Duct Tape </string>
 </resources>

@@ -33,10 +33,25 @@
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
     <TextView
-        android:id="@+id/textView"
+        android:id="@+id/tvHeadingName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="TextView" />
+        android:layout_gravity="left"
+        android:text="@string/item" />
+
+    <TextView
+        android:id="@+id/tvHeadingCraft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center|top"
+        android:text="@string/craft" />
+
+    <TextView
+        android:id="@+id/tvHeadingIntelligence"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right|top"
+        android:text="@string/intelligence" />
 
 
 </FrameLayout>
