@@ -1,6 +1,7 @@
 package com.example.theescapists2
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -106,7 +107,6 @@ class FragmentMap : Fragment(), MapAdapter.Listener{
     }
 
     override fun onClick(map: Maps) {
-        super.onClick(map)
-        Toast.makeText(this,"Нажали на ${map.mapName}", Toast.LENGTH_SHORT).show()
+        Log.d("MyLog","Нажали на ${map.mapName}")
     }
 }
