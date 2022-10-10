@@ -5,6 +5,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -12,7 +13,7 @@ import com.example.theescapists2.databinding.FragmentMapBinding
 import com.example.theescapists2.recycler.MapAdapter
 import com.example.theescapists2.recycler.Maps
 
-class FragmentMap : Fragment(){
+class FragmentMap : Fragment(), MapAdapter.Listener{
 
     private lateinit var adapter: MapAdapter
     private lateinit var recyclerView: RecyclerView
@@ -61,7 +62,7 @@ class FragmentMap : Fragment(){
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = MapAdapter(mapsArrayList)
+        adapter = MapAdapter(mapsArrayList, this)
         recyclerView.adapter = adapter
     }
 
@@ -102,5 +103,10 @@ class FragmentMap : Fragment(){
             mapsArrayList.add(maps)
 
         }
+    }
+
+    override fun onClick(map: Maps) {
+        super.onClick(map)
+        Toast.makeText(this,"Нажали на ${map.mapName}", Toast.LENGTH_SHORT).show()
     }
 }
