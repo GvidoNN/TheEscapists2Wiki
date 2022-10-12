@@ -27,6 +27,9 @@
         <action
             android:id="@+id/action_fragmentMap_to_fragmentWallpaper"
             app:destination="@id/fragmentComponent" />
+        <action
+            android:id="@+id/action_fragmentMap_to_fragmentSampleMap"
+            app:destination="@id/fragmentSampleMap" />
     </fragment>
     <fragment
         android:id="@+id/fragmentComponent"
@@ -39,5 +42,17 @@
         <action
             android:id="@+id/action_fragmentWallpaper_to_fragmentMap"
             app:destination="@id/fragmentMap" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentSampleMap"
+        android:name="com.example.theescapists2.FragmentSampleMap"
+        android:label="fragment_sample_map"
+        tools:layout="@layout/fragment_sample_map" >
+        <action
+            android:id="@+id/action_fragmentSampleMap_to_fragmentMap"
+            app:destination="@id/fragmentMap" />
+        <argument
+            android:name="MapName"
+            android:defaultValue="Prison Map" />
     </fragment>
 </navigation>

@@ -15,5 +15,6 @@
         <item name="windowNoTitle">true</item>
         <!-- Customize your theme here. -->
         <item name="android:windowActivityTransitions">true</item>
+        <item name="android:linksClickable">true</item>
     </style>
 </resources>

@@ -14,12 +14,6 @@
         android:theme="@style/Theme.TheEscapists2"
         tools:targetApi="31">
         <activity
-            android:name=".WallpaperActivity"
-            android:exported="false" />
-        <activity
-            android:name=".MapsActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>

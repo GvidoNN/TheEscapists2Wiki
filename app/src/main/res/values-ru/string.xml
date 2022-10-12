@@ -1,17 +1,165 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
+    <!-- TODO: System strings -->
     <string name="app_name">The escapists 2 вики</string>
     <string name="craft">Крафты</string>
     <string name="map">Карты</string>
     <string name="component">Компоненты</string>
     <string name="item">Предмет</string>
     <string name="intelligence">Интеллект</string>
+    <string name="ways_to_escape">Способы побега</string>
+    <!-- TODO: Craft strings -->
+    <!-- Items -->
     <string name="baseball_bat">Бейсбольная бита</string>
-    <string name="baseball_bat_craft">Скотч+Скотч+Бревно</string>
     <string name="sock_mase">Носок-кистень</string>
+    <!-- Craft Items -->
+    <string name="baseball_bat_craft">Скотч+Скотч+Бревно</string>
     <string name="sock_mase_craft">Носок + Мыло</string>
+    <!-- TODO: Component strings -->
     <string name="roll_of_duct">Скотч</string>
     <string name="timber">Бревно</string>
+    <!-- TODO: Map strings -->
+    <!-- Information about escaping plans -->
+    <string name="escape1_center_perks_2.0">Нарушение периметра \n
+    https://www.youtube.com/watch?v=VzyhM7-WMKw&amp;ab_channel=Team17 </string>
+    <string name="escape2_center_perks_2.0">Встреча с командой [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+    https://youtu.be/a2OdSuRXnBA</string>
+    <string name="escape3_center_perks_2.0">Последняя почта [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/NnE9WfK-usg
+    </string>
+
+    <string name="escape1_cougar_creek_railroad">Мой милый мошенник [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/cX9MuWS1RVQ
+    </string>
+    <string name="escape2_cougar_creek_railroad">Бешенный локомотив [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/v_pkhiwpQBI
+    </string>
+    <string name="escape3_cougar_creek_railroad">Каталажку нараспашку [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/-F2OhVv30ZE
+    </string>
+    <string name="escape4_cougar_creek_railroad">Без ума от тебя [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/jDH6-uh624M
+    </string>
+
+    <string name="escape1_rattlesnake_springs">Нарушение периметра \n
+        https://youtu.be/jyW4EuVRrA4
+    </string>
+    <string name="escape2_rattlesnake_springs">Рот на замок [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/fQzreO3aLP8
+    </string>
+    <string name="escape3_rattlesnake_springs">Пора выносить мусор [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/Vj0bAGtAUKg
+    </string>
+
+    <string name="escape1_kapowcamp">Нарушение периметра  \n
+        https://youtu.be/ushBv82D1nQ
+    </string>
+    <string name="escape2_kapowcamp">Молния Маккуин [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/2-5VLs0WZmQ
+    </string>
+    <string name="escape3_kapowcamp">Ускользнуть к победе [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/nvBuhNtEESM
+    </string>
+
+    <string name="escape1_hmsorca">Скуби-Ду [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/lqjekP4fz0I
+    </string>
+    <string name="escape2_hmsorca">Махни на прощанье! [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/1d5ODAghaH8
+    </string>
+    <string name="escape3_hmsorca">Мастера иллюзии [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/5JwZE47NNfM
+    </string>
+    <string name="escape4_hmsorca">Вернуть контроль [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/uctzlf_Jz_Q
+    </string>
+
+    <string name="escape1_hmpoffshore">Нарушение периметра \n
+        https://youtu.be/kuuOMmBoleo
+    </string>
+    <string name="escape2_hmpoffshore">Плохие намерения [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/OcRl6g8YmgM
+    </string>
+    <string name="escape3_hmpoffshore">Плавание с дельфинами [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/qJ_GeVW4zj4
+    </string>
+    <string name="escape4_hmpoffshore">Мусоровоз свободы [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/ZW0Nljw6sag
+    </string>
+
+    <string name="escape1_forttundra">Нарушение периметра \n
+        https://youtu.be/TKCPIqtmbj0
+    </string>
+    <string name="escape2_forttundra">Веселуха на джипах [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/zhABb4HKSM0
+    </string>
+    <string name="escape3_forttundra">Между молотком и наковальней [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/QXiqzurvKsI
+    </string>
+
+    <string name="escape1_area17">Нарушение периметра \n
+        https://youtu.be/aEued4135ZA
+    </string>
+    <string name="escape2_area17">Я только человек [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/9kPRV8uHVPw
+    </string>
+    <string name="escape3_area17">Ксенотехнологии… [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/xM-0919nIMo
+    </string>
+
+    <string name="escape1_airforcecon">Вернуть контроль [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/ZTctypnqpuY
+    </string>
+    <string name="escape2_airforcecon">На всех парах [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/p4Wihv7Yv_M
+    </string>
+    <string name="escape3_airforcecon">Безумный полёт [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/GieVcFEvT0k
+    </string>
+    <string name="escape4_airforcecon">Паспорт на свободу [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/n_bGIb-0UJI
+    </string>
+
+    <string name="escape1_ussanomaly">Космическая гонка [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/-5LO94bxmPM
+    </string>
+    <string name="escape2_ussanomaly">Нарушение периметра \n
+        https://youtu.be/h9Z88g7xnL4
+    </string>
+    <string name="escape3_ussanomaly">Как две капли воды [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/pFzVRM38bh4
+    </string>
+
+    <string name="escape1_santassshakedown">Нарушение периметра \n
+        https://youtu.be/iX8uP499_DM
+    </string>
+    <string name="escape2_santassshakedown">Первые в списке непослушных [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/4VwBtPEBugg
+    </string>
+    <string name="escape3_santassshakedown">Оглянись!Сзади! [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/tUkx4702BiQ
+    </string>
+
+    <string name="escape1_snowwayout">Нарушение периметра \n
+        https://youtu.be/yCTFt89XBmk
+    </string>
+    <string name="escape2_snowwayout">Это не игрушка, а коллекционный предмет [ТОЛЬКО ОДИНОЧНАЯ ИГРА] \n
+        https://youtu.be/GWH3EswExEo
+    </string>
+    <string name="escape3_snowwayout">Батарейки в комплекте не идут [ТОЛЬКО В КОМАНДЕ] \n
+        https://youtu.be/Exz5-KNBZB8
+    </string>
+
+
+
+
+
+
+
+
+
+
+
 
 </resources>

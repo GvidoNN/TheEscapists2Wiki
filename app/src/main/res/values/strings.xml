@@ -1,16 +1,24 @@
 <resources>
+    <!-- TODO: System strings -->
     <string name="app_name">The escapists 2 wiki</string>
     <string name="craft">Crafts</string>
     <string name="map">Maps</string>
     <string name="component">Components</string>
     <string name="item">Item</string>
     <string name="intelligence">Intelligence</string>
+    <string name="ways_to_escape">Ways to escape</string>
+    <!-- TODO: Craft strings -->
+    <!-- Items -->
     <string name="baseball_bat">Wooden Bat</string>
-    <string name="baseball_bat_craft">Timber+Timber+Roll of duct</string>
     <string name="sock_mase">Sock Mace</string>
+    <!-- Craft Items -->
+    <string name="baseball_bat_craft">Timber+Timber+Roll of duct</string>
     <string name="sock_mase_craft">Sock + Soap</string>
+    <!-- TODO: Component strings -->
     <string name="roll_of_duct">Roll of duct</string>
     <string name="timber">Timber</string>
+    <!-- TODO: Map strings -->
+    <!-- Name of maps -->
     <string name="center_perks_2.0" translatable="false">Center Perks 2.0</string>
     <string name="cougar_creek_railroad" translatable="false">Cougar Creek Railroad</string>
     <string name="rattlesnake_springs" translatable="false">Rattlesnake Springs</string>
@@ -21,10 +29,147 @@
     <string name="area17" translatable="false">Area 17</string>
     <string name="airforcecon" translatable="false">Air Force Con</string>
     <string name="ussanomaly" translatable="false">U.S.S. Anomaly</string>
-    <string name="thegloriousregime" translatable="false">The Glorious Regime</string>
-    <string name="wickedward" translatable="false">Wicked Ward</string>
     <string name="santassshakedown" translatable="false">Santa\'s Shakedown</string>
     <string name="snowwayout" translatable="false">Snow Way Out </string>
-    <string name="bigtopbreakout" translatable="false">Big Top Breakout </string>
-    <string name="dungeonsandducttape" translatable="false">Dungeons And Duct Tape </string>
+    <!-- Information about escaping plans -->
+    <string name="escape1_center_perks_2.0">Perimeter Breakout \n
+    https://www.youtube.com/watch?v=VzyhM7-WMKw&amp;ab_channel=Team17 </string>
+    <string name="escape2_center_perks_2.0">Meet The Crew [SINGLE-PLAYER ONLY] \n
+    https://youtu.be/a2OdSuRXnBA</string>
+    <string name="escape3_center_perks_2.0">Last Post [MULTIPLAYER ONLY] \n
+        https://youtu.be/NnE9WfK-usg
+    </string>
+
+    <string name="escape1_cougar_creek_railroad">My Little Phoney [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/cX9MuWS1RVQ
+    </string>
+    <string name="escape2_cougar_creek_railroad">Do The Locomotive [MULTIPLAYER ONLY] \n
+        https://youtu.be/v_pkhiwpQBI
+    </string>
+    <string name="escape3_cougar_creek_railroad">Loose Caboose [MULTIPLAYER ONLY] \n
+        https://youtu.be/-F2OhVv30ZE
+    </string>
+    <string name="escape4_cougar_creek_railroad">Hooked on You [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/jDH6-uh624M
+    </string>
+
+    <string name="escape1_rattlesnake_springs">Perimeter Breakout \n
+        https://youtu.be/jyW4EuVRrA4
+    </string>
+    <string name="escape2_rattlesnake_springs">Zip It Up [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/fQzreO3aLP8
+    </string>
+    <string name="escape3_rattlesnake_springs">Take Out The Trash [MULTIPLAYER ONLY] \n
+        https://youtu.be/Vj0bAGtAUKg
+    </string>
+
+    <string name="escape1_kapowcamp">Perimeter Breakout  \n
+        https://youtu.be/ushBv82D1nQ
+    </string>
+    <string name="escape2_kapowcamp">Speed McQueen [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/2-5VLs0WZmQ
+    </string>
+    <string name="escape3_kapowcamp">Glide To Victory [MULTIPLAYER ONLY] \n
+        https://youtu.be/nvBuhNtEESM
+    </string>
+
+    <string name="escape1_hmsorca">Scuba Doo [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/lqjekP4fz0I
+    </string>
+    <string name="escape2_hmsorca">Wave Goodbye! [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/1d5ODAghaH8
+    </string>
+    <string name="escape3_hmsorca">Masters of Illusion [MULTIPLAYER ONLY] \n
+        https://youtu.be/5JwZE47NNfM
+    </string>
+    <string name="escape4_hmsorca">Taking Back Control [MULTIPLAYER ONLY] \n
+        https://youtu.be/uctzlf_Jz_Q
+    </string>
+
+    <string name="escape1_hmpoffshore">Perimeter Breakout \n
+        https://youtu.be/kuuOMmBoleo
+    </string>
+    <string name="escape2_hmpoffshore">Bad Intentions [MULTIPLAYER ONLY] \n
+        https://youtu.be/OcRl6g8YmgM
+    </string>
+    <string name="escape3_hmpoffshore">Swimming With Dolphins [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/qJ_GeVW4zj4
+    </string>
+    <string name="escape4_hmpoffshore">Trash Talk [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/ZW0Nljw6sag
+    </string>
+
+    <string name="escape1_forttundra">Perimeter Escape \n
+        https://youtu.be/TKCPIqtmbj0
+    </string>
+    <string name="escape2_forttundra">Fun With Jeeps [MULTIPLAYER ONLY] \n
+        https://youtu.be/zhABb4HKSM0
+    </string>
+    <string name="escape3_forttundra">Rock-hammer Hard Place [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/QXiqzurvKsI
+    </string>
+
+    <string name="escape1_area17">Perimeter Breakout \n
+        https://youtu.be/aEued4135ZA
+    </string>
+    <string name="escape2_area17">I\'m Only Human [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/9kPRV8uHVPw
+    </string>
+    <string name="escape3_area17">Alien Technology [MULTIPLAYER ONLY] \n
+        https://youtu.be/xM-0919nIMo
+    </string>
+
+    <string name="escape1_airforcecon">Regain Control [MULTIPLAYER ONLY] \n
+        https://youtu.be/ZTctypnqpuY
+    </string>
+    <string name="escape2_airforcecon">Plane Sailing [MULTIPLAYER ONLY] \n
+        https://youtu.be/p4Wihv7Yv_M
+    </string>
+    <string name="escape3_airforcecon">Plane Crazy [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/GieVcFEvT0k
+    </string>
+    <string name="escape4_airforcecon">Passport to Freedom [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/n_bGIb-0UJI
+    </string>
+
+    <string name="escape1_ussanomaly">Race From Space [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/-5LO94bxmPM
+    </string>
+    <string name="escape2_ussanomaly">Perimeter Breakout \n
+        https://youtu.be/h9Z88g7xnL4
+    </string>
+    <string name="escape3_ussanomaly">Peas In A Pod [MULTIPLAYER ONLY] \n
+        https://youtu.be/pFzVRM38bh4
+    </string>
+
+    <string name="escape1_santassshakedown">Perimeter Breakout [MULTIPLAYER ONLY] \n
+        https://youtu.be/iX8uP499_DM
+    </string>
+    <string name="escape2_santassshakedown">Top of the Naughty List [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/4VwBtPEBugg
+    </string>
+    <string name="escape3_santassshakedown">It\'s Behind You! [MULTIPLAYER ONLY] \n
+        https://youtu.be/tUkx4702BiQ
+    </string>
+
+    <string name="escape1_snowwayout">Perimeter Breakout \n
+        https://youtu.be/yCTFt89XBmk
+    </string>
+    <string name="escape2_snowwayout">It\'s not a toy, it\'s a collectable [SINGLE-PLAYER ONLY] \n
+        https://youtu.be/GWH3EswExEo
+    </string>
+    <string name="escape3_snowwayout">Batteries not included [MULTIPLAYER ONLY] \n
+        https://youtu.be/Exz5-KNBZB8
+    </string>
+
+
+
+
+
+
+
+
+
+
+
 </resources>
