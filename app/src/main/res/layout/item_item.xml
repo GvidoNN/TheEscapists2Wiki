@@ -8,8 +8,8 @@
     <androidx.cardview.widget.CardView
         android:id="@+id/cardView"
         android:layout_width="match_parent"
-        android:layout_height="142dp"
-        android:layout_marginEnd="1dp"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
@@ -18,20 +18,22 @@
         app:layout_constraintVertical_bias="0.0">
 
         <LinearLayout
-            android:layout_width="286dp"
+            android:layout_width="wrap_content"
             android:layout_height="match_parent"
             android:layout_gravity="right"
             android:foregroundGravity="right"
-            android:gravity="right"
             android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvCraft"
-                android:layout_width="92dp"
-                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_gravity="center"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="15dp"
                 android:layout_weight="1"
-                android:text="TextView"
+                android:gravity="center"
+                android:text="@string/cushioned_inmate_outfit_craft"
                 android:textStyle="bold" />
 
             <TextView
@@ -39,9 +41,11 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
+                android:layout_marginRight="10dp"
                 android:layout_weight="1"
-                android:text="TextView"
+                android:text="40+"
                 android:textStyle="bold" />
+
         </LinearLayout>
 
         <LinearLayout
@@ -51,18 +55,22 @@
 
             <ImageView
                 android:id="@+id/title_image"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="120dp"
+                android:layout_height="120dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
                 app:srcCompat="@drawable/baseball" />
 
             <TextView
                 android:id="@+id/tvName"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_gravity="center|fill_horizontal"
-                android:gravity="bottom"
+                android:layout_height="58dp"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="3dp"
+                android:foregroundGravity="center_vertical"
                 android:rotationX="0"
-                android:text="TextView"
+                android:text="Роба заключённого Цветная"
                 android:textSize="14sp"
                 android:textStyle="bold" />
         </LinearLayout>
