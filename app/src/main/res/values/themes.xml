@@ -16,5 +16,6 @@
         <!-- Customize your theme here. -->
         <item name="android:windowActivityTransitions">true</item>
         <item name="android:linksClickable">true</item>
+        <item name="android:orientation">vertical</item>
     </style>
 </resources>

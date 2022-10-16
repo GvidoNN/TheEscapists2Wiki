@@ -18,7 +18,8 @@
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
             android:layout_width="match_parent"
-            android:layout_height="665dp">
+            android:layout_height="665dp"
+            android:layout_gravity="top">
 
         </androidx.recyclerview.widget.RecyclerView>
 
@@ -28,9 +29,10 @@
             android:layout_height="66dp"
             android:layout_gravity="bottom"
             android:background="#FF9800"
-            android:foregroundGravity="center"
             app:itemIconSize="40dp"
             app:itemIconTint="@drawable/bottom_nav_selector"
+            app:layout_anchor="@+id/recyclerView"
+            app:layout_anchorGravity="bottom"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="0.0"

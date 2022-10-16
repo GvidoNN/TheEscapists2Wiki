@@ -13,22 +13,25 @@
         android:id="@+id/recycler_view"
         android:layout_width="match_parent"
         android:layout_height="665dp"
+        app:layout_anchorGravity="top"
         tools:listitem="@layout/item_item" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="66dp"
-        android:layout_gravity="bottom|center|center_horizontal"
+        android:layout_gravity="bottom"
         android:background="#FF9800"
-        android:foregroundGravity="center"
+        android:foregroundGravity="bottom"
         app:itemIconSize="40dp"
         app:itemIconTint="@drawable/bottom_nav_selector"
+        app:layout_anchorGravity="bottom"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_menu" >
+        app:menu="@menu/bottom_menu">
+
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
 
