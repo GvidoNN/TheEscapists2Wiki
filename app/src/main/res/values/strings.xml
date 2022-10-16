@@ -166,7 +166,7 @@
     <string name="crate_base_craft">Timber + Timber + Nails</string>
     <string name="cup_of_tea_craft">Tea Bag + Lump of Sugar + Cup</string>
     <string name="glider_skin_craft">Bed Sheet + Length of Rope</string>
-    <string name="manicure_kit_craft">File + Tub of Hand Cream + Nail Polish</string>
+    <string name="manicure_kit_craft">File + Tub of Hand Cream + Nail мsh</string>
     <string name="makeshift_harness_craft">Length of Rope + Length of Rope \n + Length of Rope</string>
     <string name="makeshift_ladder_craft"> Tin of Paint + Tin of Paint + Tin of Paint</string>
     <string name="readied_fishing_rod_craft">Fishing Rod + Juicy Worm</string>
@@ -204,12 +204,99 @@
     <string name="fake_gun_craft">Moulded Gun + Jar of Ink</string>
     <string name="fishing_rod_craft">Timber + Paper Clip + \n Piece of String</string>
 
-
-
-
     <!-- TODO: Component strings -->
     <string name="roll_of_duct"> Roll of Duct Tape</string>
     <string name="timber">Timber</string>
+    <string name="file">File</string>
+    <string name="sheet_of_metal">Sheet of Metal</string>
+    <string name="dental_floss">Dental Floss</string>
+    <string name="wire">Wire</string>
+    <string name="battery">Battery</string>
+    <string name="comb">Comb</string>
+    <string name="toothbrush">Toothbrush</string>
+    <string name="razor_blade">Razor Blade</string>
+    <string name="sock">Sock</string>
+    <string name="soap">Soap</string>
+    <string name="nails">Nails</string>
+    <string name="glass_shard">Glass Shard</string>
+    <string name="cup">Cup</string>
+    <string name="mug">Mug</string>
+    <string name="bar_of_chocolate">Bar of Chocolate</string>
+    <string name="lighter">Lighter</string>
+    <string name="broom">Broom</string>
+    <string name="broom_handle">Broom Handle</string>
+    <string name="old_box">Old Box</string>
+    <string name="piece_of_string">Piece of String</string>
+    <string name="length_of_rope">Length of Rope</string>
+    <string name="tin_of_paint">Tin of Paint</string>
+    <string name="pillow_case">Pillow Case</string>
+    <string name="paper_clip">Paper Clip</string>
+    <string name="metal_baton">Metal Baton</string>
+    <string name="jar_of_ink">Jar of Ink</string>
+    <string name="inmate_outfit">Inmate Outfit</string>
+    <string name="foil">Foil</string>
+    <string name="book">Book</string>
+    <string name="pillow">Pillow</string>
+    <string name="tub_of_bleach">Tub of Bleach</string>
+    <string name="bed_sheet">Bed Sheet</string>
+    <string name="magazine">Magazine</string>
+    <string name="crowbar">Crowbar</string>
+    <string name="wax">Wax</string>
+    <string name="roll_of_toilet_paper">Roll of Toilet Paper</string>
+    <string name="tube_of_glue">Tube of Glue</string>
+    <string name="circuit_board">Circuit Board</string>
+    <string name="tub_of_talcum_powder">Tub of Talcum Powder</string>
+    <string name="tea_bag">Tea Bag</string>
+    <string name="lump_of_sugar">Lump of Sugar</string>
+    <string name="tub_of_hand_cream">Tub of Hand Cream</string>
+    <string name="nail_polish">Nail Polish</string>
+    <string name="juicy_worm">Juicy Worm</string>
+    <string name="seeds">Seeds</string>
+    <string name="soil">Soil</string>
+    <string name="handkerchief">Handkerchief</string>
+    <string name="orange_coloured_pen">Orange Coloured Pen</string>
+    <string name="green_coloured_pen">Green Coloured Pen</string>
+    <string name="dowel">Dowel</string>
+    <string name="paint_brush">Paint Brush</string>
+    <string name="bottle_of_aftershave">Bottle of Aftershave</string>
+    <string name="tubing">Tubing</string>
+    <string name="family_photo">Family Photo</string>
+    <string name="can_of_soda">Can Of Soda</string>
+    <string name="sugar_mint">Sugar Mint</string>
+    <string name="washboard">Washboard</string>
+    <string name="pie_filling">Pie Filling</string>
+    <string name="pastry_case">Pastry Case</string>
+    <string name="trash_bag">Trash Bag</string>
+    <string name="bracket">Bracket</string>
+    <string name="hammer">Hammer</string>
+    <string name="bolts">Bolts</string>
+    <string name="radio_receiver">Radio Receiver</string>
+    <string name="ice_pack">Ice Pack</string>
+    <string name="sheet_of_paper">Sheet of Paper</string>
+    <string name="tube_of_art_paints">Tube of Art Paints</string>
+    <string name="fine_art_brush">Fine Art Brush</string>
+    <string name="bag_of_flour">Bag of Flour</string>
+    <string name="bottle_of_milk">Bottle of Milk</string>
+    <string name="shoe_sole">Shoe Sole</string>
+    <string name="shoe_body">Shoe Body</string>
+    <string name="tank_of_oxygen">Tank of Oxygen</string>
+    <string name="dinner_tray">Dinner Tray</string>
+    <string name="blank_security_pass">Blank Security Pass</string>
+    <string name="feather">Feather</string>
+    <string name="toothpaste">Toothpaste</string>
+
+    
+
+    
+
+
+
+
+
+    
+    
+    
+    
     <!-- TODO: Map strings -->
     <!-- Name of maps -->
     <string name="center_perks_2.0" translatable="false">Center Perks 2.0</string>
