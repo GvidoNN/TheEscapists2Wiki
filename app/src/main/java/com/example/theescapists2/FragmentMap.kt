@@ -43,6 +43,7 @@ class FragmentMap : Fragment(), MapAdapter.Listener{
                 else -> false
             }
         }
+        Log.d("MyLog","On Create View")
         return binding.root
     }
 
@@ -66,6 +67,7 @@ class FragmentMap : Fragment(), MapAdapter.Listener{
         recyclerView.setHasFixedSize(true)
         adapter = MapAdapter(mapsArrayList, this)
         recyclerView.adapter = adapter
+        Log.d("MyLog","OnViewCreated")
 
     }
 

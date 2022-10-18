@@ -285,18 +285,7 @@
     <string name="feather">Feather</string>
     <string name="toothpaste">Toothpaste</string>
 
-    
 
-    
-
-
-
-
-
-    
-    
-    
-    
     <!-- TODO: Map strings -->
     <!-- Name of maps -->
     <string name="center_perks_2.0" translatable="false">Center Perks 2.0</string>
@@ -441,15 +430,6 @@
     <string name="escape3_snowwayout">Batteries not included [MULTIPLAYER ONLY] \n
         https://youtu.be/Exz5-KNBZB8
     </string>
-
-
-
-
-
-
-
-
-
 
 
 </resources>
