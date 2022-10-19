@@ -120,7 +120,7 @@
     <string name="makeshift_spear_craft">Ручка от метлы + \n Осколок стекла \n + Изолента</string>
     <string name="knuckle_duster_craft">Лезвие + Изолента</string>
     <string name="super_knuckle_duster_craft">Кастет + Энергомодуль</string>
-    <string name="cup_of_molten_chocolate_craft"> Чашка + Плитка шоколада + Зажигалка</string>
+    <string name="cup_of_molten_chocolate_craft"> Чашка + \n Плитка шоколада + Зажигалка</string>
     <string name="makeshift_double_bass_craft">Коробка + Ручка от метлы + \n Кусок бечёвки</string>
     <string name="nunchucks_craft">Провод + Доска + Доска</string>
     <string name="makeshift_sledgehammer_craft"> Ручка от метлы + Баночка краски \n + Изолента</string>
@@ -146,13 +146,13 @@
     <string name="cushioned_inmate_outfit_craft"> Экипировка заключённого + \n Подушка \n + Изолента</string>
     <string name="padded_inmate_outfit_craft">Одежда заключённого + Изолента + Книга</string>
     <string name="plated_Inmate_outfit_craft">Одежда заключённого ИЛИ \n Форма охранника + \n Металл. Пластина + Изолента</string>
-    <string name="makeshift_robot_guard_outfit_craft">Металл. Пластина + Рулон Фольги + Изолента</string>
+    <string name="makeshift_robot_guard_outfit_craft">Металл. Пластина + \n Рулон Фольги + Изолента</string>
     <string name="fake_wall_block_craft">Папье-маше + Папье-маше + Чернила</string>
     <string name="fake_vent_cover_craft">Папье-маше + Папье-маше</string>
     <string name="fake_fence_craft">Провод + Провод + Провод</string>
     <string name="bed_dummy_craft">Подушка + Подушка + Простыня</string>
     <string name="contraband_pouch_craft">Рулон Фольги + Изолента</string>
-    <string name="durable_contraband_pouch_craft">Рулон Фольги + Рулон Фольги + Изолента</string>
+    <string name="durable_contraband_pouch_craft">Рулон Фольги + \n Рулон Фольги + Изолента</string>
     <string name="poster_craft">Журнал + Изолента</string>
     <string name="grapple_head_craft">Ломик + Ломик + Изолента</string>
     <string name="grappling_hook_craft">Захват+ Маток ниток</string>

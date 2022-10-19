@@ -59,14 +59,16 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center|top"
-        android:text="@string/craft" />
+        android:text="@string/craft"
+        android:textColor="@color/purple_700" />
 
     <TextView
         android:id="@+id/tvHeadingIntelligence"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right|top"
-        android:text="@string/intelligence" />
+        android:text="@string/intelligence"
+        android:textColor="@color/purple_700" />
 
 
 </FrameLayout>
