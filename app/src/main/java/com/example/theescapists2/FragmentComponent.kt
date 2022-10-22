@@ -11,6 +11,9 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.theescapists2.databinding.FragmentComponentBinding
 import com.example.theescapists2.recycler.ComponentAdapter
 import com.example.theescapists2.recycler.Components
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.AdView
+import com.google.android.gms.ads.MobileAds
 
 class FragmentComponent : Fragment() {
     private lateinit var adapter: ComponentAdapter
@@ -18,6 +21,7 @@ class FragmentComponent : Fragment() {
     private lateinit var componentsArrayList: ArrayList<Components>
     lateinit var imageId: Array<Int>
     lateinit var name: Array<String>
+    lateinit var advertising : AdView
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = FragmentComponentBinding.inflate(inflater)
@@ -40,8 +44,12 @@ class FragmentComponent : Fragment() {
             }
         }
 
+        MobileAds.initialize(requireContext()) {}
+        val adRequest = AdRequest.Builder().build()
+        binding.adView2.loadAd(adRequest)
         return binding.root
     }
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -52,16 +60,6 @@ class FragmentComponent : Fragment() {
         recyclerView.setHasFixedSize(true)
         adapter = ComponentAdapter(componentsArrayList)
         recyclerView.adapter = adapter
-    }
-
-    companion object {
-        @JvmStatic
-        fun newInstance() =
-            FragmentComponent().apply {
-                arguments = Bundle().apply {
-
-                }
-            }
     }
 
     fun dataInitialize(){

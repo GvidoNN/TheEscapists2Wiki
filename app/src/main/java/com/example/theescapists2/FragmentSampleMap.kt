@@ -1,16 +1,14 @@
 package com.example.theescapists2
 
 import android.os.Bundle
-import android.text.method.LinkMovementMethod
 import android.text.util.Linkify
-import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.TextView
 import androidx.navigation.fragment.findNavController
 import com.example.theescapists2.databinding.FragmentSampleMapBinding
+
 
 
 class FragmentSampleMap : Fragment() {
@@ -46,8 +44,6 @@ class FragmentSampleMap : Fragment() {
         binding.btBack.setOnClickListener{
             findNavController().navigate(R.id.action_fragmentSampleMap_to_fragmentMap)
         }
-
-
 
         return binding.root
     }

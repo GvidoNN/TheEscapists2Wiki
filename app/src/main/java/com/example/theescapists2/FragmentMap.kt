@@ -1,12 +1,12 @@
 package com.example.theescapists2
 
+import android.app.Activity
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.FrameLayout
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
@@ -14,18 +14,28 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.theescapists2.databinding.FragmentMapBinding
 import com.example.theescapists2.recycler.MapAdapter
 import com.example.theescapists2.recycler.Maps
+import com.google.android.gms.ads.AdError
+import com.google.android.gms.ads.AdRequest
+import com.google.android.gms.ads.FullScreenContentCallback
+import com.google.android.gms.ads.LoadAdError
+import com.google.android.gms.ads.interstitial.InterstitialAd
+import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import kotlin.collections.ArrayList
+
 
 class FragmentMap : Fragment(), MapAdapter.Listener{
-
     private lateinit var adapter: MapAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var mapsArrayList: ArrayList<Maps>
     lateinit var imageId: Array<Int>
     lateinit var name: Array<String>
     lateinit var bundle : Bundle
+    private var interAd: InterstitialAd? = null
+
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = FragmentMapBinding.inflate(inflater)
+        loadInterAd()
         binding.bottomNavigation.selectedItemId = R.id.mapsId
         binding.bottomNavigation.setOnItemSelectedListener {
             when (it.itemId) {
@@ -43,18 +53,9 @@ class FragmentMap : Fragment(), MapAdapter.Listener{
                 else -> false
             }
         }
+
         return binding.root
-    }
 
-
-    companion object {
-        @JvmStatic
-        fun newInstance() =
-            FragmentMap().apply {
-                arguments = Bundle().apply {
-
-                }
-            }
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -66,7 +67,41 @@ class FragmentMap : Fragment(), MapAdapter.Listener{
         recyclerView.setHasFixedSize(true)
         adapter = MapAdapter(mapsArrayList, this)
         recyclerView.adapter = adapter
+    }
 
+    private fun showInterAd(){
+        if(interAd != null){
+            interAd?.fullScreenContentCallback = object : FullScreenContentCallback(){
+                override fun onAdDismissedFullScreenContent() {
+                    interAd = null
+                    loadInterAd()
+                }
+
+                override fun onAdFailedToShowFullScreenContent(p0: AdError) {
+                    interAd = null
+                    super.onAdFailedToShowFullScreenContent(p0)
+                }
+
+                override fun onAdShowedFullScreenContent() {
+                    interAd = null
+                    loadInterAd()
+                }
+            }
+            interAd?.show(requireContext() as Activity)
+        }
+    }
+
+    private fun loadInterAd(){
+        val adRequest = AdRequest.Builder().build()
+        InterstitialAd.load(requireContext(), "ca-app-pub-7592888554989577/7116101010", adRequest, object : InterstitialAdLoadCallback(){
+            override fun onAdFailedToLoad(p0: LoadAdError) {
+                interAd = null
+            }
+
+            override fun onAdLoaded(ad: InterstitialAd) {
+                interAd = ad
+            }
+        })
     }
 
     private fun dataInitialize() {
@@ -110,6 +145,7 @@ class FragmentMap : Fragment(), MapAdapter.Listener{
 
     override fun onClick(map: Maps) {
         bundle = Bundle()
+        showInterAd()
 
         when(map.mapName){
             getString(R.string.center_perks_2_0) -> {

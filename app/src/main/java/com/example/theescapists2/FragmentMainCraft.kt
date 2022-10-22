@@ -49,7 +49,6 @@ class FragmentMainCraft : Fragment(){
         return binding.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         dataInitialize()
@@ -60,6 +59,7 @@ class FragmentMainCraft : Fragment(){
         adapter = ItemAdapter(itemsArrayList)
         recyclerView.adapter = adapter
     }
+
 
     private fun dataInitialize() {
         itemsArrayList = arrayListOf<Items>()

@@ -37,6 +37,7 @@
             app:menu="@menu/bottom_menu">
 
         </com.google.android.material.bottomnavigation.BottomNavigationView>
+
     </LinearLayout>
 
 </FrameLayout>
