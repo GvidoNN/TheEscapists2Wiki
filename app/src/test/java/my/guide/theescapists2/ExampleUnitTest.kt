@@ -1,4 +1,4 @@
-package com.example.theescapists2
+package my.guide.theescapists2
 
 import org.junit.Test
 

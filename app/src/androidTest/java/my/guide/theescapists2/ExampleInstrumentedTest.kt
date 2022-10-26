@@ -1,4 +1,4 @@
-package com.example.theescapists2
+package my.guide.theescapists2
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.ext.junit.runners.AndroidJUnit4

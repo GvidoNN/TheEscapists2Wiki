@@ -1,12 +1,11 @@
-package com.example.theescapists2.recycler
+package my.guide.theescapists2.recycler
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.theescapists2.R
-import com.example.theescapists2.databinding.ItemMapBinding
+import my.guide.theescapists2.R
+import my.guide.theescapists2.databinding.ItemMapBinding
 
 class MapAdapter(private var MapsArrayList: ArrayList<Maps>, val listener: Listener):
     RecyclerView.Adapter<MapAdapter.MapsViewHolder>() {

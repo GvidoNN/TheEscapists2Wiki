@@ -1,11 +1,11 @@
-package com.example.theescapists2.recycler
+package my.guide.theescapists2.recycler
 
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.example.theescapists2.R
-import com.example.theescapists2.databinding.ItemItemBinding
+import my.guide.theescapists2.R
+import my.guide.theescapists2.databinding.ItemItemBinding
 
 class ItemAdapter(private val itemList: ArrayList<Items>): RecyclerView.Adapter<ItemAdapter.ItemsViewHolder>() {
 

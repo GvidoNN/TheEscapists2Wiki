@@ -1,4 +1,4 @@
-package com.example.theescapists2
+package my.guide.theescapists2
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.theescapists2.databinding.FragmentComponentBinding
-import com.example.theescapists2.recycler.ComponentAdapter
-import com.example.theescapists2.recycler.Components
+import my.guide.theescapists2.databinding.FragmentComponentBinding
+import my.guide.theescapists2.recycler.ComponentAdapter
+import my.guide.theescapists2.recycler.Components
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.AdView
 import com.google.android.gms.ads.MobileAds

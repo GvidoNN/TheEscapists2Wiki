@@ -1,8 +1,8 @@
-package com.example.theescapists2
+package my.guide.theescapists2
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.example.theescapists2.databinding.ActivityMainBinding
+import my.guide.theescapists2.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding

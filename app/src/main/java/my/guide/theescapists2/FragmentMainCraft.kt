@@ -1,4 +1,4 @@
-package com.example.theescapists2
+package my.guide.theescapists2
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,9 +8,9 @@ import android.view.ViewGroup
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.example.theescapists2.databinding.FragmentMainCraftBinding
-import com.example.theescapists2.recycler.ItemAdapter
-import com.example.theescapists2.recycler.Items
+import my.guide.theescapists2.databinding.FragmentMainCraftBinding
+import my.guide.theescapists2.recycler.ItemAdapter
+import my.guide.theescapists2.recycler.Items
 
 
 class FragmentMainCraft : Fragment(){
