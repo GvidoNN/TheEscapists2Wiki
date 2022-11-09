@@ -27,7 +27,7 @@
         <com.google.android.gms.ads.AdView
             android:id="@+id/adView2"
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="125dp"
             android:layout_marginBottom="3dp"
             android:layout_weight="1"
             app:adSize="BANNER"

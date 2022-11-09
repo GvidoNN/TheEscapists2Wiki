@@ -11,10 +11,14 @@
         android:label="FragmentMainCraft" >
         <action
             android:id="@+id/action_fragmentMainCraft_to_fragmentMap"
-            app:destination="@id/fragmentMap" />
+            app:destination="@id/fragmentMap"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
         <action
             android:id="@+id/action_fragmentMainCraft_to_fragmentWallpaper"
-            app:destination="@id/fragmentComponent" />
+            app:destination="@id/fragmentComponent"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
     </fragment>
     <fragment
         android:id="@+id/fragmentMap"
@@ -23,10 +27,14 @@
         tools:layout="@layout/fragment_map" >
         <action
             android:id="@+id/action_fragmentMap_to_fragmentMainCraft"
-            app:destination="@id/fragmentMainCraft" />
+            app:destination="@id/fragmentMainCraft"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
         <action
             android:id="@+id/action_fragmentMap_to_fragmentWallpaper"
-            app:destination="@id/fragmentComponent" />
+            app:destination="@id/fragmentComponent"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
         <action
             android:id="@+id/action_fragmentMap_to_fragmentSampleMap"
             app:destination="@id/fragmentSampleMap" />
@@ -38,10 +46,14 @@
         tools:layout="@layout/fragment_component">
         <action
             android:id="@+id/action_fragmentWallpaper_to_fragmentMainCraft"
-            app:destination="@id/fragmentMainCraft" />
+            app:destination="@id/fragmentMainCraft"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
         <action
             android:id="@+id/action_fragmentWallpaper_to_fragmentMap"
-            app:destination="@id/fragmentMap" />
+            app:destination="@id/fragmentMap"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
     </fragment>
     <fragment
         android:id="@+id/fragmentSampleMap"
