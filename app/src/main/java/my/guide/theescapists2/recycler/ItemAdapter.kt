@@ -7,7 +7,8 @@ import androidx.recyclerview.widget.RecyclerView
 import my.guide.theescapists2.R
 import my.guide.theescapists2.databinding.ItemItemBinding
 
-class ItemAdapter(private val itemList: ArrayList<Items>): RecyclerView.Adapter<ItemAdapter.ItemsViewHolder>() {
+class ItemAdapter(private var itemList: ArrayList<Items>): RecyclerView.Adapter<ItemAdapter.ItemsViewHolder>(){
+
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemsViewHolder {
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_item,parent,false)
@@ -17,7 +18,6 @@ class ItemAdapter(private val itemList: ArrayList<Items>): RecyclerView.Adapter<
     override fun onBindViewHolder(holder: ItemsViewHolder, position: Int) {
         holder.bind(itemList[position])
         }
-
 
     override fun getItemCount(): Int {
         return itemList.size
@@ -29,8 +29,12 @@ class ItemAdapter(private val itemList: ArrayList<Items>): RecyclerView.Adapter<
             binding.titleImage.setImageResource(item.imageId)
             binding.tvName.text = item.name
             binding.tvCraft.text = item.craft
+            binding.imOne.setImageResource(item.imOne)
+            binding.imTwo.setImageResource(item.imTwo)
+            binding.imThree.setImageResource(item.imThree)
             binding.tvIntelligence.text = item.intelligence
         }
     }
+
 
 }

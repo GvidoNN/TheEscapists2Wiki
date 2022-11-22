@@ -9,6 +9,8 @@
         <entry key="..\:/Theescapists2/app/src/main/res/drawable/ic_launcher_background.xml" value="0.1" />
         <entry key="..\:/Theescapists2/app/src/main/res/drawable/ic_maps.xml" value="0.1" />
         <entry key="..\:/Theescapists2/app/src/main/res/drawable/ic_wallpapers.xml" value="0.1" />
+        <entry key="..\:/Theescapists2/app/src/main/res/drawable/search_background.xml" value="0.8800000000000001" />
+        <entry key="..\:/Theescapists2/app/src/main/res/drawable/searchview_background.xml" value="0.247" />
         <entry key="..\:/Theescapists2/app/src/main/res/drawable/slashscreen.xml" value="0.1" />
         <entry key="..\:/Theescapists2/app/src/main/res/layout/activity_main.xml" value="0.264" />
         <entry key="..\:/Theescapists2/app/src/main/res/layout/activity_maps.xml" value="0.22760416666666666" />
@@ -27,6 +29,7 @@
         <entry key="..\:/Theescapists2/app/src/main/res/layout/nonitems.xml" value="0.253125" />
         <entry key="..\:/Theescapists2/app/src/main/res/menu/bottom_menu.xml" value="0.253125" />
         <entry key="..\:/Theescapists2/app/src/main/res/menu/menu_main.xml" value="0.22760416666666666" />
+        <entry key="..\:/Theescapists2/app/src/main/res/menu/search_craft.xml" value="0.25416666666666665" />
         <entry key="..\:/Theescapists2/app/src/main/res/menu/status_bar.xml" value="0.22760416666666666" />
       </map>
     </option>

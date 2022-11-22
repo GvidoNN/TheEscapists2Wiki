@@ -4,12 +4,13 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/purple_500"
     tools:context="my.guide.theescapists2.FragmentSampleMap">
 
     <ScrollView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:background="@drawable/background">
+        android:background="@color/purple_500">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -39,22 +40,19 @@
                 android:id="@+id/imPrison"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="5dp"
-                 />
+                android:layout_margin="5dp" />
 
             <ImageView
                 android:id="@+id/imSchedule"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                 />
+                android:layout_height="wrap_content" />
 
             <ImageView
                 android:id="@+id/imJob"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
-                android:layout_marginTop="10dp"
-                 />
+                android:layout_marginTop="10dp" />
 
             <TextView
                 android:id="@+id/tvTitleEscape"
@@ -62,9 +60,9 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:text="@string/ways_to_escape"
+                android:textColor="@color/white"
                 android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvEscapingPlan1"
@@ -74,9 +72,9 @@
                 android:gravity="top"
                 android:linksClickable="true"
                 android:text="@string/center_perks_2.0"
+                android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvEscapingPlan2"
@@ -84,11 +82,11 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:gravity="top"
-                android:text="@string/center_perks_2.0"
                 android:linksClickable="true"
+                android:text="@string/center_perks_2.0"
+                android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvEscapingPlan3"
@@ -98,18 +96,18 @@
                 android:gravity="top"
                 android:linksClickable="true"
                 android:text="@string/center_perks_2.0"
+                android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
             <TextView
                 android:id="@+id/tvEscapingPlan4"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:linksClickable="true"
+                android:textColor="@color/white"
                 android:textSize="18sp"
-                android:textStyle="bold"
-                android:textColor="@color/white"/>
+                android:textStyle="bold" />
 
         </LinearLayout>
     </ScrollView>

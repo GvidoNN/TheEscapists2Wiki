@@ -111,7 +111,7 @@
 
 
     <!-- Craft Items -->
-    <string name="baseball_bat_craft">Изолента+Изолента+Доска</string>
+    <string name="baseball_bat_craft">Изолента + \n Изолента + Доска</string>
     <string name="sock_mase_craft">Носок + Мыло</string>
     <string name="glass_shank_craft">Осколок стекла + Изолента</string>
     <string name="comb_blade_craft">Гребень + Лезвие</string>
@@ -121,10 +121,10 @@
     <string name="makeshift_spear_craft">Ручка от метлы + \n Осколок стекла \n + Изолента</string>
     <string name="knuckle_duster_craft">Лезвие + Изолента</string>
     <string name="super_knuckle_duster_craft">Кастет + Энергомодуль</string>
-    <string name="cup_of_molten_chocolate_craft"> Чашка + \n Плитка шоколада + Зажигалка</string>
+    <string name="cup_of_molten_chocolate_craft"> Чашка + \n Плитка шоколада \n + Зажигалка</string>
     <string name="makeshift_double_bass_craft">Коробка + Ручка от метлы + \n Кусок бечёвки</string>
     <string name="nunchucks_craft">Провод + Доска + Доска</string>
-    <string name="makeshift_sledgehammer_craft"> Ручка от метлы + Баночка краски \n + Изолента</string>
+    <string name="makeshift_sledgehammer_craft"> Ручка от метлы \n + Баночка краски \n + Изолента</string>
     <string name="super_baseball_bat_craft">Бейсбольная бита \n + Изолента + Гвозди</string>
     <string name="energy_module_craft">Батарейка + \n Батарейка + Провод</string>
     <string name="makeshift_stungun_craft">Энергомодуль + \n Скрепка + Изолента</string>
@@ -134,21 +134,21 @@
     <string name="flimsy_pickaxe_craft">Ручка инструмента + \n Ломик + Изолента</string>
     <string name="lightweight_pickaxe_craft">Хлипкая кирка + \n Доска + Изолента</string>
     <string name="sturdy_pickaxe_craft">Лёгкая кирка + \n Доска + Изолента</string>
-    <string name="flimsy_shovel_craft">Ручка инструмента + Металл. Пластина \n +  Изолента</string>
-    <string name="lightweight_shovel_craft">Хлипкая лопата + Металл. Пластина \n +  Изолента</string>
-    <string name="sturdy_shovel_craft">Лёгкая лопата + Металл. Пластина \n +  Изолента</string>
+    <string name="flimsy_shovel_craft">Ручка инструмента \n + Металл. Пластина \n +  Изолента</string>
+    <string name="lightweight_shovel_craft">Хлипкая лопата \n + Металл. Пластина \n +  Изолента</string>
+    <string name="sturdy_shovel_craft">Лёгкая лопата \n + Металл. Пластина \n +  Изолента</string>
     <string name="flimsy_cutters_craft">Напильник + \n Напильник +  Изолента</string>
     <string name="lightweight_cutters_craft">Хлипкие кусачки + \n Напильник +  Изолента</string>
     <string name="sturdy_cutters_craft">Лёгкие кусачки + \n Напильник + Изолента</string>
-    <string name="multitool_craft">Прочная лопата + Прочная кирка \n + Изолента</string>
+    <string name="multitool_craft">Прочная лопата \n + Прочная кирка \n + Изолента</string>
     <string name="cutting_floss_craft">Зубная нить + Зубная нить \n + Зубная нить</string>
     <string name="guard_outfit_craft">Чернила + Медицинский \n комбинезон</string>
     <string name="infirmary_overalls_craft">Одежда заключённого ИЛИ \n Форма охранника \n + Отбеливатель</string>
     <string name="cushioned_inmate_outfit_craft"> Экипировка заключённого + \n Подушка \n + Изолента</string>
-    <string name="padded_inmate_outfit_craft">Одежда заключённого + Изолента + Книга</string>
+    <string name="padded_inmate_outfit_craft">Одежда заключённого \n + Изолента \n + Книга</string>
     <string name="plated_Inmate_outfit_craft">Одежда заключённого ИЛИ \n Форма охранника + \n Металл. Пластина + Изолента</string>
     <string name="makeshift_robot_guard_outfit_craft">Металл. Пластина + \n Рулон Фольги + Изолента</string>
-    <string name="fake_wall_block_craft">Папье-маше + Папье-маше + \n Чернила</string>
+    <string name="fake_wall_block_craft">Папье-маше \n + Папье-маше + \n Чернила</string>
     <string name="fake_vent_cover_craft">Папье-маше + Папье-маше</string>
     <string name="fake_fence_craft">Провод + Провод + Провод</string>
     <string name="bed_dummy_craft">Подушка +  \n Подушка + Простыня</string>
@@ -172,9 +172,9 @@
     <string name="glider_skin_craft">Простыня + Моток верёвки</string>
     <string name="manicure_kit_craft">Напильник + Крем для рук + \n Лак для ногтей</string>
     <string name="makeshift_harness_craft">Моток верёвки + \n Моток верёвки + \n Моток верёвки</string>
-    <string name="makeshift_ladder_craft">Баночка краски + Баночка краски + \n Баночка краски</string>
+    <string name="makeshift_ladder_craft">Баночка краски \n + Баночка краски + \n Баночка краски</string>
     <string name="readied_fishing_rod_craft">Удочка + Червяк</string>
-    <string name="parachute_craft">Простыня + Самодельная упряжь</string>
+    <string name="parachute_craft">Простыня \n + Самодельная упряжь</string>
     <string name="potted_plant_craft">Кружка + Семена \n + Земля</string>
     <string name="pretend_flower_craft">Носовой платок + \n Оранжевая ручка + Дюбель</string>
     <string name="pretend_carrot_craft">Носовой платок + \n Оранжевая ручка + \n Зелёная ручка</string>
@@ -185,20 +185,20 @@
     <string name="glue_readied_furniture_craft">Разобраная мебель + Клей</string>
     <string name="makeshift_rocket_thruster_craft">Банка содовой + Сладкая мята</string>
     <string name="music_washboard_craft">Кусок бечёвки + \n Стиральная доска + Клей</string>
-    <string name="uncooked_pie_craft">Начинка пирога + Форма для выпечки</string>
+    <string name="uncooked_pie_craft">Начинка пирога \n + Форма для выпечки</string>
     <string name="unglued_furniture_craft">Доска + Доска</string>
     <string name="breathable_trash_bag_craft">Мешок для мусора + \n Респиратор + Изолента</string>
     <string name="crate_casing_craft">Поддон + Кронштейн</string>
     <string name="crate_top_craft">Доска + Гвозди + Молоток</string>
     <string name="crossbow_body_craft">Доска + Доска + Болты</string>
-    <string name="crossbow_lathe_craft">Дюбель + Кусок бечёвки + Клей</string>
-    <string name="fake_audio_equipment_craft">Метла + Изолента + Радиоприёмник</string>
+    <string name="crossbow_lathe_craft">Дюбель + \n Кусок бечёвки + Клей</string>
+    <string name="fake_audio_equipment_craft">Метла + \n Изолента + \n Радиоприёмник</string>
     <string name="gun_making_kit_craft">Воск + Мыло</string>
-    <string name="half_frame_of_glider_craft">Дюбель + Дюбель + Изолента</string>
+    <string name="half_frame_of_glider_craft">Дюбель + \n Дюбель + Изолента</string>
     <string name="heart_rate_slower_craft">Лёд + Лёд + Изолента</string>
     <string name="beautiful_painting_craft">Лист бумаги + \n Тюбик краски + \n Кисточка</string>
     <string name="cake_craft">Мешок муки + \n Бутылка молока + Кусок сахара</string>
-    <string name="escapists_figurine_craft">Расплавленный пластик +\n Подготовленная малярная кисть + Клей</string>
+    <string name="escapists_figurine_craft">Расплавленный пластик +\n Подготовленная малярная кисть \n+ Клей</string>
     <string name="machine_ready_shoe_craft">Подошва + Корпус обуви</string>
     <string name="makeshift_breathing_apparatus_craft">Баллон с кислородом +\n Трубы + Изолента</string>
     <string name="moulded_gun_craft">Набор для создания оружия +\n Зажигалка + Поднос</string>
