@@ -15,6 +15,11 @@ class ItemAdapter(private var itemList: ArrayList<Items>): RecyclerView.Adapter<
         return ItemsViewHolder(view)
     }
 
+    fun setFilteredList(itemList: ArrayList<Items>){
+        this.itemList = itemList
+        notifyDataSetChanged()
+    }
+
     override fun onBindViewHolder(holder: ItemsViewHolder, position: Int) {
         holder.bind(itemList[position])
         }

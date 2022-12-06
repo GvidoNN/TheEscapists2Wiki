@@ -2,22 +2,23 @@ package my.guide.theescapists2
 
 import android.os.Bundle
 import android.view.*
-import android.widget.Adapter
-import android.widget.ArrayAdapter
 import androidx.fragment.app.Fragment
-import android.widget.SearchView
+import androidx.appcompat.widget.SearchView
 import androidx.navigation.Navigation
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import my.guide.theescapists2.databinding.FragmentMainCraftBinding
 import my.guide.theescapists2.recycler.ItemAdapter
 import my.guide.theescapists2.recycler.Items
+import java.util.*
+import kotlin.collections.ArrayList
 
 
-class FragmentMainCraft : Fragment(){
+class FragmentMainCraft : Fragment() {
     private lateinit var adapter: ItemAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var itemsArrayList: ArrayList<Items>
+    private lateinit var searchView: SearchView
     lateinit var imageId: Array<Int>
     lateinit var name: Array<String>
     lateinit var craft: Array<String>
@@ -25,7 +26,6 @@ class FragmentMainCraft : Fragment(){
     lateinit var imOneId: Array<Int>
     lateinit var imTwoId: Array<Int>
     lateinit var imThreeId: Array<Int>
-
 
 
     override fun onCreateView(
@@ -60,11 +60,39 @@ class FragmentMainCraft : Fragment(){
         dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recycler_view)
+        searchView = view.findViewById(R.id.searchView)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
         adapter = ItemAdapter(itemsArrayList)
         recyclerView.adapter = adapter
 
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                filterList(newText)
+                return true
+            }
+
+        })
+
+    }
+
+    private fun filterList(query: String?) {
+        if (query != null) {
+            val filteredList = ArrayList<Items>()
+            for (i in itemsArrayList) {
+                if (i.name.lowercase(Locale.ROOT).contains(query.lowercase())) {
+                    filteredList.add(i)
+                }
+            }
+            if (filteredList.isEmpty()) {
+            } else {
+                adapter.setFilteredList(filteredList)
+            }
+        }
     }
 
     private fun dataInitialize() {
@@ -663,7 +691,8 @@ class FragmentMainCraft : Fragment(){
             getString(R.string.fishing_rod_craft)
         )
 
-        intelligence = arrayOf("40+",
+        intelligence = arrayOf(
+            "40+",
             "40+",
             "40+",
             "40+",
@@ -763,7 +792,15 @@ class FragmentMainCraft : Fragment(){
         )
 
         for (i in imageId.indices) {
-            val items = Items(imageId[i], name[i], craft[i], intelligence[i], imOneId[i], imTwoId[i], imThreeId[i])
+            val items = Items(
+                imageId[i],
+                name[i],
+                craft[i],
+                intelligence[i],
+                imOneId[i],
+                imTwoId[i],
+                imThreeId[i]
+            )
             itemsArrayList.add(items)
         }
     }
