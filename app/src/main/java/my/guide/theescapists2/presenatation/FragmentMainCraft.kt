@@ -10,9 +10,9 @@ import androidx.recyclerview.widget.RecyclerView
 import my.guide.theescapists2.R
 import my.guide.theescapists2.data.repository.ItemsRepositoryImpl
 import my.guide.theescapists2.databinding.FragmentMainCraftBinding
+import my.guide.theescapists2.domain.usecase.SearchCraftsUseCase
 import my.guide.theescapists2.recycler.ItemAdapter
 import my.guide.theescapists2.recycler.Items
-import java.util.*
 import kotlin.collections.ArrayList
 
 
@@ -28,6 +28,7 @@ class FragmentMainCraft : Fragment() {
     lateinit var imOneId: Array<Int>
     lateinit var imTwoId: Array<Int>
     lateinit var imThreeId: Array<Int>
+
 
 
 
@@ -59,6 +60,9 @@ class FragmentMainCraft : Fragment() {
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        val layoutManager = LinearLayoutManager(context)
+//        dataInitialize()
         var data = ItemsRepositoryImpl(
             itemsArrayList = arrayListOf<Items>(),
             imOneId = arrayOf<Int>(),
@@ -70,33 +74,33 @@ class FragmentMainCraft : Fragment() {
             intelligence = arrayOf<String>(),
             context = requireContext()
         )
-        super.onViewCreated(view, savedInstanceState)
-        val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recycler_view)
         searchView = view.findViewById(R.id.searchView)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
+//        adapter = ItemAdapter(itemsArrayList)
         adapter = ItemAdapter(data.dataInitialize())
         recyclerView.adapter = adapter
+        var search = SearchCraftsUseCase(data,adapter)
 
-//        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-//            override fun onQueryTextSubmit(query: String?): Boolean {
-//                return false
-//            }
-//
-//            override fun onQueryTextChange(newText: String?): Boolean {
-//                filterList(newText)
-//                return true
-//            }
-//
-//        })
+        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+            override fun onQueryTextSubmit(query: String?): Boolean {
+                return false
+            }
+
+            override fun onQueryTextChange(newText: String?): Boolean {
+                search.filterList(newText)
+                return true
+            }
+
+        })
 
     }
 
 //    private fun filterList(query: String?) {
+//        val filteredList = ArrayList<Items>()
 //        if (query != null) {
-//            val filteredList = ArrayList<Items>()
-//            for (i in data.dataInitialize()) {
+//            for (i in itemsArrayList) {
 //                if (i.name.lowercase(Locale.ROOT).contains(query.lowercase())) {
 //                    filteredList.add(i)
 //                }
