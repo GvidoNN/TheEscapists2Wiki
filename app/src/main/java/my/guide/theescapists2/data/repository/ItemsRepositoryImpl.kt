@@ -1,101 +1,23 @@
-package my.guide.theescapists2
+package my.guide.theescapists2.data.repository
 
-import android.os.Bundle
-import android.view.*
-import androidx.fragment.app.Fragment
-import androidx.appcompat.widget.SearchView
-import androidx.navigation.Navigation
-import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
-import my.guide.theescapists2.databinding.FragmentMainCraftBinding
-import my.guide.theescapists2.recycler.ItemAdapter
+import android.content.Context
+import my.guide.theescapists2.R
 import my.guide.theescapists2.recycler.Items
-import java.util.*
-import kotlin.collections.ArrayList
 
+class ItemsRepositoryImpl(
+    private var itemsArrayList: ArrayList<Items>,
+    private var imOneId: Array<Int>,
+    private var imTwoId: Array<Int>,
+    private var imThreeId: Array<Int>,
+    private var imageId: Array<Int>,
+    private var name: Array<String>,
+    private var craft: Array<String>,
+    private var intelligence: Array<String>,
+    private var context: Context
+) {
 
-class FragmentMainCraft : Fragment() {
-    private lateinit var adapter: ItemAdapter
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var itemsArrayList: ArrayList<Items>
-    private lateinit var searchView: SearchView
-    lateinit var imageId: Array<Int>
-    lateinit var name: Array<String>
-    lateinit var craft: Array<String>
-    lateinit var intelligence: Array<String>
-    lateinit var imOneId: Array<Int>
-    lateinit var imTwoId: Array<Int>
-    lateinit var imThreeId: Array<Int>
+    fun dataInitialize(): ArrayList<Items> {
 
-
-    override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        val binding = FragmentMainCraftBinding.inflate(inflater)
-        binding.bottomNavigation.selectedItemId = R.id.craftId
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.mapsId -> {
-                    val view = binding.FragmentMain
-                    Navigation.findNavController(view)
-                        .navigate(R.id.action_fragmentMainCraft_to_fragmentMap)
-                    true
-                }
-                R.id.componentId -> {
-                    val view = binding.FragmentMain
-                    Navigation.findNavController(view)
-                        .navigate(R.id.action_fragmentMainCraft_to_fragmentWallpaper)
-                    true
-                }
-                else -> false
-            }
-        }
-        return binding.root
-    }
-
-    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
-        val layoutManager = LinearLayoutManager(context)
-        recyclerView = view.findViewById(R.id.recycler_view)
-        searchView = view.findViewById(R.id.searchView)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(true)
-        adapter = ItemAdapter(itemsArrayList)
-        recyclerView.adapter = adapter
-
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
-            }
-
-            override fun onQueryTextChange(newText: String?): Boolean {
-                filterList(newText)
-                return true
-            }
-
-        })
-
-    }
-
-    private fun filterList(query: String?) {
-        if (query != null) {
-            val filteredList = ArrayList<Items>()
-            for (i in itemsArrayList) {
-                if (i.name.lowercase(Locale.ROOT).contains(query.lowercase())) {
-                    filteredList.add(i)
-                }
-            }
-            if (filteredList.isEmpty()) {
-            } else {
-                adapter.setFilteredList(filteredList)
-            }
-        }
-    }
-
-    private fun dataInitialize() {
         itemsArrayList = arrayListOf<Items>()
 
         imOneId = arrayOf(
@@ -494,201 +416,201 @@ class FragmentMainCraft : Fragment() {
             R.drawable.fishingrod
         )
         name = arrayOf(
-            getString(R.string.baseball_bat),
-            getString(R.string.sock_mase),
-            getString(R.string.glass_shank),
-            getString(R.string.comb_blade),
-            getString(R.string.whip),
-            getString(R.string.super_whip),
-            getString(R.string.makeshift_cosh),
-            getString(R.string.makeshift_spear),
-            getString(R.string.knuckle_duster),
-            getString(R.string.super_knuckle_duster),
-            getString(R.string.cup_of_molten_chocolate),
-            getString(R.string.makeshift_double_bass),
-            getString(R.string.nunchucks),
-            getString(R.string.makeshift_sledgehammer),
-            getString(R.string.super_baseball_bat),
-            getString(R.string.energy_module),
-            getString(R.string.makeshift_stungun),
-            getString(R.string.super_metal_baton),
-            getString(R.string.super_sock_mace),
-            getString(R.string.tool_handle),
-            getString(R.string.flimsy_pickaxe),
-            getString(R.string.lightweight_pickaxe),
-            getString(R.string.sturdy_pickaxe),
-            getString(R.string.flimsy_shovel),
-            getString(R.string.lightweight_shovel),
-            getString(R.string.sturdy_shovel),
-            getString(R.string.flimsy_cutters),
-            getString(R.string.lightweight_cutters),
-            getString(R.string.sturdy_cutters),
-            getString(R.string.multitool),
-            getString(R.string.cutting_floss),
-            getString(R.string.guard_outfit),
-            getString(R.string.infirmary_overalls),
-            getString(R.string.cushioned_inmate_outfit),
-            getString(R.string.padded_inmate_outfit),
-            getString(R.string.plated_Inmate_outfit),
-            getString(R.string.makeshift_robot_guard_outfit),
-            getString(R.string.fake_wall_block),
-            getString(R.string.fake_vent_cover),
-            getString(R.string.fake_fence),
-            getString(R.string.bed_dummy),
-            getString(R.string.contraband_pouch),
-            getString(R.string.durable_contraband_pouch),
-            getString(R.string.poster),
-            getString(R.string.grapple_head),
-            getString(R.string.grappling_hook),
-            getString(R.string.sheet_rope),
-            getString(R.string.candle),
-            getString(R.string.paper_mache),
-            getString(R.string.molten_plastic),
-            getString(R.string.plastic_key),
-            getString(R.string.key_mold),
-            getString(R.string.keycard_mould),
-            getString(R.string.fake_keycards),
-            getString(R.string.wad_of_putty),
-            getString(R.string.timber_brace),
-            getString(R.string.crate_base),
-            getString(R.string.cup_of_tea),
-            getString(R.string.glider_skin),
-            getString(R.string.manicure_kit),
-            getString(R.string.makeshift_harness),
-            getString(R.string.makeshift_ladder),
-            getString(R.string.readied_fishing_rod),
-            getString(R.string.parachute),
-            getString(R.string.potted_plant),
-            getString(R.string.pretend_flower),
-            getString(R.string.pretend_carrot),
-            getString(R.string.readied_paint_brush),
-            getString(R.string.visitors_kit),
-            getString(R.string.breathing_mask),
-            getString(R.string.framed_photo),
-            getString(R.string.glue_readied_furniture),
-            getString(R.string.makeshift_rocket_thruster),
-            getString(R.string.music_washboard),
-            getString(R.string.uncooked_pie),
-            getString(R.string.unglued_furniture),
-            getString(R.string.breathable_trash_bag),
-            getString(R.string.crate_casing),
-            getString(R.string.crate_top),
-            getString(R.string.crossbow_body),
-            getString(R.string.crossbow_lathe),
-            getString(R.string.fake_audio_equipment),
-            getString(R.string.gun_making_kit),
-            getString(R.string.half_frame_of_glider),
-            getString(R.string.heart_rate_slower),
-            getString(R.string.beautiful_painting),
-            getString(R.string.cake),
-            getString(R.string.escapists_figurine),
-            getString(R.string.machine_ready_shoe),
-            getString(R.string.makeshift_breathing_apparatus),
-            getString(R.string.moulded_gun),
-            getString(R.string.pair_of_shoes),
-            getString(R.string.security_pass),
-            getString(R.string.complete_crossbow),
-            getString(R.string.fake_gun),
-            getString(R.string.fishing_rod)
+            context!!.getString(R.string.baseball_bat),
+            context!!.getString(R.string.sock_mase),
+            context!!.getString(R.string.glass_shank),
+            context!!.getString(R.string.comb_blade),
+            context!!.getString(R.string.whip),
+            context!!.getString(R.string.super_whip),
+            context!!.getString(R.string.makeshift_cosh),
+            context!!.getString(R.string.makeshift_spear),
+            context!!.getString(R.string.knuckle_duster),
+            context!!.getString(R.string.super_knuckle_duster),
+            context!!.getString(R.string.cup_of_molten_chocolate),
+            context!!.getString(R.string.makeshift_double_bass),
+            context!!.getString(R.string.nunchucks),
+            context!!.getString(R.string.makeshift_sledgehammer),
+            context!!.getString(R.string.super_baseball_bat),
+            context!!.getString(R.string.energy_module),
+            context!!.getString(R.string.makeshift_stungun),
+            context!!.getString(R.string.super_metal_baton),
+            context!!.getString(R.string.super_sock_mace),
+            context!!.getString(R.string.tool_handle),
+            context!!.getString(R.string.flimsy_pickaxe),
+            context!!.getString(R.string.lightweight_pickaxe),
+            context!!.getString(R.string.sturdy_pickaxe),
+            context!!.getString(R.string.flimsy_shovel),
+            context!!.getString(R.string.lightweight_shovel),
+            context!!.getString(R.string.sturdy_shovel),
+            context!!.getString(R.string.flimsy_cutters),
+            context!!.getString(R.string.lightweight_cutters),
+            context!!.getString(R.string.sturdy_cutters),
+            context!!.getString(R.string.multitool),
+            context!!.getString(R.string.cutting_floss),
+            context!!.getString(R.string.guard_outfit),
+            context!!.getString(R.string.infirmary_overalls),
+            context!!.getString(R.string.cushioned_inmate_outfit),
+            context!!.getString(R.string.padded_inmate_outfit),
+            context!!.getString(R.string.plated_Inmate_outfit),
+            context!!.getString(R.string.makeshift_robot_guard_outfit),
+            context!!.getString(R.string.fake_wall_block),
+            context!!.getString(R.string.fake_vent_cover),
+            context!!.getString(R.string.fake_fence),
+            context!!.getString(R.string.bed_dummy),
+            context!!.getString(R.string.contraband_pouch),
+            context!!.getString(R.string.durable_contraband_pouch),
+            context!!.getString(R.string.poster),
+            context!!.getString(R.string.grapple_head),
+            context!!.getString(R.string.grappling_hook),
+            context!!.getString(R.string.sheet_rope),
+            context!!.getString(R.string.candle),
+            context!!.getString(R.string.paper_mache),
+            context!!.getString(R.string.molten_plastic),
+            context!!.getString(R.string.plastic_key),
+            context!!.getString(R.string.key_mold),
+            context!!.getString(R.string.keycard_mould),
+            context!!.getString(R.string.fake_keycards),
+            context!!.getString(R.string.wad_of_putty),
+            context!!.getString(R.string.timber_brace),
+            context!!.getString(R.string.crate_base),
+            context!!.getString(R.string.cup_of_tea),
+            context!!.getString(R.string.glider_skin),
+            context!!.getString(R.string.manicure_kit),
+            context!!.getString(R.string.makeshift_harness),
+            context!!.getString(R.string.makeshift_ladder),
+            context!!.getString(R.string.readied_fishing_rod),
+            context!!.getString(R.string.parachute),
+            context!!.getString(R.string.potted_plant),
+            context!!.getString(R.string.pretend_flower),
+            context!!.getString(R.string.pretend_carrot),
+            context!!.getString(R.string.readied_paint_brush),
+            context!!.getString(R.string.visitors_kit),
+            context!!.getString(R.string.breathing_mask),
+            context!!.getString(R.string.framed_photo),
+            context!!.getString(R.string.glue_readied_furniture),
+            context!!.getString(R.string.makeshift_rocket_thruster),
+            context!!.getString(R.string.music_washboard),
+            context!!.getString(R.string.uncooked_pie),
+            context!!.getString(R.string.unglued_furniture),
+            context!!.getString(R.string.breathable_trash_bag),
+            context!!.getString(R.string.crate_casing),
+            context!!.getString(R.string.crate_top),
+            context!!.getString(R.string.crossbow_body),
+            context!!.getString(R.string.crossbow_lathe),
+            context!!.getString(R.string.fake_audio_equipment),
+            context!!.getString(R.string.gun_making_kit),
+            context!!.getString(R.string.half_frame_of_glider),
+            context!!.getString(R.string.heart_rate_slower),
+            context!!.getString(R.string.beautiful_painting),
+            context!!.getString(R.string.cake),
+            context!!.getString(R.string.escapists_figurine),
+            context!!.getString(R.string.machine_ready_shoe),
+            context!!.getString(R.string.makeshift_breathing_apparatus),
+            context!!.getString(R.string.moulded_gun),
+            context!!.getString(R.string.pair_of_shoes),
+            context!!.getString(R.string.security_pass),
+            context!!.getString(R.string.complete_crossbow),
+            context!!.getString(R.string.fake_gun),
+            context!!.getString(R.string.fishing_rod)
         )
 
         craft = arrayOf(
-            getString(R.string.baseball_bat_craft),
-            getString(R.string.sock_mase_craft),
-            getString(R.string.glass_shank_craft),
-            getString(R.string.comb_blade_craft),
-            getString(R.string.whip_craft),
-            getString(R.string.super_whip_craft),
-            getString(R.string.makeshift_cosh_craft),
-            getString(R.string.makeshift_spear_craft),
-            getString(R.string.knuckle_duster_craft),
-            getString(R.string.super_knuckle_duster_craft),
-            getString(R.string.cup_of_molten_chocolate_craft),
-            getString(R.string.makeshift_double_bass_craft),
-            getString(R.string.nunchucks_craft),
-            getString(R.string.makeshift_sledgehammer_craft),
-            getString(R.string.super_baseball_bat_craft),
-            getString(R.string.energy_module_craft),
-            getString(R.string.makeshift_stungun_craft),
-            getString(R.string.super_metal_baton_craft),
-            getString(R.string.super_sock_mace_craft),
-            getString(R.string.tool_handle_craft),
-            getString(R.string.flimsy_pickaxe_craft),
-            getString(R.string.lightweight_pickaxe_craft),
-            getString(R.string.sturdy_pickaxe_craft),
-            getString(R.string.flimsy_shovel_craft),
-            getString(R.string.lightweight_shovel_craft),
-            getString(R.string.sturdy_shovel_craft),
-            getString(R.string.flimsy_cutters_craft),
-            getString(R.string.lightweight_cutters_craft),
-            getString(R.string.sturdy_cutters_craft),
-            getString(R.string.multitool_craft),
-            getString(R.string.cutting_floss_craft),
-            getString(R.string.guard_outfit_craft),
-            getString(R.string.infirmary_overalls_craft),
-            getString(R.string.cushioned_inmate_outfit_craft),
-            getString(R.string.padded_inmate_outfit_craft),
-            getString(R.string.plated_Inmate_outfit_craft),
-            getString(R.string.makeshift_robot_guard_outfit_craft),
-            getString(R.string.fake_wall_block_craft),
-            getString(R.string.fake_vent_cover_craft),
-            getString(R.string.fake_fence_craft),
-            getString(R.string.bed_dummy_craft),
-            getString(R.string.contraband_pouch_craft),
-            getString(R.string.durable_contraband_pouch_craft),
-            getString(R.string.poster_craft),
-            getString(R.string.grapple_head_craft),
-            getString(R.string.grappling_hook_craft),
-            getString(R.string.sheet_rope_craft),
-            getString(R.string.candle_craft),
-            getString(R.string.paper_mache_craft),
-            getString(R.string.molten_plastic_craft),
-            getString(R.string.plastic_key_craft),
-            getString(R.string.key_mold_craft),
-            getString(R.string.keycard_mould_craft),
-            getString(R.string.fake_keycards_craft),
-            getString(R.string.wad_of_putty_craft),
-            getString(R.string.timber_brace_craft),
-            getString(R.string.crate_base_craft),
-            getString(R.string.cup_of_tea_craft),
-            getString(R.string.glider_skin_craft),
-            getString(R.string.manicure_kit_craft),
-            getString(R.string.makeshift_harness_craft),
-            getString(R.string.makeshift_ladder_craft),
-            getString(R.string.readied_fishing_rod_craft),
-            getString(R.string.parachute_craft),
-            getString(R.string.potted_plant_craft),
-            getString(R.string.pretend_flower_craft),
-            getString(R.string.pretend_carrot_craft),
-            getString(R.string.readied_paint_brush_craft),
-            getString(R.string.visitors_kit_craft),
-            getString(R.string.breathing_mask_craft),
-            getString(R.string.framed_photo_craft),
-            getString(R.string.glue_readied_furniture_craft),
-            getString(R.string.makeshift_rocket_thruster_craft),
-            getString(R.string.music_washboard_craft),
-            getString(R.string.uncooked_pie_craft),
-            getString(R.string.unglued_furniture_craft),
-            getString(R.string.breathable_trash_bag_craft),
-            getString(R.string.crate_casing_craft),
-            getString(R.string.crate_top_craft),
-            getString(R.string.crossbow_body_craft),
-            getString(R.string.crossbow_lathe_craft),
-            getString(R.string.fake_audio_equipment_craft),
-            getString(R.string.gun_making_kit_craft),
-            getString(R.string.half_frame_of_glider_craft),
-            getString(R.string.heart_rate_slower_craft),
-            getString(R.string.beautiful_painting_craft),
-            getString(R.string.cake_craft),
-            getString(R.string.escapists_figurine_craft),
-            getString(R.string.machine_ready_shoe_craft),
-            getString(R.string.makeshift_breathing_apparatus_craft),
-            getString(R.string.moulded_gun_craft),
-            getString(R.string.pair_of_shoes_craft),
-            getString(R.string.security_pass_craft),
-            getString(R.string.complete_crossbow_craft),
-            getString(R.string.fake_gun_craft),
-            getString(R.string.fishing_rod_craft)
+            context!!.getString(R.string.baseball_bat_craft),
+            context!!.getString(R.string.sock_mase_craft),
+            context!!.getString(R.string.glass_shank_craft),
+            context!!.getString(R.string.comb_blade_craft),
+            context!!.getString(R.string.whip_craft),
+            context!!.getString(R.string.super_whip_craft),
+            context!!.getString(R.string.makeshift_cosh_craft),
+            context!!.getString(R.string.makeshift_spear_craft),
+            context!!.getString(R.string.knuckle_duster_craft),
+            context!!.getString(R.string.super_knuckle_duster_craft),
+            context!!.getString(R.string.cup_of_molten_chocolate_craft),
+            context!!.getString(R.string.makeshift_double_bass_craft),
+            context!!.getString(R.string.nunchucks_craft),
+            context!!.getString(R.string.makeshift_sledgehammer_craft),
+            context!!.getString(R.string.super_baseball_bat_craft),
+            context!!.getString(R.string.energy_module_craft),
+            context!!.getString(R.string.makeshift_stungun_craft),
+            context!!.getString(R.string.super_metal_baton_craft),
+            context!!.getString(R.string.super_sock_mace_craft),
+            context!!.getString(R.string.tool_handle_craft),
+            context!!.getString(R.string.flimsy_pickaxe_craft),
+            context!!.getString(R.string.lightweight_pickaxe_craft),
+            context!!.getString(R.string.sturdy_pickaxe_craft),
+            context!!.getString(R.string.flimsy_shovel_craft),
+            context!!.getString(R.string.lightweight_shovel_craft),
+            context!!.getString(R.string.sturdy_shovel_craft),
+            context!!.getString(R.string.flimsy_cutters_craft),
+            context!!.getString(R.string.lightweight_cutters_craft),
+            context!!.getString(R.string.sturdy_cutters_craft),
+            context!!.getString(R.string.multitool_craft),
+            context!!.getString(R.string.cutting_floss_craft),
+            context!!.getString(R.string.guard_outfit_craft),
+            context!!.getString(R.string.infirmary_overalls_craft),
+            context!!.getString(R.string.cushioned_inmate_outfit_craft),
+            context!!.getString(R.string.padded_inmate_outfit_craft),
+            context!!.getString(R.string.plated_Inmate_outfit_craft),
+            context!!.getString(R.string.makeshift_robot_guard_outfit_craft),
+            context!!.getString(R.string.fake_wall_block_craft),
+            context!!.getString(R.string.fake_vent_cover_craft),
+            context!!.getString(R.string.fake_fence_craft),
+            context!!.getString(R.string.bed_dummy_craft),
+            context!!.getString(R.string.contraband_pouch_craft),
+            context!!.getString(R.string.durable_contraband_pouch_craft),
+            context!!.getString(R.string.poster_craft),
+            context!!.getString(R.string.grapple_head_craft),
+            context!!.getString(R.string.grappling_hook_craft),
+            context!!.getString(R.string.sheet_rope_craft),
+            context!!.getString(R.string.candle_craft),
+            context!!.getString(R.string.paper_mache_craft),
+            context!!.getString(R.string.molten_plastic_craft),
+            context!!.getString(R.string.plastic_key_craft),
+            context!!.getString(R.string.key_mold_craft),
+            context!!.getString(R.string.keycard_mould_craft),
+            context!!.getString(R.string.fake_keycards_craft),
+            context!!.getString(R.string.wad_of_putty_craft),
+            context!!.getString(R.string.timber_brace_craft),
+            context!!.getString(R.string.crate_base_craft),
+            context!!.getString(R.string.cup_of_tea_craft),
+            context!!.getString(R.string.glider_skin_craft),
+            context!!.getString(R.string.manicure_kit_craft),
+            context!!.getString(R.string.makeshift_harness_craft),
+            context!!.getString(R.string.makeshift_ladder_craft),
+            context!!.getString(R.string.readied_fishing_rod_craft),
+            context!!.getString(R.string.parachute_craft),
+            context!!.getString(R.string.potted_plant_craft),
+            context!!.getString(R.string.pretend_flower_craft),
+            context!!.getString(R.string.pretend_carrot_craft),
+            context!!.getString(R.string.readied_paint_brush_craft),
+            context!!.getString(R.string.visitors_kit_craft),
+            context!!.getString(R.string.breathing_mask_craft),
+            context!!.getString(R.string.framed_photo_craft),
+            context!!.getString(R.string.glue_readied_furniture_craft),
+            context!!.getString(R.string.makeshift_rocket_thruster_craft),
+            context!!.getString(R.string.music_washboard_craft),
+            context!!.getString(R.string.uncooked_pie_craft),
+            context!!.getString(R.string.unglued_furniture_craft),
+            context!!.getString(R.string.breathable_trash_bag_craft),
+            context!!.getString(R.string.crate_casing_craft),
+            context!!.getString(R.string.crate_top_craft),
+            context!!.getString(R.string.crossbow_body_craft),
+            context!!.getString(R.string.crossbow_lathe_craft),
+            context!!.getString(R.string.fake_audio_equipment_craft),
+            context!!.getString(R.string.gun_making_kit_craft),
+            context!!.getString(R.string.half_frame_of_glider_craft),
+            context!!.getString(R.string.heart_rate_slower_craft),
+            context!!.getString(R.string.beautiful_painting_craft),
+            context!!.getString(R.string.cake_craft),
+            context!!.getString(R.string.escapists_figurine_craft),
+            context!!.getString(R.string.machine_ready_shoe_craft),
+            context!!.getString(R.string.makeshift_breathing_apparatus_craft),
+            context!!.getString(R.string.moulded_gun_craft),
+            context!!.getString(R.string.pair_of_shoes_craft),
+            context!!.getString(R.string.security_pass_craft),
+            context!!.getString(R.string.complete_crossbow_craft),
+            context!!.getString(R.string.fake_gun_craft),
+            context!!.getString(R.string.fishing_rod_craft)
         )
 
         intelligence = arrayOf(
@@ -803,5 +725,6 @@ class FragmentMainCraft : Fragment() {
             )
             itemsArrayList.add(items)
         }
+        return itemsArrayList
     }
 }

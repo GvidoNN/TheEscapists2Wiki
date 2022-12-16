@@ -1,4 +1,4 @@
-package my.guide.theescapists2
+package my.guide.theescapists2.presenatation
 
 import android.os.Bundle
 import android.text.util.Linkify
@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
+import my.guide.theescapists2.R
 import my.guide.theescapists2.databinding.FragmentSampleMapBinding
 
 

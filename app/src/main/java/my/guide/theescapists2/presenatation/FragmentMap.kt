@@ -1,4 +1,4 @@
-package my.guide.theescapists2
+package my.guide.theescapists2.presenatation
 
 import android.app.Activity
 import android.os.Bundle
@@ -19,6 +19,7 @@ import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import my.guide.theescapists2.R
 import kotlin.collections.ArrayList
 
 
