@@ -36,23 +36,6 @@ class FragmentMap : Fragment(), MapAdapter.Listener{
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = FragmentMapBinding.inflate(inflater)
         loadInterAd()
-        binding.bottomNavigation.selectedItemId = R.id.mapsId
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.craftId -> {
-                    val view = binding.FragmentMain
-                    Navigation.findNavController(view)
-                        .navigate(R.id.action_fragmentMap_to_fragmentMainCraft)
-                    true
-                }
-                R.id.componentId -> {
-                    val view = binding.FragmentMain
-                    Navigation.findNavController(view).navigate(R.id.action_fragmentMap_to_fragmentWallpaper)
-                    true
-                }
-                else -> false
-            }
-        }
 
         return binding.root
 

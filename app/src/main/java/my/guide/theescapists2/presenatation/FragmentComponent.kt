@@ -26,25 +26,6 @@ class FragmentComponent : Fragment() {
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
         val binding = FragmentComponentBinding.inflate(inflater)
-        binding.bottomNavigation.selectedItemId = R.id.componentId
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.craftId -> {
-                    val view = binding.FragmentMain
-                    Navigation.findNavController(view)
-                        .navigate(R.id.action_fragmentWallpaper_to_fragmentMainCraft)
-                    true
-                }
-                R.id.mapsId -> {
-                    val view = binding.FragmentMain
-                    Navigation.findNavController(view)
-                        .navigate(R.id.action_fragmentWallpaper_to_fragmentMap)
-                    true
-                }
-                else -> false
-            }
-        }
-
         MobileAds.initialize(requireContext()) {}
         val adRequest = AdRequest.Builder().build()
         binding.adView2.loadAd(adRequest)

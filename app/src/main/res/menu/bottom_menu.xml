@@ -1,19 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
-        android:id="@+id/craftId"
+        android:id="@+id/fragmentMainCraft"
         android:icon="@drawable/ic_crafts"
         android:title="@string/craft"
         android:orderInCategory="1"
         />
     <item
-        android:id="@+id/mapsId"
+        android:id="@+id/fragmentMap"
         android:icon="@drawable/ic_maps"
         android:title="@string/map"
         android:orderInCategory="3"
         />
     <item
-        android:id="@+id/componentId"
+        android:id="@+id/fragmentComponent"
         android:icon="@drawable/ic_components"
         android:title="@string/component"
         android:orderInCategory="2"

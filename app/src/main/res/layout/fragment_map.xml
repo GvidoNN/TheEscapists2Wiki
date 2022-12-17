@@ -21,23 +21,6 @@
             android:layout_height="665dp"
             android:layout_weight="1" />
 
-        <com.google.android.material.bottomnavigation.BottomNavigationView
-            android:id="@+id/bottomNavigation"
-            android:layout_width="match_parent"
-            android:layout_height="66dp"
-            android:layout_gravity="bottom|center|center_horizontal"
-            android:background="#FF9800"
-            android:foregroundGravity="center"
-            app:itemIconSize="40dp"
-            app:itemIconTint="@drawable/bottom_nav_selector"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.0"
-            app:layout_constraintStart_toStartOf="parent"
-            app:menu="@menu/bottom_menu">
-
-        </com.google.android.material.bottomnavigation.BottomNavigationView>
-
     </LinearLayout>
 
 </FrameLayout>

@@ -38,24 +38,6 @@ class FragmentMainCraft : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentMainCraftBinding.inflate(inflater)
-        binding.bottomNavigation.selectedItemId = R.id.craftId
-        binding.bottomNavigation.setOnItemSelectedListener {
-            when (it.itemId) {
-                R.id.mapsId -> {
-                    val view = binding.FragmentMain
-                    Navigation.findNavController(view)
-                        .navigate(R.id.action_fragmentMainCraft_to_fragmentMap)
-                    true
-                }
-                R.id.componentId -> {
-                    val view = binding.FragmentMain
-                    Navigation.findNavController(view)
-                        .navigate(R.id.action_fragmentMainCraft_to_fragmentWallpaper)
-                    true
-                }
-                else -> false
-            }
-        }
         return binding.root
     }
 
