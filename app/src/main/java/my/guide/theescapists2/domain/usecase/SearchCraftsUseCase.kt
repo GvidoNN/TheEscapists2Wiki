@@ -1,17 +1,22 @@
 package my.guide.theescapists2.domain.usecase
 
 import my.guide.theescapists2.data.repository.ItemsRepositoryImpl
+import my.guide.theescapists2.domain.repository.ItemsRepository
 import my.guide.theescapists2.recycler.ItemAdapter
 import my.guide.theescapists2.recycler.Items
 import java.util.*
 import kotlin.collections.ArrayList
 
-class SearchCraftsUseCase(var data : ItemsRepositoryImpl, var adapter: ItemAdapter) {
+class SearchCraftsUseCase(var itemRepository : ItemsRepository, var adapter: ItemAdapter) {
+
+    fun searchMain(){
+
+    }
 
     fun filterList(query: String?): ArrayList<Items> {
         val filteredList = ArrayList<Items>()
         if (query != null) {
-            for (i in data.dataInitialize()) {
+            for (i in itemRepository.dataInitialize()) {
                 if (i.name.lowercase(Locale.ROOT).contains(query.lowercase())) {
                     filteredList.add(i)
                 }
