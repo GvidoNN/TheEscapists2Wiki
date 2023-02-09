@@ -94,7 +94,7 @@ class ComponentsRepositoryImpl(private var context: Context) : ComponentsReposit
         )
 
         var imageId = arrayOf(
-            R.drawable.rollofduct,
+            R.drawable.rollofducttape,
             R.drawable.timber,
             R.drawable.file,
             R.drawable.sheetofmetal,
@@ -115,7 +115,7 @@ class ComponentsRepositoryImpl(private var context: Context) : ComponentsReposit
             R.drawable.broomhandle,
             R.drawable.oldbox,
             R.drawable.pieceofstring,
-            R.drawable.lenghtofrope,
+            R.drawable.lengthofrope,
             R.drawable.tinofpaint,
             R.drawable.pillowcase,
             R.drawable.paperclip,

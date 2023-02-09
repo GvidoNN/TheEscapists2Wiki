@@ -34,8 +34,6 @@ class MapAdapter(private var MapsArrayList: ArrayList<Maps>, val listener: Liste
         return MapsArrayList.size
     }
 
-
-
     interface Listener{
         fun onClick(map: Maps){
 

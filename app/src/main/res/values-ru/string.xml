@@ -7,7 +7,7 @@
     <string name="map">Карты</string>
     <string name="component">Компоненты</string>
     <string name="item">Предмет</string>
-    <string name="intelligence">Интеллект</string>
+    <string name="intelligence">Интеллект: </string>
     <string name="ways_to_escape">Способы побега</string>
     <string name="advertising">Здесь могла быть ваша реклама :)</string>
     <string name="search_hint">Для поиска вписывать сюда...</string>
