@@ -30,7 +30,7 @@
                 android:layout_height="120dp"
                 android:layout_marginLeft="2dp"
                 android:layout_weight="1"
-                app:srcCompat="@drawable/rollofduct" />
+                app:srcCompat="@drawable/battery" />
 
             <TextView
                 android:id="@+id/tvNameComponent"
