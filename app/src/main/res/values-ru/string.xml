@@ -10,7 +10,7 @@
     <string name="intelligence">Интеллект: </string>
     <string name="ways_to_escape">Способы побега</string>
     <string name="advertising">Здесь могла быть ваша реклама :)</string>
-    <string name="search_hint">Для поиска вписывать сюда...</string>
+    <string name="search_hint">Введите название предмета</string>
     <!-- TODO: Craft strings -->
     <!-- Items -->
     <string name="baseball_bat">Бейсбольная бита</string>

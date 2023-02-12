@@ -25,9 +25,6 @@ class FragmentComponent : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentComponentBinding.inflate(inflater)
-        MobileAds.initialize(requireContext()) {}
-        val adRequest = AdRequest.Builder().build()
-        binding.adView2.loadAd(adRequest)
         return binding.root
     }
 

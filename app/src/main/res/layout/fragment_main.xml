@@ -19,8 +19,10 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/mainBottomNavigationView"
+        app:itemRippleColor="@color/blackforstatusbar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:background="@drawable/navigationview_frame"
         app:menu="@menu/bottom_menu"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/mainContainerView"/>

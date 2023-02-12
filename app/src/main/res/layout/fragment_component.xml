@@ -9,29 +9,10 @@
 
     <!-- TODO: Update blank fragment layout -->
 
-    <TextView
-        android:id="@+id/textView2"
-        android:layout_width="match_parent"
-        android:layout_height="64dp"
-        android:gravity="center"
-        android:text="@string/advertising"
-        android:textSize="16sp"
-        android:textStyle="bold"
-        android:visibility="visible" />
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
-
-        <com.google.android.gms.ads.AdView
-            android:id="@+id/adView2"
-            android:layout_width="match_parent"
-            android:layout_height="125dp"
-            android:layout_marginBottom="3dp"
-            android:layout_weight="1"
-            app:adSize="BANNER"
-            app:adUnitId="ca-app-pub-7592888554989577/2438489407" />
 
         <androidx.recyclerview.widget.RecyclerView
             android:id="@+id/recyclerView"
