@@ -2,7 +2,7 @@
     <!-- Base application theme. -->
     <style name="Theme.TheEscapists2" parent="Theme.MaterialComponents.DayNight.DarkActionBar">
         <!-- Primary brand color. -->
-        <item name="colorPrimary">@color/teal_200</item>
+        <item name="colorPrimary">@color/orange_for_frame</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">#000000</item>
         <!-- Secondary brand color. -->

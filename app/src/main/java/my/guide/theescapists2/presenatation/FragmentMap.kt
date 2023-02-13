@@ -6,7 +6,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.Navigation
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
@@ -19,42 +19,46 @@ import com.google.android.gms.ads.FullScreenContentCallback
 import com.google.android.gms.ads.LoadAdError
 import com.google.android.gms.ads.interstitial.InterstitialAd
 import com.google.android.gms.ads.interstitial.InterstitialAdLoadCallback
+import kotlinx.coroutines.launch
 import my.guide.theescapists2.R
+import my.guide.theescapists2.data.repository.MapRepositoryImpl
+import my.guide.theescapists2.domain.usecase.PutDataSampleMapUseCase
 import kotlin.collections.ArrayList
 
 
-class FragmentMap : Fragment(), MapAdapter.Listener{
+class FragmentMap : Fragment(), MapAdapter.Listener {
     private lateinit var adapter: MapAdapter
     private lateinit var recyclerView: RecyclerView
-    private lateinit var mapsArrayList: ArrayList<Maps>
     lateinit var imageId: Array<Int>
     lateinit var name: Array<String>
-    lateinit var bundle : Bundle
     private var interAd: InterstitialAd? = null
-
-
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? {
+    private val mapsRepository by lazy { MapRepositoryImpl(context = requireContext()) }
+    private val putDataSampleMapUseCase by lazy { PutDataSampleMapUseCase(mapRepository = mapsRepository) }
+    override fun onCreateView(
+        inflater: LayoutInflater,
+        container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
         val binding = FragmentMapBinding.inflate(inflater)
-        loadInterAd()
-
+        lifecycleScope.launch {
+            loadInterAd()
+        }
         return binding.root
-
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        dataInitialize()
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = MapAdapter(mapsArrayList, this)
+        adapter = MapAdapter(mapsRepository.dataInitialize(), this)
         recyclerView.adapter = adapter
     }
 
-    private fun showInterAd(){
-        if(interAd != null){
-            interAd?.fullScreenContentCallback = object : FullScreenContentCallback(){
+    private fun showInterAd() {
+        if (interAd != null) {
+            interAd?.fullScreenContentCallback = object : FullScreenContentCallback() {
                 override fun onAdDismissedFullScreenContent() {
                     interAd = null
                     loadInterAd()
@@ -74,268 +78,194 @@ class FragmentMap : Fragment(), MapAdapter.Listener{
         }
     }
 
-    private fun loadInterAd(){
+    private fun loadInterAd() {
         val adRequest = AdRequest.Builder().build()
-        InterstitialAd.load(requireContext(), "ca-app-pub-7592888554989577/7116101010", adRequest, object : InterstitialAdLoadCallback(){
-            override fun onAdFailedToLoad(p0: LoadAdError) {
-                interAd = null
-            }
+        InterstitialAd.load(
+            requireContext(),
+            "ca-app-pub-7592888554989577/7116101010",
+            adRequest,
+            object : InterstitialAdLoadCallback() {
+                override fun onAdFailedToLoad(p0: LoadAdError) {
+                    interAd = null
+                }
 
-            override fun onAdLoaded(ad: InterstitialAd) {
-                interAd = ad
-            }
-        })
-    }
-
-    private fun dataInitialize() {
-        mapsArrayList = arrayListOf<Maps>()
-
-        imageId = arrayOf(
-            R.drawable.centerperks20,
-            R.drawable.cougarcreekrailroad,
-            R.drawable.rattlesnakesprings,
-            R.drawable.kapow,
-            R.drawable.hmsorca,
-            R.drawable.hmpoffshore,
-            R.drawable.forttundra,
-            R.drawable.area17,
-            R.drawable.airforcecon,
-            R.drawable.ussanomaly,
-            R.drawable.santassshakedown,
-            R.drawable.snowwayout
-        )
-        name = arrayOf(
-            getString(R.string.center_perks_2_0),
-            getString(R.string.cougar_creek_railroad),
-            getString(R.string.rattlesnake_springs),
-            getString(R.string.kapowcamp),
-            getString(R.string.hmsorca),
-            getString(R.string.hmpoffshore),
-            getString(R.string.forttundra),
-            getString(R.string.area17),
-            getString(R.string.airforcecon),
-            getString(R.string.ussanomaly),
-            getString(R.string.santassshakedown),
-            getString(R.string.snowwayout)
-        )
-
-        for (i in imageId.indices) {
-            val maps = Maps(imageId[i], name[i])
-            mapsArrayList.add(maps)
-
-        }
+                override fun onAdLoaded(ad: InterstitialAd) {
+                    interAd = ad
+                }
+            })
     }
 
     override fun onClick(map: Maps) {
-        bundle = Bundle()
         showInterAd()
-
-        when(map.mapName){
+        when (map.mapName) {
             getString(R.string.center_perks_2_0) -> {
-                val text = getString(R.string.center_perks_2_0)
-                val textEscape1 = getString(R.string.escape1_center_perks_2_0)
-                val textEscape2 = getString(R.string.escape2_center_perks_2_0)
-                val textEscape3 = getString(R.string.escape3_center_perks_2_0)
-                val titleImageId = R.drawable.centerperks20
-                val scheduleImageId = R.drawable.schedulecenterperks
-                val jobsImageId = R.drawable.jobscenterperks
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putInt("TitleImageId", titleImageId)
-                bundle.putInt("ScheduleImageId", scheduleImageId )
-                bundle.putInt("JobsImageId", jobsImageId )
-
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.center_perks_2_0,
+                        stringEscape1 = R.string.escape1_center_perks_2_0,
+                        stringEscape2 = R.string.escape2_center_perks_2_0,
+                        stringEscape3 = R.string.escape3_center_perks_2_0,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.centerperks20,
+                        scheduleImageId = R.drawable.schedulecenterperks,
+                        jobsImageId = R.drawable.jobscenterperks
+                    )
+                )
             }
             getString(R.string.cougar_creek_railroad) -> {
-                val text = getString(R.string.cougar_creek_railroad)
-                val textEscape1 = getString(R.string.escape1_cougar_creek_railroad)
-                val textEscape2 = getString(R.string.escape2_cougar_creek_railroad)
-                val textEscape3 = getString(R.string.escape3_cougar_creek_railroad)
-                val textEscape4 = getString(R.string.escape4_cougar_creek_railroad)
-                val titleImageId = R.drawable.cougarcreekrailroad
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putString("EscapePlan4", textEscape4)
-                bundle.putInt("TitleImageId", titleImageId)
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.cougar_creek_railroad,
+                        stringEscape1 = R.string.escape1_cougar_creek_railroad,
+                        stringEscape2 = R.string.escape2_cougar_creek_railroad,
+                        stringEscape3 = R.string.escape3_cougar_creek_railroad,
+                        stringEscape4 = R.string.escape4_cougar_creek_railroad,
+                        titleImageId = R.drawable.cougarcreekrailroad,
+                        scheduleImageId = null,
+                        jobsImageId = null
+                    )
+                )
             }
             getString(R.string.rattlesnake_springs) -> {
-                val text = getString(R.string.rattlesnake_springs)
-                val textEscape1 = getString(R.string.escape1_rattlesnake_springs)
-                val textEscape2 = getString(R.string.escape2_rattlesnake_springs)
-                val textEscape3 = getString(R.string.escape3_rattlesnake_springs)
-                val titleImageId = R.drawable.rattlesnakesprings
-                val scheduleImageId = R.drawable.schedulerattlesnakesprings
-                val jobsImageId = R.drawable.jobrattlesnakesprings
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putInt("TitleImageId", titleImageId)
-                bundle.putInt("ScheduleImageId", scheduleImageId )
-                bundle.putInt("JobsImageId", jobsImageId )
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.rattlesnake_springs,
+                        stringEscape1 = R.string.escape1_rattlesnake_springs,
+                        stringEscape2 = R.string.escape2_rattlesnake_springs,
+                        stringEscape3 = R.string.escape3_rattlesnake_springs,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.rattlesnakesprings,
+                        scheduleImageId = R.drawable.schedulerattlesnakesprings,
+                        jobsImageId = R.drawable.jobrattlesnakesprings
+                    )
+                )
             }
             getString(R.string.kapowcamp) -> {
-                val text = getString(R.string.kapowcamp)
-                val textEscape1 = getString(R.string.escape1_kapowcamp)
-                val textEscape2 = getString(R.string.escape2_kapowcamp)
-                val textEscape3 = getString(R.string.escape3_kapowcamp)
-                val titleImageId = R.drawable.kapow
-                val scheduleImageId = R.drawable.schedulekapowcamp
-                val jobsImageId = R.drawable.jobkapowcamp
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putInt("TitleImageId", titleImageId)
-                bundle.putInt("ScheduleImageId", scheduleImageId )
-                bundle.putInt("JobsImageId", jobsImageId )
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.kapowcamp,
+                        stringEscape1 = R.string.escape1_kapowcamp,
+                        stringEscape2 = R.string.escape2_kapowcamp,
+                        stringEscape3 = R.string.escape3_kapowcamp,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.kapow,
+                        scheduleImageId = R.drawable.schedulekapowcamp,
+                        jobsImageId = R.drawable.jobkapowcamp
+                    )
+                )
             }
             getString(R.string.hmsorca) -> {
-                val text = getString(R.string.hmsorca)
-                val textEscape1 = getString(R.string.escape1_hmsorca)
-                val textEscape2 = getString(R.string.escape2_hmsorca)
-                val textEscape3 = getString(R.string.escape3_hmsorca)
-                val textEscape4 = getString(R.string.escape4_hmsorca)
-                val titleImageId = R.drawable.hmsorca
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putString("EscapePlan4", textEscape4)
-                bundle.putInt("TitleImageId", titleImageId)
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.hmsorca,
+                        stringEscape1 = R.string.escape1_hmsorca,
+                        stringEscape2 = R.string.escape2_hmsorca,
+                        stringEscape3 = R.string.escape3_hmsorca,
+                        stringEscape4 = R.string.escape4_hmsorca,
+                        titleImageId = R.drawable.hmsorca,
+                        scheduleImageId = null,
+                        jobsImageId = null
+                    )
+                )
             }
             getString(R.string.hmpoffshore) -> {
-                val text = getString(R.string.hmpoffshore)
-                val textEscape1 = getString(R.string.escape1_hmpoffshore)
-                val textEscape2 = getString(R.string.escape2_hmpoffshore)
-                val textEscape3 = getString(R.string.escape3_hmpoffshore)
-                val textEscape4 = getString(R.string.escape4_hmpoffshore)
-                val titleImageId = R.drawable.hmpoffshore
-                val scheduleImageId = R.drawable.schedulehmpoffshore
-                val jobsImageId = R.drawable.jobhmpoffshore
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putString("EscapePlan4", textEscape4)
-                bundle.putInt("TitleImageId", titleImageId)
-                bundle.putInt("ScheduleImageId", scheduleImageId )
-                bundle.putInt("JobsImageId", jobsImageId )
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.hmpoffshore,
+                        stringEscape1 = R.string.escape1_hmpoffshore,
+                        stringEscape2 = R.string.escape2_hmpoffshore,
+                        stringEscape3 = R.string.escape3_hmpoffshore,
+                        stringEscape4 = R.string.escape4_hmpoffshore,
+                        titleImageId = R.drawable.hmpoffshore,
+                        scheduleImageId = R.drawable.schedulehmpoffshore,
+                        jobsImageId = R.drawable.jobhmpoffshore
+                    )
+                )
             }
             getString(R.string.forttundra) -> {
-                val text = getString(R.string.forttundra)
-                val textEscape1 = getString(R.string.escape1_forttundra)
-                val textEscape2 = getString(R.string.escape2_forttundra)
-                val textEscape3 = getString(R.string.escape3_forttundra)
-                val titleImageId = R.drawable.forttundra
-                val scheduleImageId = R.drawable.scheduleforttundra
-                val jobsImageId = R.drawable.jobforttundra
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putInt("TitleImageId", titleImageId)
-                bundle.putInt("ScheduleImageId", scheduleImageId )
-                bundle.putInt("JobsImageId", jobsImageId )
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.forttundra,
+                        stringEscape1 = R.string.escape1_forttundra,
+                        stringEscape2 = R.string.escape2_forttundra,
+                        stringEscape3 = R.string.escape3_forttundra,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.forttundra,
+                        scheduleImageId = R.drawable.scheduleforttundra,
+                        jobsImageId = R.drawable.jobforttundra
+                    )
+                )
             }
             getString(R.string.area17) -> {
-                val text = getString(R.string.area17)
-                val textEscape1 = getString(R.string.escape1_area17)
-                val textEscape2 = getString(R.string.escape2_area17)
-                val textEscape3 = getString(R.string.escape3_area17)
-                val titleImageId = R.drawable.area17
-                val scheduleImageId = R.drawable.schedulearea17
-                val jobsImageId = R.drawable.jobarea17
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putInt("TitleImageId", titleImageId)
-                bundle.putInt("ScheduleImageId", scheduleImageId )
-                bundle.putInt("JobsImageId", jobsImageId )
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.area17,
+                        stringEscape1 = R.string.escape1_area17,
+                        stringEscape2 = R.string.escape2_area17,
+                        stringEscape3 = R.string.escape3_area17,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.area17,
+                        scheduleImageId = R.drawable.schedulearea17,
+                        jobsImageId = R.drawable.jobarea17
+                    )
+                )
             }
             getString(R.string.airforcecon) -> {
-                val text = getString(R.string.airforcecon)
-                val textEscape1 = getString(R.string.escape1_airforcecon)
-                val textEscape2 = getString(R.string.escape2_airforcecon)
-                val textEscape3 = getString(R.string.escape3_airforcecon)
-                val textEscape4 = getString(R.string.escape4_airforcecon)
-                val titleImageId = R.drawable.airforcecon
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putString("EscapePlan4", textEscape4)
-                bundle.putInt("TitleImageId", titleImageId)
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.airforcecon,
+                        stringEscape1 = R.string.escape1_airforcecon,
+                        stringEscape2 = R.string.escape2_airforcecon,
+                        stringEscape3 = R.string.escape3_airforcecon,
+                        stringEscape4 = R.string.escape4_airforcecon,
+                        titleImageId = R.drawable.airforcecon,
+                        scheduleImageId = null,
+                        jobsImageId = null
+                    )
+                )
             }
             getString(R.string.ussanomaly) -> {
-                val text = getString(R.string.ussanomaly)
-                val textEscape1 = getString(R.string.escape1_ussanomaly)
-                val textEscape2 = getString(R.string.escape2_ussanomaly)
-                val textEscape3 = getString(R.string.escape3_ussanomaly)
-                val titleImageId = R.drawable.ussanomaly
-                val scheduleImageId = R.drawable.scheduleussanomaly
-                val jobsImageId = R.drawable.jobussanomaly
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putInt("TitleImageId", titleImageId)
-                bundle.putInt("ScheduleImageId", scheduleImageId )
-                bundle.putInt("JobsImageId", jobsImageId )
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.ussanomaly,
+                        stringEscape1 = R.string.escape1_ussanomaly,
+                        stringEscape2 = R.string.escape2_ussanomaly,
+                        stringEscape3 = R.string.escape3_ussanomaly,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.ussanomaly,
+                        scheduleImageId = R.drawable.scheduleussanomaly,
+                        jobsImageId = R.drawable.jobussanomaly
+                    )
+                )
             }
             getString(R.string.santassshakedown) -> {
-                val text = getString(R.string.santassshakedown)
-                val textEscape1 = getString(R.string.escape1_santassshakedown)
-                val textEscape2 = getString(R.string.escape2_santassshakedown)
-                val textEscape3 = getString(R.string.escape3_santassshakedown)
-                val titleImageId = R.drawable.santassshakedown
-                val scheduleImageId = R.drawable.schedulesantassshakedown
-                val jobsImageId = R.drawable.jobsantassshakedown
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putInt("TitleImageId", titleImageId)
-                bundle.putInt("ScheduleImageId", scheduleImageId )
-                bundle.putInt("JobsImageId", jobsImageId )
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.santassshakedown,
+                        stringEscape1 = R.string.escape1_santassshakedown,
+                        stringEscape2 = R.string.escape2_santassshakedown,
+                        stringEscape3 = R.string.escape3_santassshakedown,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.santassshakedown,
+                        scheduleImageId = R.drawable.schedulesantassshakedown,
+                        jobsImageId = R.drawable.jobsantassshakedown
+                    )
+                )
             }
             getString(R.string.snowwayout) -> {
-                val text = getString(R.string.snowwayout)
-                val textEscape1 = getString(R.string.escape1_snowwayout)
-                val textEscape2 = getString(R.string.escape2_snowwayout)
-                val textEscape3 = getString(R.string.escape3_snowwayout)
-                val titleImageId = R.drawable.snowwayout
-                val scheduleImageId = R.drawable.schedulesnowwayout
-                val jobsImageId = R.drawable.jobsnowwayout
-                bundle.putString("MapName", text)
-                bundle.putString("EscapePlan1", textEscape1)
-                bundle.putString("EscapePlan2", textEscape2)
-                bundle.putString("EscapePlan3", textEscape3)
-                bundle.putInt("TitleImageId", titleImageId)
-                bundle.putInt("ScheduleImageId", scheduleImageId )
-                bundle.putInt("JobsImageId", jobsImageId )
-                findNavController().navigate(R.id.action_fragmentMap_to_fragmentSampleMap,bundle)
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.snowwayout,
+                        stringEscape1 = R.string.escape1_snowwayout,
+                        stringEscape2 = R.string.escape2_snowwayout,
+                        stringEscape3 = R.string.escape3_snowwayout,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.snowwayout,
+                        scheduleImageId = R.drawable.schedulesnowwayout,
+                        jobsImageId = R.drawable.jobsnowwayout
+                    )
+                )
             }
-
         }
-
     }
-
-
 }

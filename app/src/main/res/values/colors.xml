@@ -9,5 +9,5 @@
     <color name="white">#FFFFFFFF</color>
     <color name="blackforstatusbar">#FF252525</color>
     <color name="orange_for_frame">#C75532</color>
-    <color name="orange_for_navigation_bar">#FF5722</color>
+    <color name="orange_for_navigation_bar">#E779FA</color>
 </resources>
