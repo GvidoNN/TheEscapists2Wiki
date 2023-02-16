@@ -40,6 +40,4 @@ class ItemAdapter(private var itemList: ArrayList<Items>): RecyclerView.Adapter<
             binding.tvIntelligence.text = item.intelligence
         }
     }
-
-
 }

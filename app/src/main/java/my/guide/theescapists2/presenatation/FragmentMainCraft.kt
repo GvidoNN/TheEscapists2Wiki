@@ -1,6 +1,7 @@
 package my.guide.theescapists2.presenatation
 
 import android.os.Bundle
+import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.appcompat.widget.SearchView
@@ -24,7 +25,6 @@ class FragmentMainCraft : Fragment() {
             adapter = adapter
         )
     }
-
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -51,7 +51,7 @@ class FragmentMainCraft : Fragment() {
 
             override fun onQueryTextChange(newText: String?): Boolean {
                 searchCraftsUseCase.filterList(newText)
-                return true
+                return false
             }
 
         })

@@ -22,4 +22,5 @@ class SearchCraftsUseCase(var itemRepository : ItemsRepository, var adapter: Ite
         }
         return filteredList
     }
+    
 }
