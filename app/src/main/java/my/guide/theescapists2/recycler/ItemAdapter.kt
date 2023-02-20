@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import my.guide.theescapists2.R
 import my.guide.theescapists2.databinding.ItemItemBinding
+import my.guide.theescapists2.domain.models.Items
 
 class ItemAdapter(private var itemList: ArrayList<Items>): RecyclerView.Adapter<ItemAdapter.ItemsViewHolder>(){
 

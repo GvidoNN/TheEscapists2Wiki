@@ -12,7 +12,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import my.guide.theescapists2.databinding.FragmentMapBinding
 import my.guide.theescapists2.recycler.MapAdapter
-import my.guide.theescapists2.recycler.Maps
+import my.guide.theescapists2.domain.models.Maps
 import com.google.android.gms.ads.AdError
 import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.FullScreenContentCallback
@@ -23,7 +23,6 @@ import kotlinx.coroutines.launch
 import my.guide.theescapists2.R
 import my.guide.theescapists2.data.repository.MapRepositoryImpl
 import my.guide.theescapists2.domain.usecase.PutDataSampleMapUseCase
-import kotlin.collections.ArrayList
 
 
 class FragmentMap : Fragment(), MapAdapter.Listener {

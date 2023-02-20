@@ -4,7 +4,7 @@ import android.content.Context
 import android.os.Bundle
 import my.guide.theescapists2.R
 import my.guide.theescapists2.domain.repository.MapRepository
-import my.guide.theescapists2.recycler.Maps
+import my.guide.theescapists2.domain.models.Maps
 
 class MapRepositoryImpl(private var context: Context) : MapRepository {
 

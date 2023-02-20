@@ -1,8 +1,7 @@
 package my.guide.theescapists2.domain.repository
 
 import android.os.Bundle
-import my.guide.theescapists2.recycler.Items
-import my.guide.theescapists2.recycler.Maps
+import my.guide.theescapists2.domain.models.Maps
 
 interface MapRepository {
 

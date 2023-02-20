@@ -1,7 +1,6 @@
 package my.guide.theescapists2.domain.repository
 
-import android.content.Context
-import my.guide.theescapists2.recycler.Items
+import my.guide.theescapists2.domain.models.Items
 
 interface ItemsRepository {
 

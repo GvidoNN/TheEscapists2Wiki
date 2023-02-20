@@ -2,7 +2,7 @@ package my.guide.theescapists2.domain.usecase
 
 import my.guide.theescapists2.domain.repository.ItemsRepository
 import my.guide.theescapists2.recycler.ItemAdapter
-import my.guide.theescapists2.recycler.Items
+import my.guide.theescapists2.domain.models.Items
 import java.util.*
 import kotlin.collections.ArrayList
 

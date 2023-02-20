@@ -6,6 +6,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import my.guide.theescapists2.R
 import my.guide.theescapists2.databinding.ItemMapBinding
+import my.guide.theescapists2.domain.models.Maps
 
 class MapAdapter(private var MapsArrayList: ArrayList<Maps>, val listener: Listener):
     RecyclerView.Adapter<MapAdapter.MapsViewHolder>() {

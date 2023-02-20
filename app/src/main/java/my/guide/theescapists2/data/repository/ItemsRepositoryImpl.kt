@@ -3,7 +3,7 @@ package my.guide.theescapists2.data.repository
 import android.content.Context
 import my.guide.theescapists2.R
 import my.guide.theescapists2.domain.repository.ItemsRepository
-import my.guide.theescapists2.recycler.Items
+import my.guide.theescapists2.domain.models.Items
 
 class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
 
