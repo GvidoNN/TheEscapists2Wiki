@@ -39,9 +39,7 @@ class FragmentMap : Fragment(), MapAdapter.Listener {
         savedInstanceState: Bundle?
     ): View? {
         val binding = FragmentMapBinding.inflate(inflater)
-        lifecycleScope.launch {
-            loadInterAd()
-        }
+        loadInterAd()
         return binding.root
     }
 
