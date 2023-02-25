@@ -13,11 +13,13 @@ import com.google.android.gms.ads.AdRequest
 import com.google.android.gms.ads.MobileAds
 import my.guide.theescapists2.R
 import my.guide.theescapists2.data.repository.ComponentsRepositoryImpl
+import my.guide.theescapists2.domain.usecase.PutDataComponentUseCase
 
 class FragmentComponent : Fragment() {
     private lateinit var adapter: ComponentAdapter
     private lateinit var recyclerView: RecyclerView
     private val componentsRepository by lazy { ComponentsRepositoryImpl(context = requireContext()) }
+    private val putDataComponentUseCase by lazy {PutDataComponentUseCase(componentsRepository = componentsRepository)}
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -28,14 +30,13 @@ class FragmentComponent : Fragment() {
         return binding.root
     }
 
-
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val layoutManager = LinearLayoutManager(context)
         recyclerView = view.findViewById(R.id.recyclerView)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
-        adapter = ComponentAdapter(componentsRepository.dataInitialize())
+        adapter = ComponentAdapter(putDataComponentUseCase.getData())
         recyclerView.adapter = adapter
     }
 

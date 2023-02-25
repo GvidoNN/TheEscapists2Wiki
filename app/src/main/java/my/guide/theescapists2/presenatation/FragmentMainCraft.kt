@@ -56,4 +56,6 @@ class FragmentMainCraft : Fragment() {
 
         })
     }
+
+
 }
