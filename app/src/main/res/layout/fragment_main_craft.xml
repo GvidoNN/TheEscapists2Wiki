@@ -28,8 +28,7 @@
             android:layout_height="665dp"
             android:layout_marginBottom="0dp"
             android:layout_weight="1"
-            app:layout_anchorGravity="top"
-            tools:listitem="@layout/item_item">
+            app:layout_anchorGravity="top">
 
         </androidx.recyclerview.widget.RecyclerView>
 

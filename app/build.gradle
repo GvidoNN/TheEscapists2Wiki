@@ -11,8 +11,8 @@ android {
         applicationId "my.guide.theescapists2"
         minSdk 21
         targetSdk 32
-        versionCode 5
-        versionName "1.4"
+        versionCode 7
+        versionName "1.7"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -40,12 +40,6 @@ dependencies {
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:$lifecycle_version"
     annotationProcessor "androidx.lifecycle:lifecycle-compiler:$lifecycle_version"
 
-    def koin_version = "3.1.2"
-    implementation "io.insert-koin:koin-core:$koin_version"
-    implementation "io.insert-koin:koin-android:$koin_version"
-
-    testImplementation "io.insert-koin:koin-test:$koin_version"
-
     implementation 'androidx.core:core-ktx:1.7.0'
     implementation 'androidx.appcompat:appcompat:1.5.1'
     implementation 'com.google.android.material:material:1.6.1'
@@ -59,10 +53,11 @@ dependencies {
 
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
 
-    implementation 'com.github.bumptech.glide:glide:4.12.0'
+    implementation 'com.google.android.gms:play-services-ads-lite:21.5.0'
+    implementation 'com.google.android.gms:play-services-ads:21.5.0'
 
-    implementation 'com.google.android.gms:play-services-ads-lite:21.4.0'
-    implementation 'com.google.android.gms:play-services-ads:21.4.0'
+    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:x.x.x"
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:x.x.x"

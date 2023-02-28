@@ -6,11 +6,12 @@ import my.guide.theescapists2.domain.models.Items
 import java.util.*
 import kotlin.collections.ArrayList
 
-class SearchCraftsUseCase(var itemRepository : ItemsRepository, var adapter: ItemAdapter) {
+class SearchCraftsUseCase(var itemsRepository : ItemsRepository, var adapter: ItemAdapter) {
+
     fun filterList(query: String?): ArrayList<Items> {
         val filteredList = ArrayList<Items>()
         if (query != null) {
-            for (i in itemRepository.dataInitialize()) {
+            for (i in itemsRepository.dataInitialize()) {
                 if (i.name.lowercase(Locale.ROOT).contains(query.lowercase())) {
                     filteredList.add(i)
                 }
@@ -22,5 +23,5 @@ class SearchCraftsUseCase(var itemRepository : ItemsRepository, var adapter: Ite
         }
         return filteredList
     }
-    
+
 }

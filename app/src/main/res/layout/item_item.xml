@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="@drawable/orangeframe">
@@ -11,10 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="4dp"
-        android:background="@drawable/orangeframe"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
+        android:background="@drawable/orangeframe"
         app:layout_constraintTop_toTopOf="parent">
 
         <LinearLayout
@@ -37,8 +36,8 @@
                     android:layout_marginLeft="20dp"
                     android:layout_marginTop="5dp"
                     android:layout_weight="1"
-                    android:background="@drawable/orange_frame_little"
-                    android:orientation="horizontal">
+                    android:orientation="horizontal"
+                    android:background="@drawable/orange_frame_little">
 
                     <TextView
                         android:id="@+id/tvTextIntelligence"
@@ -95,8 +94,9 @@
                         android:layout_height="50dp"
                         android:layout_gravity="bottom|center"
                         android:layout_weight="1"
+                        android:background="@drawable/orange_frame_little"
                         app:srcCompat="@drawable/bedsheet"
-                        android:background="@drawable/orange_frame_little"/>
+                        />
 
                     <ImageView
                         android:id="@+id/imOne"
@@ -104,8 +104,9 @@
                         android:layout_height="50dp"
                         android:layout_gravity="left"
                         android:layout_weight="1"
+                        android:background="@drawable/orange_frame_little"
                         app:srcCompat="@drawable/battery"
-                        android:background="@drawable/orange_frame_little"/>
+                       />
 
                     <ImageView
                         android:id="@+id/imThree"
@@ -113,8 +114,9 @@
                         android:layout_height="50dp"
                         android:layout_gravity="center|right"
                         android:layout_weight="1"
+                        android:background="@drawable/orange_frame_little"
                         app:srcCompat="@drawable/bagofflour"
-                        android:background="@drawable/orange_frame_little"/>
+                        />
                 </LinearLayout>
 
             </LinearLayout>

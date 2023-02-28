@@ -1,7 +1,5 @@
 package my.guide.theescapists2;
 
-import static org.koin.android.ext.koin.ModuleExtKt.androidContext;
-
 import android.app.Activity;
 import android.app.Application;
 import android.content.Context;

@@ -1,7 +1,6 @@
 package my.guide.theescapists2.presenatation
 
 import android.os.Bundle
-import android.util.Log
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.appcompat.widget.SearchView
@@ -10,8 +9,11 @@ import androidx.recyclerview.widget.RecyclerView
 import my.guide.theescapists2.R
 import my.guide.theescapists2.data.repository.ItemsRepositoryImpl
 import my.guide.theescapists2.databinding.FragmentMainCraftBinding
+import my.guide.theescapists2.domain.models.Items
 import my.guide.theescapists2.domain.usecase.SearchCraftsUseCase
 import my.guide.theescapists2.recycler.ItemAdapter
+import java.util.*
+import kotlin.collections.ArrayList
 
 
 class FragmentMainCraft : Fragment() {
@@ -21,7 +23,7 @@ class FragmentMainCraft : Fragment() {
     private val itemsRepository by lazy { ItemsRepositoryImpl(context = requireContext()) }
     private val searchCraftsUseCase by lazy {
         SearchCraftsUseCase(
-            itemRepository = itemsRepository,
+            itemsRepository = itemsRepository,
             adapter = adapter
         )
     }
@@ -36,13 +38,15 @@ class FragmentMainCraft : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val layoutManager = LinearLayoutManager(context)
+        val layoutManager = LinearLayoutManager(requireContext())
         recyclerView = view.findViewById(R.id.recycler_view)
         searchView = view.findViewById(R.id.searchView)
         recyclerView.layoutManager = layoutManager
         recyclerView.setHasFixedSize(true)
         adapter = ItemAdapter(itemsRepository.dataInitialize())
         recyclerView.adapter = adapter
+
+
 
         searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
@@ -55,6 +59,7 @@ class FragmentMainCraft : Fragment() {
             }
 
         })
+
     }
 
 
