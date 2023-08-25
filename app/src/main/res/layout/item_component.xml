@@ -40,6 +40,7 @@
                 android:layout_gravity="center"
                 android:layout_weight="1"
                 android:gravity="center"
+                android:fontFamily="@font/nunito_bold"
                 android:text="TextView"
                 android:textSize="20sp"
                 android:textStyle="bold" />

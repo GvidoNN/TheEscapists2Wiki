@@ -12,8 +12,7 @@ class ComponentAdapter(private val componentList: ArrayList<Components>) :
     RecyclerView.Adapter<ComponentAdapter.ComponentViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComponentViewHolder {
-        val view =
-            LayoutInflater.from(parent.context).inflate(R.layout.item_component, parent, false)
+        val view = LayoutInflater.from(parent.context).inflate(R.layout.item_component, parent, false)
         return ComponentViewHolder(view)
     }
 

@@ -5,14 +5,14 @@ plugins {
 }
 
 android {
-    compileSdk 32
+    compileSdk 33
 
     defaultConfig {
         applicationId "my.guide.theescapists2"
         minSdk 21
-        targetSdk 32
-        versionCode 7
-        versionName "1.7"
+        targetSdk 33
+        versionCode 8
+        versionName "1.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

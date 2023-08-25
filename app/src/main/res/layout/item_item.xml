@@ -45,6 +45,7 @@
                         android:layout_height="wrap_content"
                         android:layout_weight="1"
                         android:gravity="center"
+                        android:fontFamily="@font/nunito_bold"
                         android:text="@string/intelligence"
                         android:textColor="@color/blackforstatusbar"
                         android:textSize="16sp"
@@ -65,6 +66,17 @@
                 </LinearLayout>
 
                 <TextView
+                    android:id="@+id/tvContraband"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:layout_weight="1"
+                    android:fontFamily="@font/nunito_bold"
+                    android:gravity="center"
+                    android:text="@string/contraband"
+                    android:textColor="#F11D1D" />
+
+                <TextView
                     android:id="@+id/tvCraft"
                     android:layout_width="219dp"
                     android:layout_height="139dp"
@@ -78,6 +90,7 @@
                     android:shadowColor="@color/blackforstatusbar"
                     android:text="@string/cushioned_inmate_outfit_craft"
                     android:textColor="@color/blackforstatusbar"
+                    android:fontFamily="@font/nunito_medium"
                     android:textSize="16sp"
                     android:textStyle="bold" />
 
@@ -140,11 +153,12 @@
 
             <TextView
                 android:id="@+id/tvName"
-                android:layout_width="match_parent"
-                android:layout_height="58dp"
+                android:layout_width="114dp"
+                android:layout_height="80dp"
                 android:layout_gravity="center"
                 android:layout_marginLeft="5dp"
                 android:layout_marginTop="3dp"
+                android:fontFamily="@font/nunito_bold"
                 android:foregroundGravity="center_vertical"
                 android:rotationX="0"
                 android:text="Роба заключённого Цветная"

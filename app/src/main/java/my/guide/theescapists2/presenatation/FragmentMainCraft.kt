@@ -9,11 +9,8 @@ import androidx.recyclerview.widget.RecyclerView
 import my.guide.theescapists2.R
 import my.guide.theescapists2.data.repository.ItemsRepositoryImpl
 import my.guide.theescapists2.databinding.FragmentMainCraftBinding
-import my.guide.theescapists2.domain.models.Items
 import my.guide.theescapists2.domain.usecase.SearchCraftsUseCase
 import my.guide.theescapists2.recycler.ItemAdapter
-import java.util.*
-import kotlin.collections.ArrayList
 
 
 class FragmentMainCraft : Fragment() {
@@ -27,6 +24,11 @@ class FragmentMainCraft : Fragment() {
             adapter = adapter
         )
     }
+
+    /*private val searchCraftsUseCase = SearchCraftsUseCase(
+        itemsRepository = itemsRepository,
+        adapter = adapter
+    )*/
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
@@ -39,6 +41,7 @@ class FragmentMainCraft : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val layoutManager = LinearLayoutManager(requireContext())
+
         recyclerView = view.findViewById(R.id.recycler_view)
         searchView = view.findViewById(R.id.searchView)
         recyclerView.layoutManager = layoutManager
@@ -57,7 +60,6 @@ class FragmentMainCraft : Fragment() {
                 searchCraftsUseCase.filterList(newText)
                 return false
             }
-
         })
 
     }
