@@ -263,6 +263,62 @@ class FragmentMap : Fragment(), MapAdapter.Listener {
                     )
                 )
             }
+            getString(R.string.wicked_ward) -> {
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.wicked_ward,
+                        stringEscape1 = R.string.escape1_wicked_ward,
+                        stringEscape2 = R.string.escape2_wicked_ward,
+                        stringEscape3 = R.string.escape3_wicked_ward,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.wickedward,
+                        scheduleImageId = R.drawable.schedulewickedward,
+                        jobsImageId = R.drawable.jobwickedward
+                    )
+                )
+            }
+            getString(R.string.the_glorious_regime) -> {
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.the_glorious_regime,
+                        stringEscape1 = R.string.escape1_glorious_regime,
+                        stringEscape2 = R.string.escape2_glorious_regime,
+                        stringEscape3 = R.string.escape3_glorious_regime,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.gloriousregime,
+                        scheduleImageId = R.drawable.schedulegloriousregime,
+                        jobsImageId = R.drawable.jobgloriousregime
+                    )
+                )
+            }
+            getString(R.string.dungeons_and_duct_tape) -> {
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.dungeons_and_duct_tape,
+                        stringEscape1 = R.string.escape1_dungeons_duct_tape,
+                        stringEscape2 = R.string.escape2_dungeons_duct_tape,
+                        stringEscape3 = R.string.escape3_dungeons_duct_tape,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.dangeonandducttape,
+                        scheduleImageId = R.drawable.scheduledangeonsandducttapee,
+                        jobsImageId = R.drawable.jobsdangeonducttape
+                    )
+                )
+            }
+            getString(R.string.big_top_breakout) -> {
+                findNavController().navigate(
+                    R.id.action_fragmentMap_to_fragmentSampleMap, putDataSampleMapUseCase.getData(
+                        text = R.string.big_top_breakout,
+                        stringEscape1 = R.string.escape1_big_top_breakout,
+                        stringEscape2 = R.string.escape2_big_top_breakout,
+                        stringEscape3 = R.string.escape3_big_top_breakout,
+                        stringEscape4 = null,
+                        titleImageId = R.drawable.bigtopbreakout,
+                        scheduleImageId = R.drawable.schedulebigtopbreakout,
+                        jobsImageId = R.drawable.jobbigtopbreakout
+                    )
+                )
+            }
         }
     }
 }

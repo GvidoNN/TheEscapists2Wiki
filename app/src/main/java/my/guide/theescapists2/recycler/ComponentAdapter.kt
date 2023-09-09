@@ -7,8 +7,9 @@ import androidx.recyclerview.widget.RecyclerView
 import my.guide.theescapists2.R
 import my.guide.theescapists2.databinding.ItemComponentBinding
 import my.guide.theescapists2.domain.models.Components
+import my.guide.theescapists2.domain.models.Items
 
-class ComponentAdapter(private val componentList: ArrayList<Components>) :
+class ComponentAdapter(private var componentList: ArrayList<Components>) :
     RecyclerView.Adapter<ComponentAdapter.ComponentViewHolder>() {
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ComponentViewHolder {
@@ -18,6 +19,11 @@ class ComponentAdapter(private val componentList: ArrayList<Components>) :
 
     override fun onBindViewHolder(holder: ComponentViewHolder, position: Int) {
         holder.bind(componentList[position])
+    }
+
+    fun setFilteredList(componentList: ArrayList<Components>){
+        this.componentList = componentList
+        notifyDataSetChanged()
     }
 
     override fun getItemCount(): Int {

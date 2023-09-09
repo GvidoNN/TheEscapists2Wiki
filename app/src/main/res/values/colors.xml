@@ -10,5 +10,5 @@
     <color name="blackforstatusbar">#FF252525</color>
     <color name="orange_for_frame">#C75532</color>
     <color name="white_gray">#E1DFDF</color>
-    <color name="orange_for_navigation_bar">#E779FA</color>
+    <color name="navigation_search_bar">#8E8E8E</color>
 </resources>

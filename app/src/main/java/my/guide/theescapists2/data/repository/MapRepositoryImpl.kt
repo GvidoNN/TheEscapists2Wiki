@@ -26,7 +26,11 @@ class MapRepositoryImpl(private var context: Context) : MapRepository {
             R.drawable.airforcecon,
             R.drawable.ussanomaly,
             R.drawable.santassshakedown,
-            R.drawable.snowwayout
+            R.drawable.snowwayout,
+            R.drawable.wickedward,
+            R.drawable.gloriousregime,
+            R.drawable.dangeonandducttape,
+            R.drawable.bigtopbreakout
         )
         val name = arrayOf(
             context.getString(R.string.center_perks_2_0),
@@ -40,7 +44,11 @@ class MapRepositoryImpl(private var context: Context) : MapRepository {
             context.getString(R.string.airforcecon),
             context.getString(R.string.ussanomaly),
             context.getString(R.string.santassshakedown),
-            context.getString(R.string.snowwayout)
+            context.getString(R.string.snowwayout),
+            context.getString(R.string.wicked_ward),
+            context.getString(R.string.the_glorious_regime),
+            context.getString(R.string.dungeons_and_duct_tape),
+            context.getString(R.string.big_top_breakout)
         )
 
         for (i in imageId.indices) {

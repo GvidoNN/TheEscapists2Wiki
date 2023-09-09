@@ -12,7 +12,6 @@ import my.guide.theescapists2.R
 import my.guide.theescapists2.databinding.FragmentSampleMapBinding
 
 
-
 class FragmentSampleMap : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -38,11 +37,11 @@ class FragmentSampleMap : Fragment() {
         binding.imJob.setImageResource(jobsImageId!!)
 
         Linkify.addLinks(binding.tvEscapingPlan1, Linkify.ALL)
-        Linkify.addLinks( binding.tvEscapingPlan2, Linkify.ALL)
-        Linkify.addLinks( binding.tvEscapingPlan3, Linkify.ALL)
-        Linkify.addLinks( binding.tvEscapingPlan4, Linkify.ALL)
+        Linkify.addLinks(binding.tvEscapingPlan2, Linkify.ALL)
+        Linkify.addLinks(binding.tvEscapingPlan3, Linkify.ALL)
+        Linkify.addLinks(binding.tvEscapingPlan4, Linkify.ALL)
 
-        binding.btBack.setOnClickListener{
+        binding.btBack.setOnClickListener {
             findNavController().navigate(R.id.action_fragmentSampleMap_to_fragmentMap)
         }
 

@@ -7,9 +7,10 @@
     <string name="item">Item</string>
     <string name="intelligence">Intelligence: </string>
     <string name="ways_to_escape">Ways to escape</string>
-    <string name="advertising">Here must be an advertising :)</string>\
+    <string name="advertising">Here must be an advertising :)</string>
     <string name="search_hint">Enter item name...</string>
     <string name="contraband">Contraband</string>
+
     <!-- TODO: Craft strings -->
     <!-- Items -->
     <string name="baseball_bat">Wooden Bat</string>
@@ -303,6 +304,11 @@
     <string name="ussanomaly" translatable="false">U.S.S. Anomaly</string>
     <string name="santassshakedown" translatable="false">Santa\'s Shakedown</string>
     <string name="snowwayout" translatable="false">Snow Way Out </string>
+    <string name="the_glorious_regime" translatable="false">The Glorious Regime</string>
+    <string name="big_top_breakout" translatable="false">Big Top Breakout</string>
+    <string name="dungeons_and_duct_tape" translatable="false">Dungeons and Duct Tape</string>
+    <string name="wicked_ward" translatable="false">Wicked Ward</string>
+
     <!-- Information about escaping plans -->
     <string name="escape1_center_perks_2.0">Perimeter Breakout \n
     https://www.youtube.com/watch?v=VzyhM7-WMKw&amp;ab_channel=Team17 </string>
@@ -433,6 +439,48 @@
     <string name="escape3_snowwayout">Batteries not included [MULTIPLAYER ONLY] \n
         https://youtu.be/Exz5-KNBZB8
     </string>
+
+    <string name="escape1_wicked_ward">Perimeter Breakout \n
+        https://www.youtube.com/watch?v=74iD9DZZVzY
+    </string>
+    <string name="escape2_wicked_ward">A Grave Affair [SINGLE-PLAYER ONLY] \n
+        https://www.youtube.com/watch?v=QtO-kCWwZko
+    </string>
+    <string name="escape3_wicked_ward">Monster Mash [MULTIPLAYER ONLY] \n
+        https://www.youtube.com/watch?v=goPG7hbCsWQ
+    </string>
+
+    <string name="escape1_glorious_regime">Perimeter Breakout \n
+        https://www.youtube.com/watch?v=CNPMSxIo3JE
+    </string>
+    <string name="escape2_glorious_regime">Cold Case [SINGLE-PLAYER ONLY] \n
+        https://www.youtube.com/watch?v=xE_M8EnCXGM
+    </string>
+    <string name="escape3_glorious_regime">Get to da chopper! [MULTIPLAYER ONLY] \n
+        https://www.youtube.com/watch?v=UAU5wD60qHQ
+    </string>
+
+    <string name="escape1_dungeons_duct_tape">Perimeter Breakout \n
+        https://www.youtube.com/watch?v=MTqterJI9fg
+    </string>
+    <string name="escape2_dungeons_duct_tape">Tis but a scratch [SINGLE-PLAYER ONLY] \n
+        https://www.youtube.com/watch?v=UrcLRxqOfrE
+    </string>
+    <string name="escape3_dungeons_duct_tape">Siege the day [MULTIPLAYER ONLY] \n
+        https://www.youtube.com/watch?v=vIQhByGcAKA
+    </string>
+
+    <string name="escape1_big_top_breakout">Perimeter Breakout \n
+        https://www.youtube.com/watch?v=nXsoZ7KkrOc
+    </string>
+    <string name="escape2_big_top_breakout">Its A Long Shot Guides [SINGLE-PLAYER ONLY] \n
+        https://www.youtube.com/watch?v=BKtJBNneVSw
+    </string>
+    <string name="escape3_big_top_breakout">Wind Up Merchant Guide [MULTIPLAYER ONLY] \n
+        https://www.youtube.com/watch?v=LqAaYyjtx1c
+    </string>
+
+
 
 
 </resources>
