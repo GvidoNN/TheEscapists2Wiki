@@ -110,6 +110,18 @@
     <string name="complete_crossbow">Готовый арбалет</string>
     <string name="fake_gun">Фальшивое оружие</string>
     <string name="fishing_rod">Удочка</string>
+    <string name="makeshift_sword">Самодельный меч</string>
+    <string name="makeshift_knights_helmet">Самодельный рыцарский шлем</string>
+    <string name="makeshift_chest_plate">Самодельный нагрудник</string>
+    <string name="makeshift_greaves">Самодельные поножи</string>
+    <string name="makeshift_gauntlets">Самодельные перчатки</string>
+    <string name="makeshift_halbard">Самодельная алебарда</string>
+    <string name="catapult_beam">Балка катапульты</string>
+    <string name="half_catapult_frame">Половина рамы катапульты</string>
+    <string name="catapult_bucket">Ведро катапульты</string>
+    <string name="makeshift_launcher">Самодельная пусковая установка</string>
+    <string name="makeshift_helmet">Самодельный шлем</string>
+    <string name="wind_up_mouse">Заводная мышь</string>
 
 
     <!-- Craft Items -->
@@ -209,6 +221,18 @@
     <string name="complete_crossbow_craft">Ложе арбалета + \n Плечо арбалета + Клей</string>
     <string name="fake_gun_craft">Отлитое оружие + Чернилаc</string>
     <string name="fishing_rod_craft">Доска + Скрепка + \n Кусок бечёвки</string>
+    <string name="makeshift_sword_craft">Молоток + Ручка инструмента + \n Расплавленый металл</string>
+    <string name="makeshift_knights_helmet_craft">Металл + Перо + \n Заклёпки</string>
+    <string name="makeshift_chest_plate_craft">Металл + Металл \n + Заклёпки</string>
+    <string name="makeshift_greaves_craft">Ботинки + \n Кожаный ремешок + \n Металл</string>
+    <string name="makeshift_gauntlets_craft">Белые перчатки + \n Заклёпки + \n Металл</string>
+    <string name="makeshift_halbard_craft">Слиток железа + \n Расплавленый металл + \n Черенок метлы</string>
+    <string name="catapult_beam_craft">Доска + Доска +\nДеревянный колышек</string>
+    <string name="half_catapult_frame_craft">Доска + Кронштейн + \n Деревянный колышек</string>
+    <string name="catapult_bucket_craft">Слиток железа \n + Слиток железа + \n Кожаный ремешок</string>
+    <string name="makeshift_launcher_craft">Доска + Пружина + \n Пружина</string>
+    <string name="makeshift_helmet_craft">Кокос \n + Изолента + \n Молоток</string>
+    <string name="wind_up_mouse_craft">Вставная челюсть + \n Носовой платок + \n  Кусок бечёвки</string>
 
     <!-- TODO: Component strings -->
     <string name="roll_of_duct">Изолента</string>
@@ -273,7 +297,7 @@
     <string name="pie_filling">Начинка пирога</string>
     <string name="pastry_case">Pastry Case</string>
     <string name="trash_bag">Пакет для мусора</string>
-    <string name="bracket">Bracket</string>
+    <string name="bracket">Кронштейн</string>
     <string name="hammer">Молоток</string>
     <string name="bolts">Болты</string>
     <string name="radio_receiver">Радиоприёмник</string>
@@ -290,6 +314,16 @@
     <string name="blank_security_pass">Пустой пропуск охраны</string>
     <string name="feather">Перо</string>
     <string name="toothpaste">Зубная паста</string>
+    <string name="pair_of_white_gloves">Белые перчатки</string>
+    <string name="leather_strap">Кожаный ремешок</string>
+    <string name="rivets">Заклепки</string>
+    <string name="wooden_peg">Деревянный колышек</string>
+    <string name="iron_bar">Железный слиток</string>
+    <string name="coconut">Кокос</string>
+    <string name="spring">Пружина</string>
+    <string name="chattering_teeth">Вставная челюсть</string>
+    <string name="molten_metal">Расплавленый металл</string>
+
     <!-- TODO: Map strings -->
     <!-- Information about escaping plans -->
     <string name="escape1_center_perks_2.0">Нарушение периметра \n

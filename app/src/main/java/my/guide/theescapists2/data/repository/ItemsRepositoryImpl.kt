@@ -106,7 +106,19 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             R.drawable.blanksecuritypass,
             R.drawable.crossbowbody,
             R.drawable.mouldedgun,
-            R.drawable.timber
+            R.drawable.timber,
+            R.drawable.hammer,
+            R.drawable.sheetofmetal,
+            R.drawable.sheetofmetal,
+            R.drawable.pairofshoes,
+            R.drawable.pair_of_white_gloves,
+            R.drawable.iron_bar,
+            R.drawable.timber,
+            R.drawable.timber,
+            R.drawable.iron_bar,
+            R.drawable.timber,
+            R.drawable.coconut,
+            R.drawable.chattering_teeth
         )
 
         var imTwoId = arrayOf(
@@ -205,7 +217,19 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             R.drawable.jarofink,
             R.drawable.crossbowlathe,
             R.drawable.jarofink,
-            R.drawable.paperclip
+            R.drawable.paperclip,
+            R.drawable.toolhandle,
+            R.drawable.feather,
+            R.drawable.sheetofmetal,
+            R.drawable.leather_strap,
+            R.drawable.rivets,
+            R.drawable.molten_metal,
+            R.drawable.timber,
+            R.drawable.bracket,
+            R.drawable.iron_bar,
+            R.drawable.spring,
+            R.drawable.rollofducttape,
+            R.drawable.handkerchief
         )
 
         var imThreeId = arrayOf(
@@ -304,6 +328,18 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             R.drawable.feather,
             R.drawable.tubeofglue,
             R.drawable.empty,
+            R.drawable.pieceofstring,
+            R.drawable.molten_metal,
+            R.drawable.rivets,
+            R.drawable.rivets,
+            R.drawable.sheetofmetal,
+            R.drawable.sheetofmetal,
+            R.drawable.broomhandle,
+            R.drawable.wooden_peg,
+            R.drawable.wooden_peg,
+            R.drawable.leather_strap,
+            R.drawable.spring,
+            R.drawable.hammer,
             R.drawable.pieceofstring
         )
 
@@ -403,6 +439,18 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             true,
             true,
             false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
             true
         )
 
@@ -502,7 +550,19 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             R.drawable.securitypass,
             R.drawable.completecrossbow,
             R.drawable.fakegun,
-            R.drawable.fishingrod
+            R.drawable.fishingrod,
+            R.drawable.makeshift_sword,
+            R.drawable.makeshift_knights_helmet,
+            R.drawable.makeshift_chest_plate,
+            R.drawable.makeshift_greaves,
+            R.drawable.makeshift_gauntlets,
+            R.drawable.makeshift_halbard,
+            R.drawable.catapult_beam,
+            R.drawable.half_catapult_frame,
+            R.drawable.catapult_bucket,
+            R.drawable.makeshift_launcher,
+            R.drawable.makeshift_helmet,
+            R.drawable.wind_up_mouse
         )
         var name = arrayOf(
             context.getString(R.string.baseball_bat),
@@ -600,7 +660,19 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             context.getString(R.string.security_pass),
             context.getString(R.string.complete_crossbow),
             context.getString(R.string.fake_gun),
-            context.getString(R.string.fishing_rod)
+            context.getString(R.string.fishing_rod),
+            context.getString(R.string.makeshift_sword),
+            context.getString(R.string.makeshift_knights_helmet),
+            context.getString(R.string.makeshift_chest_plate),
+            context.getString(R.string.makeshift_greaves),
+            context.getString(R.string.makeshift_gauntlets),
+            context.getString(R.string.makeshift_halbard),
+            context.getString(R.string.catapult_beam),
+            context.getString(R.string.half_catapult_frame),
+            context.getString(R.string.catapult_bucket),
+            context.getString(R.string.makeshift_launcher),
+            context.getString(R.string.makeshift_helmet),
+            context.getString(R.string.wind_up_mouse)
         )
 
         var craft = arrayOf(
@@ -699,7 +771,19 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             context.getString(R.string.security_pass_craft),
             context.getString(R.string.complete_crossbow_craft),
             context.getString(R.string.fake_gun_craft),
-            context.getString(R.string.fishing_rod_craft)
+            context.getString(R.string.fishing_rod_craft),
+            context.getString(R.string.makeshift_sword_craft),
+            context.getString(R.string.makeshift_knights_helmet_craft),
+            context.getString(R.string.makeshift_chest_plate_craft),
+            context.getString(R.string.makeshift_greaves_craft),
+            context.getString(R.string.makeshift_gauntlets_craft),
+            context.getString(R.string.makeshift_halbard_craft),
+            context.getString(R.string.catapult_beam_craft),
+            context.getString(R.string.half_catapult_frame_craft),
+            context.getString(R.string.catapult_bucket_craft),
+            context.getString(R.string.makeshift_launcher_craft),
+            context.getString(R.string.makeshift_helmet_craft),
+            context.getString(R.string.wind_up_mouse_craft)
         )
 
         var intelligence = arrayOf(
@@ -799,6 +883,18 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             "60+",
             "70+",
             "70+",
+            "70+",
+            "70+",
+            "60+",
+            "50+",
+            "50+",
+            "60+",
+            "70+",
+            "70+",
+            "70+",
+            "70+",
+            "50+",
+            "60+",
             "70+"
         )
 
@@ -898,6 +994,18 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             true,
             true,
             true,
+            false,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            true,
+            false,
             false
         )
 

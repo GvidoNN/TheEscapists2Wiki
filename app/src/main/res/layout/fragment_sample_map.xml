@@ -19,9 +19,12 @@
 
             <ImageButton
                 android:id="@+id/btBack"
-                android:layout_width="62dp"
-                android:layout_height="wrap_content"
-                android:src="@drawable/cross"
+                android:layout_width="61dp"
+                android:layout_height="42dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="10dp"
+                android:backgroundTint="@color/purple_500"
+                android:src="@drawable/ic_arrow_back"
                 tools:ignore="SpeakableTextPresentCheck" />
 
             <TextView
@@ -69,6 +72,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
                 android:gravity="top"
                 android:linksClickable="true"
                 android:text="@string/center_perks_2.0"
@@ -82,6 +87,8 @@
                 android:layout_height="wrap_content"
                 android:layout_gravity="top"
                 android:gravity="top"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
                 android:linksClickable="true"
                 android:text="@string/center_perks_2.0"
                 android:textColor="@color/white"
@@ -95,6 +102,8 @@
                 android:layout_gravity="top"
                 android:gravity="top"
                 android:linksClickable="true"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
                 android:text="@string/center_perks_2.0"
                 android:textColor="@color/white"
                 android:textSize="18sp"
@@ -103,6 +112,8 @@
             <TextView
                 android:id="@+id/tvEscapingPlan4"
                 android:layout_width="match_parent"
+                android:layout_marginStart="6dp"
+                android:layout_marginEnd="6dp"
                 android:layout_height="wrap_content"
                 android:linksClickable="true"
                 android:textColor="@color/white"

@@ -90,7 +90,17 @@ class ComponentsRepositoryImpl(private var context: Context) : ComponentsReposit
             context.getString(R.string.dinner_tray),
             context.getString(R.string.blank_security_pass),
             context.getString(R.string.feather),
-            context.getString(R.string.toothpaste)
+            context.getString(R.string.toothpaste),
+            context.getString(R.string.pair_of_white_gloves),
+            context.getString(R.string.leather_strap),
+            context.getString(R.string.pair_of_white_gloves),
+            context.getString(R.string.rivets),
+            context.getString(R.string.wooden_peg),
+            context.getString(R.string.iron_bar),
+            context.getString(R.string.coconut),
+            context.getString(R.string.spring),
+            context.getString(R.string.chattering_teeth)
+
         )
 
         var imageId = arrayOf(
@@ -172,7 +182,16 @@ class ComponentsRepositoryImpl(private var context: Context) : ComponentsReposit
             R.drawable.dinnertray,
             R.drawable.blanksecuritypass,
             R.drawable.feather,
-            R.drawable.toothpaste
+            R.drawable.toothpaste,
+            R.drawable.leather_strap,
+            R.drawable.pair_of_white_gloves,
+            R.drawable.rivets,
+            R.drawable.wooden_peg,
+            R.drawable.iron_bar,
+            R.drawable.coconut,
+            R.drawable.spring,
+            R.drawable.chattering_teeth,
+            R.drawable.molten_metal
         )
 
         for (i in imageId.indices) {

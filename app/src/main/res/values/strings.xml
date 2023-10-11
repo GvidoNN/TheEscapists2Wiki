@@ -109,6 +109,18 @@
     <string name="complete_crossbow">Complete Crossbow</string>
     <string name="fake_gun">Fake Gun</string>
     <string name="fishing_rod">Fishing Rod</string>
+    <string name="makeshift_sword">Makeshift Sword</string>
+    <string name="makeshift_knights_helmet">Makeshift Knights Helmet</string>
+    <string name="makeshift_chest_plate">Makeshift Chest Plate</string>
+    <string name="makeshift_greaves">Makeshift Greaves</string>
+    <string name="makeshift_gauntlets">Makeshift Gauntlets</string>
+    <string name="makeshift_halbard">Makeshift Halbard</string>
+    <string name="catapult_beam">Catapult Beam</string>
+    <string name="half_catapult_frame">Half Catapult Frame</string>
+    <string name="catapult_bucket">Catapult Bucket</string>
+    <string name="makeshift_launcher">Makeshift Launcher</string>
+    <string name="makeshift_helmet">Makeshift Helmet</string>
+    <string name="wind_up_mouse">Wind-Up Mouse</string>
 
     <!-- Craft Items -->
     <string name="baseball_bat_craft">Timber+Timber + \n Roll of Duct Tape</string>
@@ -207,6 +219,19 @@
     <string name="complete_crossbow_craft">Crossbow Body + \n Crossbow Lathe + \n Tube of Glue</string>
     <string name="fake_gun_craft">Moulded Gun + Jar of Ink</string>
     <string name="fishing_rod_craft">Timber + Paper Clip + \n Piece of String</string>
+    <string name="makeshift_sword_craft">Hammer + Tool Handle + \n Molten Metal</string>
+    <string name="makeshift_knights_helmet_craft">Sheet of Metal + Feather + \n Rivets</string>
+    <string name="makeshift_chest_plate_craft">Sheet of Metal + Sheet of Metal \n + Rivets</string>
+    <string name="makeshift_greaves_craft">Pair of Shoes + \n Leather Strap + \n Sheet of Metal</string>
+    <string name="makeshift_gauntlets_craft">Pair of White Gloves + \n Rivets + \n Sheet of Metal</string>
+    <string name="makeshift_halbard_craft">Iron bar + \n Molten Metal + \n Broom Handle</string>
+    <string name="catapult_beam_craft">Timber + Timber +\nWooden Peg</string>
+    <string name="half_catapult_frame_craft">Timber + Bracket + \n Wooden Peg</string>
+    <string name="catapult_bucket_craft">Iron Bar + Iron Bar + \n Leather Strap</string>
+    <string name="makeshift_launcher_craft">Timber + Spring + \n Spring</string>
+    <string name="makeshift_helmet_craft">Coconut \n + Roll of Duct Tape + \n Hammer</string>
+    <string name="wind_up_mouse_craft">Chattering Teeth + \n Handkerchief + \n  Piece of String</string>
+
 
     <!-- TODO: Component strings -->
     <string name="roll_of_duct"> Roll of Duct Tape</string>
@@ -288,7 +313,15 @@
     <string name="blank_security_pass">Blank Security Pass</string>
     <string name="feather">Feather</string>
     <string name="toothpaste">Toothpaste</string>
-
+    <string name="pair_of_white_gloves">Pair of White Gloves</string>
+    <string name="leather_strap">Leather Strap</string>
+    <string name="rivets">Rivets</string>
+    <string name="wooden_peg">Wooden Peg</string>
+    <string name="iron_bar">Iron Bar</string>
+    <string name="coconut">Coconut</string>
+    <string name="spring">Spring</string>
+    <string name="chattering_teeth">Chattering Teeth</string>
+    <string name="molten_metal">Molten Metal</string>
 
     <!-- TODO: Map strings -->
     <!-- Name of maps -->
