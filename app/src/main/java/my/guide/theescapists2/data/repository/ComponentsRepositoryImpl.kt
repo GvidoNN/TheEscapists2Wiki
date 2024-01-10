@@ -9,9 +9,9 @@ class ComponentsRepositoryImpl(private var context: Context) : ComponentsReposit
 
     override fun dataInitialize(): ArrayList<Components> {
 
-        var componentsArrayList = arrayListOf<Components>()
+        val componentsArrayList = arrayListOf<Components>()
 
-        var name = arrayOf(
+        val name = arrayOf(
             context.getString(R.string.roll_of_duct),
             context.getString(R.string.timber),
             context.getString(R.string.file),
@@ -91,7 +91,6 @@ class ComponentsRepositoryImpl(private var context: Context) : ComponentsReposit
             context.getString(R.string.blank_security_pass),
             context.getString(R.string.feather),
             context.getString(R.string.toothpaste),
-            context.getString(R.string.pair_of_white_gloves),
             context.getString(R.string.leather_strap),
             context.getString(R.string.pair_of_white_gloves),
             context.getString(R.string.rivets),
@@ -99,11 +98,11 @@ class ComponentsRepositoryImpl(private var context: Context) : ComponentsReposit
             context.getString(R.string.iron_bar),
             context.getString(R.string.coconut),
             context.getString(R.string.spring),
-            context.getString(R.string.chattering_teeth)
-
+            context.getString(R.string.chattering_teeth),
+            context.getString(R.string.molten_metal)
         )
 
-        var imageId = arrayOf(
+        val imageId = arrayOf(
             R.drawable.rollofducttape,
             R.drawable.timber,
             R.drawable.file,
@@ -194,8 +193,103 @@ class ComponentsRepositoryImpl(private var context: Context) : ComponentsReposit
             R.drawable.molten_metal
         )
 
+        val contraband = listOf(
+            true,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            true,
+            true,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false,
+            false,
+            false,
+            true,
+            false,
+            true,
+            false,
+            true,
+            false,
+            false
+        )
+
         for (i in imageId.indices) {
-            val components = Components(name[i], imageId[i])
+            val components = Components(
+                name = name[i],
+                imageId = imageId[i],
+                contraband = contraband[i]
+            )
             componentsArrayList.add(components)
         }
         return componentsArrayList

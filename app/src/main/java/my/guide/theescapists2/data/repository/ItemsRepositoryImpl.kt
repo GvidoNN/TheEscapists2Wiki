@@ -950,7 +950,7 @@ class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
             true,
             true,
             true,
-            true,
+            false, //слепок ключа
             true,
             true,
             false, // wad of putty

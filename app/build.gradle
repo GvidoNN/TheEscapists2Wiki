@@ -11,8 +11,8 @@ android {
         applicationId "my.guide.theescapists2"
         minSdk 21
         targetSdk 33
-        versionCode 8
-        versionName "1.8"
+        versionCode 10
+        versionName "2.0"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 

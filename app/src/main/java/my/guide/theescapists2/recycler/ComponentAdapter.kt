@@ -18,7 +18,9 @@ class ComponentAdapter(private var componentList: ArrayList<Components>) :
     }
 
     override fun onBindViewHolder(holder: ComponentViewHolder, position: Int) {
-        holder.bind(componentList[position])
+        val itemData = componentList[position]
+        holder.bind(itemData)
+
     }
 
     fun setFilteredList(componentList: ArrayList<Components>){
@@ -35,6 +37,11 @@ class ComponentAdapter(private var componentList: ArrayList<Components>) :
         fun bind(component: Components) {
             binding.tvNameComponent.text = component.name
             binding.imComponent.setImageResource(component.imageId)
+            if (component.contraband) {
+                binding.tvContrabandComponent.visibility = View.VISIBLE
+            } else {
+                binding.tvContrabandComponent.visibility = View.GONE
+            }
         }
     }
 }
