@@ -5,7 +5,7 @@
     android:id="@+id/FragmentMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="my.guide.theescapists2.presenatation.FragmentComponent">
+    tools:context="lovely.honey.prison.presenatation.FragmentComponent">
 
     <!-- TODO: Update blank fragment layout -->
 

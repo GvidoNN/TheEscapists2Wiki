@@ -6,6 +6,6 @@
     app:startDestination="@id/fragmentMain">
     <fragment
         android:id="@+id/fragmentMain"
-        android:name="my.guide.theescapists2.FragmentMain"
+        android:name="lovely.honey.prison.FragmentMain"
         android:label="FragmentMain" />
 </navigation>

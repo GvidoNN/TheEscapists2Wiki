@@ -1,5 +1,5 @@
 <resources>
-    <!-- TODO: System strings -->
+    <!-- System strings -->
     <string name="app_name">The escapists 2 wiki</string>
     <string name="craft">Crafts</string>
     <string name="map">Maps</string>
@@ -11,7 +11,13 @@
     <string name="search_hint">Enter item name...</string>
     <string name="contraband">Contraband</string>
 
-    <!-- TODO: Craft strings -->
+    <!-- Filter items -->
+    <string name="clothes">Clothes</string>
+    <string name="weapon">Weapon</string>
+    <string name="tool">Tool</string>
+    <string name="component_one">Component</string>
+    <string name="exclusive_item">Exclusive</string>
+
     <!-- Items -->
     <string name="baseball_bat">Wooden Bat</string>
     <string name="sock_mase">Sock Mace</string>

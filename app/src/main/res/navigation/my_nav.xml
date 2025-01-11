@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/fragmentMainCraft"
-        android:name="my.guide.theescapists2.presenatation.FragmentMainCraft"
+        android:name="lovely.honey.prison.presenatation.FragmentMainCraft"
         android:label="FragmentMainCraft" >
         <action
             android:id="@+id/action_fragmentMainCraft_to_fragmentMap"
@@ -22,7 +22,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentMap"
-        android:name="my.guide.theescapists2.presenatation.FragmentMap"
+        android:name="lovely.honey.prison.presenatation.FragmentMap"
         android:label="fragment_map"
         tools:layout="@layout/fragment_map" >
         <action
@@ -41,7 +41,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentComponent"
-        android:name="my.guide.theescapists2.presenatation.FragmentComponent"
+        android:name="lovely.honey.prison.presenatation.FragmentComponent"
         android:label="fragment_component"
         tools:layout="@layout/fragment_component">
         <action
@@ -57,7 +57,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragmentSampleMap"
-        android:name="my.guide.theescapists2.presenatation.FragmentSampleMap"
+        android:name="lovely.honey.prison.presenatation.FragmentSampleMap"
         android:label="fragment_sample_map"
         tools:layout="@layout/fragment_sample_map" >
         <action

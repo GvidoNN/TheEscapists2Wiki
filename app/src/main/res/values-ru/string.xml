@@ -12,7 +12,16 @@
     <string name="advertising">Здесь могла быть ваша реклама :)</string>
     <string name="search_hint">Введите название предмета</string>
     <string name="contraband">Контрабанда</string>
+
     <!-- TODO: Craft strings -->
+
+    <!-- Filter items -->
+    <string name="clothes">Одежда</string>
+    <string name="weapon">Оружие</string>
+    <string name="tool">Инструмент</string>
+    <string name="component_one">Компонент</string>
+    <string name="exclusive_item">Экслюзивный</string>
+
     <!-- Items -->
     <string name="baseball_bat">Бейсбольная бита</string>
     <string name="sock_mase">Носок-кистень</string>

@@ -5,7 +5,7 @@
     android:id="@+id/FragmentMain"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="my.guide.theescapists2.presenatation.FragmentMainCraft">
+    tools:context="lovely.honey.prison.presenatation.FragmentMainCraft">
 
     <LinearLayout
         android:layout_width="match_parent"

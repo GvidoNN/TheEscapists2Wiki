@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/purple_500"
-    tools:context="my.guide.theescapists2.presenatation.FragmentSampleMap">
+    tools:context="lovely.honey.prison.presenatation.FragmentSampleMap">
 
     <ScrollView
         android:layout_width="match_parent"
