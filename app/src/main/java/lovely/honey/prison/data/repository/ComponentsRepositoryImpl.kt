@@ -5,7 +5,9 @@ import lovely.honey.prison.R
 import lovely.honey.prison.domain.repository.ComponentsRepository
 import lovely.honey.prison.domain.models.Components
 
-class ComponentsRepositoryImpl(private var context: Context) : ComponentsRepository {
+class ComponentsRepositoryImpl(
+    private var context: Context
+) : ComponentsRepository {
 
     override fun dataInitialize(): ArrayList<Components> {
 

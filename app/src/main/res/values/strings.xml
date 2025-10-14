@@ -9,7 +9,13 @@
     <string name="ways_to_escape">Ways to escape</string>
     <string name="advertising">Here must be an advertising :)</string>
     <string name="search_hint">Enter item name...</string>
-    <string name="contraband">Contraband</string>
+    <string name="contraband">Forbidden</string>
+
+    <!-- Onboardin strings -->
+    <string name="onboarding_title">Application features</string>
+    <string name="onboarding_text_1">Learn how to craft all items in game</string>
+    <string name="onboarding_text_2">Learn about all components in game</string>
+    <string name="onboarding_text_3">All maps included in guide</string>
 
     <!-- Filter items -->
     <string name="clothes">Clothes</string>

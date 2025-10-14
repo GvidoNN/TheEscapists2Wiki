@@ -4,6 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/FragmentMain"
     android:layout_width="match_parent"
+    android:background="@color/main_background"
     android:layout_height="match_parent"
     tools:context="lovely.honey.prison.presenatation.FragmentMainCraft">
 

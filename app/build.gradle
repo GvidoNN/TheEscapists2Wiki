@@ -5,14 +5,15 @@ plugins {
 }
 
 android {
-    compileSdk 34
+    namespace "lovely.honey.prison"
+    compileSdk 35
 
     defaultConfig {
         applicationId "lovely.honey.prison"
         minSdk 21
-        targetSdk 34
-        versionCode 14
-        versionName "2.7"
+        targetSdk 35
+        versionCode 15
+        versionName "2.8"
         testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
     }
 
@@ -52,9 +53,6 @@ dependencies {
     implementation 'androidx.navigation:navigation-ui-ktx:2.5.2'
 
     implementation 'androidx.recyclerview:recyclerview:1.2.1'
-
-    implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
-    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:x.x.x"
 
     implementation 'org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.1'
     implementation "org.jetbrains.kotlinx:kotlinx-coroutines-core:x.x.x"

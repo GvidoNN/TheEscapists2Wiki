@@ -4,46 +4,52 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.appcompat.widget.SearchView
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
-import androidx.recyclerview.widget.RecyclerView
 import lovely.honey.prison.R
 import lovely.honey.prison.data.repository.ItemsRepositoryImpl
+import lovely.honey.prison.data.repository.UserRepositoryImpl
 import lovely.honey.prison.databinding.FragmentMainCraftBinding
 import lovely.honey.prison.domain.models.Items
-import lovely.honey.prison.recycler.ItemAdapter
+import lovely.honey.prison.presenatation.recycler.ItemAdapter
 import java.util.Locale
 
 
 class FragmentMainCraft : Fragment() {
 
     private lateinit var adapter: ItemAdapter
-    private lateinit var recyclerView: RecyclerView
-    private lateinit var searchView: SearchView
     private lateinit var itemsList: List<Items>
+    private lateinit var binding: FragmentMainCraftBinding
+
     private val itemsRepository by lazy { ItemsRepositoryImpl(context = requireContext()) }
+    private val userRepository by lazy { UserRepositoryImpl(context = requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater,
         container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding = FragmentMainCraftBinding.inflate(inflater)
+        binding = FragmentMainCraftBinding.inflate(inflater)
         return binding.root
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        initRecyclerView()
+        checkFirstEnter()
+    }
+
+    private fun initRecyclerView() {
         val layoutManager = LinearLayoutManager(requireContext())
         itemsList = itemsRepository.dataInitialize()
-        recyclerView = view.findViewById(R.id.recycler_view)
-        searchView = view.findViewById(R.id.searchView)
-        recyclerView.layoutManager = layoutManager
-        recyclerView.setHasFixedSize(true)
+
+        binding.recyclerView.layoutManager = layoutManager
+        binding.recyclerView.setHasFixedSize(true)
 
         adapter = ItemAdapter(itemsList as ArrayList<Items>)
-        recyclerView.adapter = adapter
+        binding.recyclerView.adapter = adapter
 
-        searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
             override fun onQueryTextSubmit(query: String?): Boolean {
                 return false
             }
@@ -54,7 +60,12 @@ class FragmentMainCraft : Fragment() {
                 return false
             }
         })
+    }
 
+    private fun checkFirstEnter() {
+        if (userRepository.getFirstEnter()) {
+            findNavController().navigate(R.id.action_fragmentMainCraft_to_fragmentOnboarding)
+        }
     }
 
     fun filterList(query: String?): ArrayList<Items> {

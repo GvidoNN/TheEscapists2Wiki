@@ -6,7 +6,9 @@ import lovely.honey.prison.data.entity.ItemsFilter
 import lovely.honey.prison.domain.repository.ItemsRepository
 import lovely.honey.prison.domain.models.Items
 
-class ItemsRepositoryImpl(private var context: Context) : ItemsRepository {
+class ItemsRepositoryImpl(
+    private var context: Context
+) : ItemsRepository {
 
     override fun dataInitialize(): ArrayList<Items> {
         var itemsArrayList = arrayListOf<Items>()

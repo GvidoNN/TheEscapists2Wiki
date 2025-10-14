@@ -19,7 +19,7 @@
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/mainBottomNavigationView"
-        app:itemRippleColor="@color/blackforstatusbar"
+        app:itemRippleColor="@color/orange_for_frame"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:background="@drawable/navigationview_frame"

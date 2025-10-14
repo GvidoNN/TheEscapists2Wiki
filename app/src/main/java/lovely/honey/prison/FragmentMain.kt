@@ -18,7 +18,7 @@ class FragmentMain: Fragment(R.layout.fragment_main) {
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             when (destination.id) {
-                R.id.fragmentSampleMap -> {
+                R.id.fragmentSampleMap, R.id.fragmentOnboarding -> {
                     bottomNavigationView.visibility = View.GONE
                 }
                 else -> {
@@ -28,5 +28,7 @@ class FragmentMain: Fragment(R.layout.fragment_main) {
         }
         NavigationUI.setupWithNavController(bottomNavigationView, navController)
     }
+
+
 
 }

@@ -6,7 +6,9 @@ import lovely.honey.prison.R
 import lovely.honey.prison.domain.repository.MapRepository
 import lovely.honey.prison.domain.models.Maps
 
-class MapRepositoryImpl(private var context: Context) : MapRepository {
+class MapRepositoryImpl(
+    private var context: Context
+) : MapRepository {
 
     lateinit var bundle: Bundle
 

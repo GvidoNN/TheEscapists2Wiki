@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 
 <resources>
-    <!-- TODO: System strings -->
+    <!--  System strings -->
     <string name="app_name">The escapists 2 вики</string>
     <string name="craft">Крафты</string>
     <string name="map">Карты</string>
@@ -11,9 +11,13 @@
     <string name="ways_to_escape">Способы побега</string>
     <string name="advertising">Здесь могла быть ваша реклама :)</string>
     <string name="search_hint">Введите название предмета</string>
-    <string name="contraband">Контрабанда</string>
+    <string name="contraband">Запрещён</string>
 
-    <!-- TODO: Craft strings -->
+    <!-- Onboardin strings -->
+    <string name="onboarding_title">Возможности приложения</string>
+    <string name="onboarding_text_1">Узнай как изготавливаются вещи в игре</string>
+    <string name="onboarding_text_2">Узнай обо всех компонентах для изготовления</string>
+    <string name="onboarding_text_3">Все инструкции для побегов</string>
 
     <!-- Filter items -->
     <string name="clothes">Одежда</string>
@@ -24,7 +28,7 @@
 
     <!-- Items -->
     <string name="baseball_bat">Бейсбольная бита</string>
-    <string name="sock_mase">Носок-кистень</string>
+    <string name="sock_mase">Носок-\nкистень</string>
     <string name="glass_shank">Подклееный осколок стекла</string>
     <string name="comb_blade">Лезвие гребня</string>
     <string name="whip">Кнут</string>

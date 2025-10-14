@@ -19,6 +19,9 @@
             app:destination="@id/fragmentComponent"
             app:popUpToInclusive="true"
             app:popUpTo="@id/my_nav"/>
+        <action
+            android:id="@+id/action_fragmentMainCraft_to_fragmentOnboarding"
+            app:destination="@id/fragmentOnboarding" />
     </fragment>
     <fragment
         android:id="@+id/fragmentMap"
@@ -66,5 +69,13 @@
         <argument
             android:name="MapName"
             android:defaultValue="Prison Map" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentOnboarding"
+        android:name="lovely.honey.prison.presenatation.FragmentOnboarding"
+        android:label="FragmentOnboarding" >
+        <action
+            android:id="@+id/action_fragmentOnboarding_to_fragmentMainCraft"
+            app:destination="@id/fragmentMainCraft" />
     </fragment>
 </navigation>

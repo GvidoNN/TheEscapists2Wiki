@@ -11,4 +11,5 @@
     <color name="orange_for_frame">#C75532</color>
     <color name="white_gray">#E1DFDF</color>
     <color name="navigation_search_bar">#8E8E8E</color>
+    <color name="main_background">#F5F5DC</color>
 </resources>

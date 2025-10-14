@@ -1,17 +1,17 @@
 package lovely.honey.prison.presenatation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import androidx.appcompat.widget.SearchView
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import lovely.honey.prison.databinding.FragmentComponentBinding
-import lovely.honey.prison.recycler.ComponentAdapter
+import lovely.honey.prison.presenatation.recycler.ComponentAdapter
 import lovely.honey.prison.R
 import lovely.honey.prison.data.repository.ComponentsRepositoryImpl
+import lovely.honey.prison.databinding.FragmentComponentBinding
 import lovely.honey.prison.domain.models.Components
 import lovely.honey.prison.domain.usecase.PutDataComponentUseCase
 import java.util.Locale
@@ -21,6 +21,7 @@ class FragmentComponent : Fragment() {
     private lateinit var adapter: ComponentAdapter
     private lateinit var recyclerView: RecyclerView
     private lateinit var searchView: SearchView
+
     private val componentsRepository by lazy { ComponentsRepositoryImpl(context = requireContext()) }
     private val putDataComponentUseCase by lazy { PutDataComponentUseCase(componentsRepository = componentsRepository) }
 

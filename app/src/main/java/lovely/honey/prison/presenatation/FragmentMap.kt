@@ -1,18 +1,18 @@
 package lovely.honey.prison.presenatation
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
+import androidx.fragment.app.Fragment
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import lovely.honey.prison.databinding.FragmentMapBinding
-import lovely.honey.prison.recycler.MapAdapter
+import lovely.honey.prison.presenatation.recycler.MapAdapter
 import lovely.honey.prison.domain.models.Maps
 import lovely.honey.prison.R
 import lovely.honey.prison.data.repository.MapRepositoryImpl
+import lovely.honey.prison.databinding.FragmentMapBinding
 import lovely.honey.prison.domain.usecase.PutDataSampleMapUseCase
 
 
@@ -22,6 +22,7 @@ class FragmentMap : Fragment(), MapAdapter.Listener {
     lateinit var imageId: Array<Int>
     lateinit var name: Array<String>
     private val mapsRepository by lazy { MapRepositoryImpl(context = requireContext()) }
+
     private val putDataSampleMapUseCase by lazy { PutDataSampleMapUseCase(mapRepository = mapsRepository) }
     override fun onCreateView(
         inflater: LayoutInflater,
