@@ -1126,6 +1126,7 @@ class ItemsRepositoryImpl(
 
         for (i in imageId.indices) {
             val items = Items(
+                i,
                 imageId[i],
                 name[i],
                 craft[i],

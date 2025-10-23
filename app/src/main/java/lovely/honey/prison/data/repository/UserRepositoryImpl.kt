@@ -23,6 +23,7 @@ class UserRepositoryImpl (
     }
 
     override fun getFirstEnter(): Boolean {
-        return prefs.getBoolean(KEY_FIRST_ENTER, true)
+        val enterValue = prefs.getBoolean(KEY_FIRST_ENTER, true)
+        return enterValue
     }
 }

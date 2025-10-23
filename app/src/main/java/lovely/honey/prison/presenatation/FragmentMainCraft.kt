@@ -4,9 +4,14 @@ import android.os.Bundle
 import android.view.*
 import androidx.fragment.app.Fragment
 import androidx.appcompat.widget.SearchView
+import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
+import kotlinx.coroutines.Dispatchers
+import kotlinx.coroutines.launch
+import kotlinx.coroutines.withContext
 import lovely.honey.prison.R
+import lovely.honey.prison.data.repository.FavouriteItemsRepositoryImpl
 import lovely.honey.prison.data.repository.ItemsRepositoryImpl
 import lovely.honey.prison.data.repository.UserRepositoryImpl
 import lovely.honey.prison.databinding.FragmentMainCraftBinding
@@ -23,6 +28,7 @@ class FragmentMainCraft : Fragment() {
 
     private val itemsRepository by lazy { ItemsRepositoryImpl(context = requireContext()) }
     private val userRepository by lazy { UserRepositoryImpl(context = requireContext()) }
+    private val favouriteItemsRepository by lazy { FavouriteItemsRepositoryImpl(context = requireContext()) }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -45,25 +51,43 @@ class FragmentMainCraft : Fragment() {
 
         binding.recyclerView.layoutManager = layoutManager
         binding.recyclerView.setHasFixedSize(true)
+        lifecycleScope.launch(Dispatchers.IO) {
+            val adapterInstance = ItemAdapter(
+                itemList = itemsList as ArrayList<Items>,
+                onLikeClick = {
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        favouriteItemsRepository.insertItems(it)
+                    }
+                },
+                onDislikeClick = {
+                    lifecycleScope.launch(Dispatchers.IO) {
+                        favouriteItemsRepository.deleteItem(it)
+                    }
+                },
+                favouriteItemList = favouriteItemsRepository.getAllItems()
+            )
 
-        adapter = ItemAdapter(itemsList as ArrayList<Items>)
-        binding.recyclerView.adapter = adapter
-
-        binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                return false
+            withContext(Dispatchers.Main) {
+                adapter = adapterInstance
+                binding.recyclerView.adapter = adapter
             }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                filterList(newText)
-                adapter.notifyDataSetChanged()
-                return false
-            }
-        })
+            binding.searchView.setOnQueryTextListener(object : SearchView.OnQueryTextListener {
+                override fun onQueryTextSubmit(query: String?): Boolean {
+                    return false
+                }
+
+                override fun onQueryTextChange(newText: String?): Boolean {
+                    filterList(newText)
+                    adapter.notifyDataSetChanged()
+                    return false
+                }
+            })
+        }
     }
 
     private fun checkFirstEnter() {
-        if (userRepository.getFirstEnter()) {
+        if (!userRepository.getFirstEnter()) {
             findNavController().navigate(R.id.action_fragmentMainCraft_to_fragmentOnboarding)
         }
     }

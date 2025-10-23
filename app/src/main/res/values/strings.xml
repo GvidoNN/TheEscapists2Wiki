@@ -11,7 +11,10 @@
     <string name="search_hint">Enter item name...</string>
     <string name="contraband">Forbidden</string>
 
-    <!-- Onboardin strings -->
+    <!-- Favourite strings -->
+    <string name="favourite_empty_text">Favourite items is empty</string>
+
+    <!-- Onboarding strings -->
     <string name="onboarding_title">Application features</string>
     <string name="onboarding_text_1">Learn how to craft all items in game</string>
     <string name="onboarding_text_2">Learn about all components in game</string>

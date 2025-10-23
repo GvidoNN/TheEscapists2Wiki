@@ -13,6 +13,9 @@
     <string name="search_hint">Введите название предмета</string>
     <string name="contraband">Запрещён</string>
 
+    <!-- Favourite strings -->
+    <string name="favourite_empty_text">Избранное пусто</string>
+
     <!-- Onboardin strings -->
     <string name="onboarding_title">Возможности приложения</string>
     <string name="onboarding_text_1">Узнай как изготавливаются вещи в игре</string>

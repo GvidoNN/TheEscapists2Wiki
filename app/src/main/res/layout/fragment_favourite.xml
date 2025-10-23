@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/FragmentMain"
+    android:layout_width="match_parent"
+    android:background="@color/main_background"
+    android:layout_height="match_parent"
+    tools:context="lovely.honey.prison.presenatation.FragmentMainCraft">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="665dp"
+            android:layout_marginBottom="0dp"
+            android:layout_weight="1"
+            app:layout_anchorGravity="top">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+        <ImageView
+            android:id="@+id/imEmpty"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:layout_marginTop="200dp"
+            android:tint="@color/orange_for_frame"
+            android:foregroundGravity="center"
+            app:srcCompat="@drawable/ic_empty_list" />
+
+        <TextView
+            android:id="@+id/tvEmpty"
+            android:layout_width="wrap_content"
+            android:layout_height="80dp"
+            android:layout_gravity="center"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="3dp"
+            android:fontFamily="@font/nunito_bold"
+            android:foregroundGravity="center"
+            android:text="@string/favourite_empty_text"
+            android:textColor="@color/blackforstatusbar"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+    </LinearLayout>
+</FrameLayout>

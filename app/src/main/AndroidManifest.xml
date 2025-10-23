@@ -17,8 +17,7 @@
         tools:targetApi="35" >
         <activity
             android:name="lovely.honey.prison.MainActivity"
-            android:exported="true"
-            android:screenOrientation="portrait">
+            android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />

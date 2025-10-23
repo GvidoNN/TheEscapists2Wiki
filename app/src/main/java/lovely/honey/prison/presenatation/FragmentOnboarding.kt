@@ -48,7 +48,7 @@ class FragmentOnboarding : Fragment() {
                 if (lastPagePosition == onboardingItems.lastIndex &&
                     scrollState == ViewPager2.SCROLL_STATE_DRAGGING
                 ) {
-                    userRepository.setFirstEnter(false)
+                    userRepository.setFirstEnter(true)
                     findNavController().navigate(R.id.action_fragmentOnboarding_to_fragmentMainCraft)
                 }
             }

@@ -22,6 +22,11 @@
         <action
             android:id="@+id/action_fragmentMainCraft_to_fragmentOnboarding"
             app:destination="@id/fragmentOnboarding" />
+        <action
+            android:id="@+id/action_fragmentMainCraft_to_fragmentFavourite"
+            app:destination="@id/fragmentFavourite"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav" />
     </fragment>
     <fragment
         android:id="@+id/fragmentMap"
@@ -41,6 +46,11 @@
         <action
             android:id="@+id/action_fragmentMap_to_fragmentSampleMap"
             app:destination="@id/fragmentSampleMap" />
+        <action
+            android:id="@+id/action_fragmentMap_to_fragmentFavourite"
+            app:destination="@id/fragmentFavourite"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav" />
     </fragment>
     <fragment
         android:id="@+id/fragmentComponent"
@@ -55,6 +65,11 @@
         <action
             android:id="@+id/action_fragmentWallpaper_to_fragmentMap"
             app:destination="@id/fragmentMap"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
+        <action
+            android:id="@+id/action_fragmentComponent_to_fragmentFavourite"
+            app:destination="@id/fragmentFavourite"
             app:popUpToInclusive="true"
             app:popUpTo="@id/my_nav"/>
     </fragment>
@@ -77,5 +92,25 @@
         <action
             android:id="@+id/action_fragmentOnboarding_to_fragmentMainCraft"
             app:destination="@id/fragmentMainCraft" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragmentFavourite"
+        android:name="lovely.honey.prison.presenatation.FragmentFavourite"
+        android:label="FragmentFavourite" >
+        <action
+            android:id="@+id/action_fragmentFavourite_to_fragmentMap"
+            app:destination="@id/fragmentMap"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
+        <action
+            android:id="@+id/action_fragmentFavourite_to_fragmentComponent"
+            app:destination="@id/fragmentComponent"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
+        <action
+            android:id="@+id/action_fragmentFavourite_to_fragmentMainCraft"
+            app:destination="@id/fragmentMainCraft"
+            app:popUpToInclusive="true"
+            app:popUpTo="@id/my_nav"/>
     </fragment>
 </navigation>

@@ -149,7 +149,7 @@
                 android:layout_width="120dp"
                 android:layout_height="120dp"
                 android:layout_gravity="center|left"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="10dp"
                 android:background="@drawable/orangeframe"
                 app:srcCompat="@drawable/baseball" />
@@ -159,7 +159,7 @@
                 android:layout_width="114dp"
                 android:layout_height="80dp"
                 android:layout_gravity="center"
-                android:layout_marginLeft="5dp"
+                android:layout_marginStart="5dp"
                 android:layout_marginTop="3dp"
                 android:fontFamily="@font/nunito_bold"
                 android:foregroundGravity="center_vertical"
@@ -168,6 +168,14 @@
                 android:textColor="@color/blackforstatusbar"
                 android:textSize="16sp"
                 android:textStyle="bold" />
+
+            <ImageView
+                android:id="@+id/imLike"
+                android:src="@drawable/ic_like"
+                android:layout_marginStart="15dp"
+                android:tint="@color/orange_for_frame"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
         </LinearLayout>
 
     </androidx.cardview.widget.CardView>

@@ -1,6 +1,5 @@
 package lovely.honey.prison.presenatation.recycler
 
-import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -10,11 +9,14 @@ import androidx.recyclerview.widget.RecyclerView
 import lovely.honey.prison.R
 import lovely.honey.prison.domain.models.Items
 
-class ItemAdapter(private var itemList: ArrayList<Items>): RecyclerView.Adapter<ItemAdapter.ItemsViewHolder>(){
-    lateinit var context: Context
+class ItemAdapter(
+    private var itemList: ArrayList<Items>,
+    private var favouriteItemList: List<Items>,
+    private val onLikeClick: (item: Items) -> Unit,
+    private val onDislikeClick: (item: Items) -> Unit
+) : RecyclerView.Adapter<ItemAdapter.ItemsViewHolder>() {
 
-
-    class ItemsViewHolder(item: View): RecyclerView.ViewHolder(item){
+    class ItemsViewHolder(item: View) : RecyclerView.ViewHolder(item) {
         val titleImage: ImageView = item.findViewById(R.id.title_image)
         val tvName: TextView = item.findViewById(R.id.tvName)
         val tvCraft: TextView = item.findViewById(R.id.tvCraft)
@@ -23,42 +25,59 @@ class ItemAdapter(private var itemList: ArrayList<Items>): RecyclerView.Adapter<
         val imThree: ImageView = item.findViewById(R.id.imThree)
         val tvIntelligence: TextView = item.findViewById(R.id.tvIntelligence)
         val tvContraband: TextView = item.findViewById(R.id.tvContraband)
+        val imLike: ImageView = item.findViewById(R.id.imLike)
     }
+
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ItemsViewHolder {
-        context = parent.context
         val view = LayoutInflater.from(parent.context).inflate(R.layout.item_item, parent, false)
         return ItemsViewHolder(view)
     }
 
-    fun setFilteredList(itemList: ArrayList<Items>){
+    fun setFilteredList(itemList: ArrayList<Items>) {
         this.itemList = itemList
         notifyDataSetChanged()
     }
 
     override fun onBindViewHolder(holder: ItemsViewHolder, position: Int) {
         val itemData = itemList[position]
-        holder.titleImage.setImageResource(itemData.imageId)
-        holder.tvName.text = itemData.name
-        holder.tvCraft.text = itemData.craft
-        holder.imOne.setImageResource(itemData.imOne)
-        holder.imTwo.setImageResource(itemData.imTwo)
-        holder.imThree.setImageResource(itemData.imThree)
-        holder.tvIntelligence.text = itemData.intelligence
-        if(itemData.haveThirdItem){
-            holder.imThree.visibility = View.VISIBLE
-        } else {
-            holder.imThree.visibility = View.GONE
+        with(holder) {
+            titleImage.setImageResource(itemData.imageId)
+            tvName.text = itemData.name
+            tvCraft.text = itemData.craft
+            imOne.setImageResource(itemData.imOne)
+            imTwo.setImageResource(itemData.imTwo)
+            imThree.setImageResource(itemData.imThree)
+            tvIntelligence.text = itemData.intelligence
+            if (favouriteItemList.any { it.id == itemData.id }) {
+                imLike.setImageResource(R.drawable.ic_like_filled)
+                imLike.setOnClickListener {
+                    onDislikeClick.invoke(itemData)
+                    imLike.setImageResource(R.drawable.ic_like)
+                }
+            } else {
+                imLike.setImageResource(R.drawable.ic_like)
+                imLike.setOnClickListener {
+                    onLikeClick.invoke(itemData)
+                    imLike.setImageResource(R.drawable.ic_like_filled)
+                }
+            }
+
+            if (itemData.haveThirdItem) {
+                imThree.visibility = View.VISIBLE
+            } else {
+                imThree.visibility = View.GONE
+            }
+
+            if (itemData.contraband) {
+                tvContraband.visibility = View.VISIBLE
+            } else {
+                tvContraband.visibility = View.GONE
+            }
         }
-        if (itemData.contraband) {
-            holder.tvContraband.visibility = View.VISIBLE
-        } else {
-            holder.tvContraband.visibility = View.GONE
-        }
+
     }
 
     override fun getItemCount(): Int {
         return itemList.size
     }
-
-
 }
