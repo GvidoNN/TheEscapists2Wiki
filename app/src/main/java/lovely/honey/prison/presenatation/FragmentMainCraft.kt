@@ -57,11 +57,19 @@ class FragmentMainCraft : Fragment() {
                 onLikeClick = {
                     lifecycleScope.launch(Dispatchers.IO) {
                         favouriteItemsRepository.insertItems(it)
+                        val updatedList = favouriteItemsRepository.getAllItems()
+                        withContext(Dispatchers.Main) {
+                            adapter.updateFavouriteList(updatedList)
+                        }
                     }
                 },
                 onDislikeClick = {
                     lifecycleScope.launch(Dispatchers.IO) {
                         favouriteItemsRepository.deleteItem(it)
+                        val updatedList = favouriteItemsRepository.getAllItems()
+                        withContext(Dispatchers.Main) {
+                            adapter.updateFavouriteList(updatedList)
+                        }
                     }
                 },
                 favouriteItemList = favouriteItemsRepository.getAllItems()
@@ -108,6 +116,4 @@ class FragmentMainCraft : Fragment() {
         }
         return filteredList
     }
-
-
 }

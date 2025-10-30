@@ -5,6 +5,7 @@
     <string name="map">Maps</string>
     <string name="component">Components</string>
     <string name="item">Item</string>
+    <string name="favourite">Favorites</string>
     <string name="intelligence">Intelligence: </string>
     <string name="ways_to_escape">Ways to escape</string>
     <string name="advertising">Here must be an advertising :)</string>

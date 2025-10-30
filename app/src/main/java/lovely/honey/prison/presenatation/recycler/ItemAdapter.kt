@@ -33,6 +33,11 @@ class ItemAdapter(
         return ItemsViewHolder(view)
     }
 
+    fun updateFavouriteList(newFavouriteList: List<Items>) {
+        favouriteItemList = newFavouriteList
+        notifyDataSetChanged()
+    }
+
     fun setFilteredList(itemList: ArrayList<Items>) {
         this.itemList = itemList
         notifyDataSetChanged()

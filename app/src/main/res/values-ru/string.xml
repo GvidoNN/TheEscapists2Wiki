@@ -6,6 +6,7 @@
     <string name="craft">Крафты</string>
     <string name="map">Карты</string>
     <string name="component">Компоненты</string>
+    <string name="favourite">Избранное</string>
     <string name="item">Предмет</string>
     <string name="intelligence">Интеллект: </string>
     <string name="ways_to_escape">Способы побега</string>
